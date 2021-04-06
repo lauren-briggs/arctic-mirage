@@ -1,0 +1,503 @@
+/*header - main styling*/
+
+body{
+    font-family: degular, sans-serif;
+    font-weight:lighter;
+    font-style: normal;
+    cursor: url('https://github.com/lauren-briggs/arctic-mirage/blob/main/assets/img/AM21-04_Logo_Cursor_A.png');
+}
+
+nav{
+    font-family: degular, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    position: fixed;
+    right: -200px;
+    bottom: 200px;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+#menu{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-end;
+    list-style: none;
+    padding: 20px 50px 20px 50px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #707070;
+}
+
+li a:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.homelogo{
+    position: fixed;
+    top: 40px;
+    left: 40px;
+}
+
+/* Slideshow */
+
+
+
+.slideshow-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        .mySlides{
+            position: absolute;
+            margin-top: -200px;
+            margin-left: -250px;
+        }
+
+        .fadeslide img{
+            opacity:0; 
+            animation-name: fadeInSlide; 
+            animation-duration: 15s; 
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fadeInSlide {
+            0%   { opacity: 0; }
+            20%   { opacity: 1; }
+            40%  { opacity: 1; }
+            60%  { opacity: 0; }
+            80%  {opacity: 0;}
+            100% { opacity: 0; }
+        }
+
+        #delay1 { animation-delay: 0s; }
+        #delay2 { animation-delay: 3s; }
+        #delay3 { animation-delay: 6s; }
+        #delay4 { animation-delay: 9s; }
+        #delay5 { animation-delay: 12s; }
+
+
+/*consistent styling*/
+
+p{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    font-kerning:4px;
+    letter-spacing:auto;
+    line-height: 22px;
+    color: white;
+    padding: 5px 0px;
+}
+
+.about .block,
+.contact .block{
+    padding-left: 30px;
+}
+
+h1,
+h2,
+h3,
+h4{
+    letter-spacing: 1px;
+    color: white;
+    font-kerning: auto;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+h2{
+    font-weight:300;
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+h3{
+    font-weight: 300;
+    font-size: 18px;
+    text-decoration: underline;
+    text-transform:uppercase;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
+    line-height: 1.5;
+}
+
+h4{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.25;
+}
+
+/* work menu */
+
+    .work{
+        width: 50%;
+        background-color: black;
+        position:absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 0;
+        display: none;
+    }
+
+    .grid-container-workmenu{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        padding:6em 11em 6em 6em;
+        column-gap: 2em;
+        row-gap: 3em;
+    }
+
+    .work.showme{
+        display: block;
+        z-index: 1;
+    }
+
+
+    .work h1:hover{
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 8%;
+        cursor: grab;
+    }
+
+    .work a{
+        color: white;
+        text-decoration: none;
+    }
+
+/*toggle descriptions in work menu*/
+
+    .work p{
+        display: none;
+    }
+
+    .descr.showme{
+        display: block;
+    }
+
+
+/* about */
+
+    .about{
+        width: 50vw;
+        background-color: black;
+        color: white;
+        position:absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 0;
+        display: none;
+    }
+
+    .about.showme{
+        display: block;
+        z-index: 1;
+    }
+
+    .grid-container-about{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        padding:6em 11em 6em 6em;
+        column-gap: 2em;
+        row-gap: 3em;
+    }
+
+    #about-intro{
+        grid-column: 1 / span 2;
+    }
+
+    #about-client{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row: 6;
+    }
+
+    #about-client-img{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row: 7;
+    }
+
+    #about-services{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row: 8;
+
+    }
+
+    #grid-container-clients{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        column-gap: 2em;
+        row-gap: 1em;
+    }
+
+    #grid-container-services{
+        display: grid;
+        grid-template-columns: 45px auto;
+        grid-template-rows: 45px auto;
+        column-gap: 2em;
+        row-gap: 1em;
+
+    }
+
+
+    .team p{
+        font-size: 18px;
+        padding-bottom: 1em;
+    }
+
+    /*fade in*/
+    #fade,
+    .fade{
+        opacity: 1;
+        animation: fadeIn;
+        animation-duration: 2s;
+    }
+
+    @keyframes fadeIn{
+        from{ opacity: 0;}
+        to{ opacity: 1;}
+    }
+
+
+    #alex,
+    #ahna{
+            flex: 1 0 20%;
+            padding: 1.75rem 1rem 0rem 1.75rem;
+            /* when the screen resizes, make it so our columns don't jump in size */
+            transition: flex-basis 500ms linear;
+            margin-bottom: 1rem;
+        
+    }
+
+    #clients img{
+        display: inline-flex;
+        justify-content: space-around;
+        margin-left: 30px;
+        padding-top: 30px;
+    }
+
+/*list of services*/
+
+.about h4{  
+    font-size: 18px;
+    text-transform: none;
+    font-weight: 400;
+
+}
+
+.about li{
+    list-style:none;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+.about ul{
+    padding-bottom: 1em;
+}
+
+#liheader{
+    text-decoration: underline;
+}
+
+
+
+/* contact  */
+
+.contact{
+    width: 50%;
+    min-height: 100vh;
+    background-color: black;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 0;
+    display: none;
+}
+
+.contact.showme{
+    display: block;
+    z-index: 1;
+}
+
+.grid-container-contact{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-template-rows: auto auto auto auto;
+    padding:6em 11em 6em 6em;
+    column-gap: 2em;
+    row-gap: 3em;
+    height: 100vh;
+    align-content: space-around;
+}
+
+#contact-intro{
+    grid-column: 1 / span 2;
+}
+#contact-form{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row: 3;
+}
+#contact-socials{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row: 4;
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-container-socials{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    column-gap: 2em;
+    color: white;
+    justify-content: space-around;
+}
+
+
+
+#address,
+#enquiries{
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex: 1 0 20%;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+}
+
+/* #contactflex p{
+    font-size: 16px;
+} */
+
+/*CONTACT US FORM STYLING*/
+
+.contact h2{
+    padding-bottom: 0.75em;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#name,
+#email,
+#subject,
+#message,
+#submit{
+    width: 100%;
+    padding:10px;
+    margin: 0.5em 0em;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    justify-content: space-around;
+}
+
+:placeholder-shown,
+input,
+textarea{
+    padding: 10px;
+    font-family: degular, sans-serif;
+    font-weight:lighter;
+    font-style: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#submit:hover{
+    background-color: white;
+    color: black;
+}
+
+#name:hover,
+#email:hover,
+#subject:hover,
+#message:hover{
+    border: 2px solid white;
+}
+
+#name:focus,
+#email:focus,
+#subject:focus,
+#message:focus{
+    border: 2px solid white;
+}
+
+
+/*social links style*/
+
+.contact ul{
+    width: 100%;
+    padding-top: 30px;
+}
+
+.contact li{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+}
+
+.contact a:link,
+.contact a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.contact a:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
+}
+
+/* Project sections */
+
+/* FETTI */
+
+.projectfetti{
+    width: 46.7vw;
+    min-height: 100vh;
+    background-color: white;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectfetti.showme{
+    display: flex;
+    z-index: 1;
+}
+
+.project .img{
+    display: flex;
+}
