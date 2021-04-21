@@ -22,7 +22,8 @@
 
     <header>
         <div class="homelogo">
-            <img src="assets/img/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png" width="100px" alt="Arctic Mirage Logo">
+            <img src="assets/img/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png" width="100px" alt="Arctic Mirage Logo"
+                id="homelogo-btn">
         </div>
     </header>
 
@@ -34,7 +35,6 @@
             <li id="menu" class="worknav"><a href="#work">Work</a> </li>
             <li id="menu" class="aboutnav"><a href="#about">About</a> </li>
             <li id="menu" class="contactnav"><a href="#contact">Contact</a> </li>
-
         </ul>
     </nav>
 
@@ -85,22 +85,34 @@
 
 
     <div class="grid-container-work">
-        <div class="grid-item-work">
+        <div class="grid-item-work" id="project-img-container">
             <!-- project sections -->
 
             <!-- FETTI sections -->
             <section class="projectfetti">
                 <div class="project img fetti">
-                    <img src="assets/img/fetti/AM_Fetti_04_1500px.png" width="100%" alt="Fetti Website Mockup"><br>
-                    <img src="assets/img/fetti/AM_Fetti_05_1500px.png" width="100%" alt="Fetti Menu"><br>
-                    <img src="assets/img/fetti/AM_Fetti_06_1500px.png" width="100%" alt="Fetti Business Cards"><br>
-                    <img src="assets/img/fetti/AM_Fetti_03_1500px.png" width="100%" alt="Fetti Website Mockup"><br>
-                    <img src="assets/img/fetti/AM_Fetti_07_1500px.png" width="100%" alt="Fetti Logo on Wine Glass"><br>
+                    <img src="assets/img/fetti/AM_Fetti_04_1500px.png" width="100%" alt="Fetti Website Mockup">
+                    <img src="assets/img/fetti/AM_Fetti_05_1500px.png" width="100%" alt="Fetti Menu">
+                    <img src="assets/img/fetti/AM_Fetti_06_1500px.png" width="100%" alt="Fetti Business Cards">
+                    <img src="assets/img/fetti/AM_Fetti_03_1500px.png" width="100%" alt="Fetti Website Mockup">
+                    <img src="assets/img/fetti/AM_Fetti_07_1500px.png" width="100%" alt="Fetti Logo on Wine Glass">
                     <img src="assets/img/fetti/AM_Fetti_02_1500px.png" width="100%" alt="Fetti Website Mockup">
-
                 </div>
-
             </section>
+            <!-- FARMER sections -->
+            <section class="projectfarmer">
+                <div class="project img farmer">
+                    <img src="assets/img/farmer/AM_Farmer_01_1500px.png" width="100%" alt="Farmer St logo">
+                    <img src="assets/img/farmer/AM_Farmer_03_1500px.png" width="100%" alt="Farmer St brochure mock up">
+                    <img src="assets/img/farmer/AM_Farmer_04_1500px.png" width="100%" alt="Farmer St logo deboss">
+                    <img src="assets/img/farmer/AM_Farmer_02_1500px.png" width="100%" alt="Farmer St stables sketch">
+                    <img src="assets/img/farmer/AM_Farmer_05_1500px.png" width="100%" alt="Farmer St brochure mock up">
+                    <img src="assets/img/farmer/AM_Farmer_06_1500px.png" width="100%" alt="Farmer St brochure mock up">
+                    <img src="assets/img/farmer/AM_Farmer_07_1500px.png" width="100%" alt="Farmer St brochure mock up">
+                </div>
+            </section>
+
+
 
         </div>
         <div class="grid-item-work">
@@ -392,11 +404,11 @@
             </div>
 
             <div class="grid-item-about">
-                <img src="https://via.placeholder.com/250" width="80%" alt="placeholder"><br>
+                <img src="assets/img/team/AM_team-02.png" width="80%" alt="placeholder"><br>
             </div>
 
             <div class="grid-item-about">
-                <img src="https://via.placeholder.com/250" width="80%" alt="placeholder"><br>
+                <img src="assets/img/team/AM_team-01.png" width="80%" alt="placeholder"><br>
             </div>
 
             <!--team-->
@@ -419,12 +431,12 @@
             </div>
 
             <div class="grid-item-about">
-                <img src="https://via.placeholder.com/250" width="80%" alt="placeholder"><br>
+                <img src="assets/img/team/AM_team-02.png" width="80%" alt="placeholder"><br>
 
             </div>
 
             <div class="grid-item-about">
-                <img src="https://via.placeholder.com/250" width="80%" alt="placeholder"><br>
+                <img src="assets/img/team/AM_team-03.png" width="80%" alt="placeholder"><br>
 
             </div>
 
@@ -447,48 +459,22 @@
                 </p>
             </div>
 
-            <!--clients-->
-            <div class="grid-item-about" id="about-client">
-                <p id="fade">At Arctic Mirage, we love collaborating with some very talented and experienced
-                    professionals. Here are a few we’ve teamed with in the past:
-                </p>
-            </div>
-
-            <div class="grid-item-about" id="about-client-img">
-                <div id="grid-container-clients">
-                    <div class="grid-item-client">
-                        <img id="fade" src="https://via.placeholder.com/150" width="100%" alt="placeholder">
-                    </div>
-
-                    <div class="grid-item-client">
-                        <img id="fade" src="https://via.placeholder.com/150" width="100%" alt="placeholder">
-                    </div>
-
-                    <div class="grid-item-client">
-                        <img id="fade" src="https://via.placeholder.com/150" width="100%" alt="placeholder">
-                    </div>
-
-                    <div class="grid-item-client">
-                        <img id="fade" src="https://via.placeholder.com/150" width="100%" alt="placeholder">
-                    </div>
-                </div>
-            </div>
             <!--services-->
             <div class="grid-item-about" id="about-services">
-                <p class="fade">OUR SERVICES INCLUDE:</p>
+                <h2 class="fade">SERVICES</h2>
             </div>
 
             <!-- Branding -->
-            <div class="grid-item-about" id="grid-container-services">
+            <div class="grid-item-about hover" id="grid-container-services">
                 <div class="grid-item-about-sub">
-                    <h4 id="brandinghover">01/</h4>
+                    <h4>01/</h4>
                 </div>
                 <div class="grid-item-about-sub">
-                    <h4 id="brandinghover">Branding</h4>
+                    <h4>Branding</h4>
                 </div>
                 <div class="grid-item-about-sub"></div>
                 <div class="grid-item-about-sub">
-                    <ul id="brandinglist">
+                    <ul class="hidden-list" id="brandinglist">
                         <li>Logo Design (Company / Brand)</li>
                         <li>Branding & project naming</li>
                         <li>Brand strategy</li>
@@ -501,16 +487,16 @@
             </div>
 
             <!-- Print & Brand Collateral -->
-            <div class="grid-item-about" id="grid-container-services">
+            <div class="grid-item-about  hover" id="grid-container-services">
                 <div class="grid-item-about-sub">
-                    <h4 id="print hover">02/</h4>
+                    <h4>02/</h4>
                 </div>
                 <div class="grid-item-about-sub">
-                    <h4 id="print hover">Print & Brand Collateral</h4>
+                    <h4>Print & Brand Collateral</h4>
                 </div>
                 <div class="grid-item-about-sub"></div>
                 <div class="grid-item-about-sub">
-                    <ul id="print list">
+                    <ul class="hidden-list" id="print list">
                         <li>Stationery Design</li>
                         <li>Menu Design</li>
                         <li>Invitation Design</li>
@@ -529,16 +515,16 @@
             </div>
 
             <!-- Website & Digital -->
-            <div class="grid-item-about" id="grid-container-services">
+            <div class="grid-item-about hover" id="grid-container-services">
                 <div class="grid-item-about-sub">
                     <h4 id="web hover">03/</h4>
                 </div>
                 <div class="grid-item-about-sub">
-                    <h4 id="web hover">Website & Digital</h4>
+                    <h4>Website & Digital</h4>
                 </div>
                 <div class="grid-item-about-sub"></div>
                 <div class="grid-item-about-sub">
-                    <ul id="web list">
+                    <ul class="hidden-list" id="web list">
                         <li>Web Domain Registration & Hosting</li>
                         <li>Full Website</li>
                         <li>Comprehensive Corporate Website</li>
@@ -559,16 +545,16 @@
             </div>
 
             <!-- Photography & Videography -->
-            <div class="grid-item-about" id="grid-container-services">
+            <div class="grid-item-about hover" id="grid-container-services">
                 <div class="grid-item-about-sub">
-                    <h4 id="photo hover">04/</h4>
+                    <h4>04/</h4>
                 </div>
                 <div class="grid-item-about-sub">
-                    <h4 id="photo hover">Photography & Videography</h4>
+                    <h4>Photography & Videography</h4>
                 </div>
                 <div class="grid-item-about-sub"></div>
                 <div class="grid-item-about-sub">
-                    <ul id="photo list">
+                    <ul class="hidden-list" id="photo list">
                         <li id="liheader">Photography</li>
                         <li>Lifestyle Photography</li>
                         <li>Royalty Free Stock Images</li>
@@ -585,16 +571,16 @@
             </div>
 
             <!-- Interior & Styling -->
-            <div class="grid-item-about" id="grid-container-services">
+            <div class="grid-item-about hover" id="grid-container-services">
                 <div class="grid-item-about-sub">
-                    <h4 id="styling hover">05/</h4>
+                    <h4>05/</h4>
                 </div>
                 <div class="grid-item-about-sub">
-                    <h4 id="styling hover">Interior & Styling</h4>
+                    <h4>Interior & Styling</h4>
                 </div>
                 <div class="grid-item-about-sub"></div>
                 <div class="grid-item-about-sub">
-                    <ul id="styling list">
+                    <ul class="hidden-list" id="styling list">
                         <li>Restaurant/Cafe Fit-Out</li>
                         <li>Office Layout</li>
                         <li>Floor Plans & Graphic Layout</li>
@@ -608,16 +594,16 @@
             </div>
 
             <!-- Interior Design -->
-            <div class="grid-item-about" id="grid-container-services">
+            <div class="grid-item-about hover" id="grid-container-services">
                 <div class="grid-item-about-sub">
-                    <h4 id="interior hover">06/</h4>
+                    <h4>06/</h4>
                 </div>
                 <div class="grid-item-about-sub">
-                    <h4 id="interior hover">Interior Design</h4>
+                    <h4>Interior Design</h4>
                 </div>
                 <div class="grid-item-about-sub"></div>
                 <div class="grid-item-about-sub">
-                    <ul id="interior list">
+                    <ul class="hidden-list" id="interior list">
                         <li>Conceptual Design</li>
                         <li>Schedule of Internal Fixtures & Finishes</li>
                         <li>Lighting Layout & Schedule</li>
@@ -634,16 +620,16 @@
             </div>
 
             <!-- 3D Visualisation -->
-            <div class="grid-item-about" id="grid-container-services">
+            <div class="grid-item-about hover" id="grid-container-services">
                 <div class="grid-item-about-sub">
-                    <h4 id="3d hover">07/</h4>
+                    <h4>07/</h4>
                 </div>
                 <div class="grid-item-about-sub">
-                    <h4 id="3d hover">3D Visualisation</h4>
+                    <h4>3D Visualisation</h4>
                 </div>
                 <div class="grid-item-about-sub"></div>
                 <div class="grid-item-about-sub">
-                    <ul id="3d list">
+                    <ul class="hidden-list" id="3d list">
                         <li id="liheader">Exterior:</li>
                         <li>Eye Level/Ground</li>
                         <li>Bird-Eye View</li>
@@ -662,16 +648,16 @@
             </div>
 
             <!--Display Suite & Hoarding Banner-->
-            <div class="grid-item-about" id="grid-container-services">
+            <div class="grid-item-about hover" id="grid-container-services">
                 <div class="grid-item-about-sub">
-                    <h4 id="display hover">08/</h4>
+                    <h4>08/</h4>
                 </div>
                 <div class="grid-item-about-sub">
-                    <h4 id="display hover">Display Suite & Hoarding Banner</h4>
+                    <h4>Display Suite & Hoarding Banner</h4>
                 </div>
                 <div class="grid-item-about-sub"></div>
                 <div class="grid-item-about-sub">
-                    <ul id="display list">
+                    <ul class="hidden-list" id="display list">
                         <li id="liheader">Display Suite Graphics:</li>
                         <li>Window Decal</li>
                         <li>A-Frame</li>
@@ -680,6 +666,39 @@
                         <li>Display Suite Interior Styling</li>
                         <li>Furniture Hire</li>
                     </ul>
+                </div>
+            </div>
+            <!--clients-->
+            <div class="grid-item-about" id="about-client">
+                <h2 class="fade">CLIENTS</h2>
+            </div>
+            <div class="grid-item-about" id="about-client-text">
+                <p id="fade">At Arctic Mirage, we love collaborating with some very talented and experienced
+                    professionals. Here are a few we’ve teamed with in the past:
+                </p>
+            </div>
+
+            <div class="grid-item-about" id="about-client-img">
+                <div id="grid-container-clients">
+                    <div class="grid-item-client">
+                        <img id="fade" src="assets/img/clients/AM_Clients_01_500px.gif" width="100%"
+                            alt="AM Clients GIF">
+                    </div>
+
+                    <div class="grid-item-client">
+                        <img id="fade" src="assets/img/clients/AM_Clients_02_500px.gif" width="100%"
+                            alt="AM Clients GIF">
+                    </div>
+
+                    <div class="grid-item-client">
+                        <img id="fade" src="assets/img/clients/AM_Clients_03_500px.gif" width="100%"
+                            alt="AM Clients GIF">
+                    </div>
+
+                    <div class="grid-item-client">
+                        <img id="fade" src="assets/img/clients/AM_Clients_04_500px.gif" width="100%"
+                            alt="AM Clients GIF">
+                    </div>
                 </div>
             </div>
         </div>
@@ -691,7 +710,8 @@
         <div class="grid-container-contact">
 
             <div class="grid-item-contact" id="contact-intro">
-                <p>We believe in a long lasting collaboration with our clients.</p>
+                <h2>We believe in a long lasting collaboration with our clients.</h2>
+                <br>
                 <p>If you have a project in mind, or an idea you would like to discuss, we would love to hear from you.
                     Please fill in the form below or give us a call.</p>
                 <p>Connect with us on Instagram to see some of our latest work, collaborations and industry events.</p>
@@ -716,6 +736,7 @@
             <!--contact us form -->
             <div class="grid-item-contact" id="contact-form">
                 <h2 id="fade">Contact Us</h2>
+                <br>
                 <form autocomplete="on" class="fade">
                     <!-- <label for="name">Name:</label> -->
                     <input class="text-input" id="name" type="text" placeholder="Name">

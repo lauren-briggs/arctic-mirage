@@ -5,58 +5,76 @@ $(document).ready(function () {
   var workNav = $('.worknav');
   var workEl = $('.work');
 
-  var amLogo = $('.homelogo');
-
   var aboutNav = $('.aboutnav');
   var aboutEl = $('.about');
 
   var contactNav = $('.contactnav');
   var contactEl = $('.contact');
 
+  var homeLogoBtn = $('.homelogo');
 
-  /*
-    TYPE
-    SET VARIABLE
-    var hyphen = document.getElementById('hyphen');
-  
-    ADD EVENT LISTENER
-    hyphen.addEventListener('click', showMeHyphentype);
-  
-    CALL FUNCTION
-    function showMeHyphentype() {
-    document.getElementById('hyphen').classList.toggle('showme');
-    }
-    */
+  var nav = $('nav');
 
-  //Nav - open work menu/
-  workNav.click(function () {
-    workEl.toggle('showme');
-  });
 
-  //Nav - close work menu when logo is clicked/
-  amLogo.click(function () {
-    workEl.removeClass('showme');
-  });
 
-  //Nav - close work menu when about is clicked/
-  aboutNav.click(function () {
-    workEl.removeClass('showme');
-  });
+  //Nav - close work/about/contact menu when logo is clicked/
+  function closeAllMenus() {
+    workEl.css({ "display": "none", "transition": "0.5s" });
+    aboutEl.css("display", "none");
+    contactEl.css("display", "none");
+    console.log("Close menus");
+    nav.css("color", "black");
+  }
 
-  //IF THEN need to try
-  //Nav - when you open work nav - about nav closes
+  //toggle work menu
+  function toggleWork() {
+    workEl.toggle("showme");
+    workEl.css("z-index", "0.5");
+    aboutEl.css({ "display": "none", "z-index": "-0.5" });
+    contactEl.css({ "display": "none", "z-index": "-0.5" });
+    fettiPro.css("display", "none");
+    $('nav a').css("color", "white");
+  };
 
-  //Nav - open about/
-  aboutNav.click(function () {
+  //toggle about menu
+  function toggleAbout() {
     aboutEl.toggle('showme');
-    // aboutEl.style.zIndex = 2000;
-    // contactEl.style.zIndex = -1000;
-  });
+    aboutEl.css('z-index', '0.5');
+    workEl.css({ "display": "none", "z-index": "-0.5" });
+    contactEl.css({ "display": "none", "z-index": "-0.5", "transition": "0.5s" });
+    $('nav a').css("color", "white");
+  }
 
-  //Nav - open contact
-  contactNav.click(function () {
+  //toggle contact menu
+  function toggleContact() {
+    workEl.css({ "display": "none", "z-index": "-0.5" });
+    aboutEl.css({ "display": "none", "z-index": "-0.5" });
     contactEl.toggle('showme');
-  });
+    contactEl.css("z-index", "0.5");
+    $('nav a').css("color", "white");
+  }
+
+  //Nav event listeners
+  workNav.click(toggleWork);
+  aboutNav.click(toggleAbout);
+  contactNav.click(toggleContact);
+  homeLogoBtn.click(closeAllMenus);
+
+
+  //change colours of nav el when menus open
+  // if ($('.work.showme') || $('.about.showme') || $('.contact.showme')) {
+  //   $('nav').children().css("color", "white");
+  // } else {
+  //   $('nav').children().css("color", "black");
+  // }
+
+  // const workElAttr = workEl.attr('showme');
+
+  // if (typeof workElAttr !== "undefined" && workElAttr !== false) {
+  //   $('nav').children().css("color", "white");
+  // } else {
+  //   $('nav').children().css("color", "black");
+  // }
 
 
   //fetti variables
@@ -87,16 +105,17 @@ $(document).ready(function () {
   //Fetti - adding description when click on link/
   fettiLink.click(function () {
     fettiDescr.toggle('showme');
-  });
-
-  //Fetti Project IMG - showing Fetti Project IMG on left when click on link/
-  fettiLink.click(function () {
     fettiPro.toggle('showme');
   });
+
+  // //Fetti Project IMG - showing Fetti Project IMG on left when click on link/
+  // fettiLink.click(function () {
+  // });
 
   //Farmer - adding description when click on link/
   farmerLink.click(function () {
     farmerDescr.toggle('showme');
+    farmerPro.toggle('showme');
   });
 
 
