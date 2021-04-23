@@ -13,8 +13,8 @@ nav{
     font-style: normal;
     font-size: 20px;
     position: fixed;
-    right: -200px;
-    bottom: 200px;
+    right: -250px;
+    bottom: 250px;
     transform: rotate(90deg);
     z-index: 1;
 }
@@ -32,11 +32,24 @@ nav a{
     text-decoration: none;
     color: black;
     z-index: 99;
+    /* transition: 0.5s; */
+}
+
+nav a.white{
+    color: white;
 }
 
 li a:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.closenav{
+    visibility: hidden;
+}
+
+.closenav.showme{
+    visibility: visible;
 }
 
 .homelogo{
@@ -144,6 +157,15 @@ h4{
     line-height: 1.25;
 }
 
+/* work container overflow hidden */
+.grid-container-work{
+    overflow: hidden;
+}
+
+#project-img-container{
+    overflow-y: scroll;
+}
+
 /* work menu */
 
     .work{
@@ -154,11 +176,12 @@ h4{
         right: 0px;
         z-index: 0;
         display: none;
-        overflow: hidden;
+        overflow-y: scroll;
+        transition: 0.5s;
     }
 
     .work:hover{
-        overflow: auto;
+        overflow: hidden;
     }
 
     .grid-container-workmenu{
@@ -170,11 +193,10 @@ h4{
         row-gap: 3em;
     }
 
-    .work.showme{
+    .showme{
         display: block;
         z-index: 1;
     }
-
 
     .work h1:hover{
         text-decoration: underline;
@@ -200,15 +222,11 @@ h4{
         background-color: black;
         color: white;
         position:absolute;
-        top: 0px;
         right: 0px;
+        top: 0px;
         z-index: 0;
         display: none;
-    }
-
-    .about.showme{
-        display: block;
-        z-index: 1;
+        float: right;
     }
 
     .grid-container-about{
@@ -335,13 +353,9 @@ h4{
     position:absolute;
     top: 0px;
     right: 0px;
-    z-index: 0;
     display: none;
-}
-
-.contact.showme{
-    display: block;
-    z-index: 1;
+    /* opacity: 0; */
+    transition: all 0.5s linear;
 }
 
 .grid-container-contact{

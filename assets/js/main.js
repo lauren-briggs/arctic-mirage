@@ -12,6 +12,7 @@ $(document).ready(function () {
   var contactEl = $('.contact');
 
   var homeLogoBtn = $('.homelogo');
+  var closeBtn = $('.closenav');
 
   var nav = $('nav');
 
@@ -19,22 +20,42 @@ $(document).ready(function () {
 
   //Nav - close work/about/contact menu when logo is clicked/
   function closeAllMenus() {
-    workEl.css({ "display": "none", "transition": "0.5s" });
+    workEl.css("display", "none");
     aboutEl.css("display", "none");
     contactEl.css("display", "none");
+    closeBtn.removeClass('showme');
+    $('nav a').removeClass('white');
     console.log("Close menus");
-    nav.css("color", "black");
   }
 
-  //toggle work menu
+  // toggle work menu
   function toggleWork() {
     workEl.toggle("showme");
     workEl.css("z-index", "0.5");
     aboutEl.css({ "display": "none", "z-index": "-0.5" });
     contactEl.css({ "display": "none", "z-index": "-0.5" });
-    fettiPro.css("display", "none");
-    $('nav a').css("color", "white");
+    closeBtn.addClass('showme');
+    $('nav a').addClass('white');
+    // $('#project-img-container').css('display', 'none');
   };
+
+  //toggle work menu
+  // function toggleWork() {
+  //   if (workEl.hasClass('showme') === true) {
+  //     workEl.removeClass('showme');
+  //     $('#project-img-container').css('display', 'none');
+  //     changeNav()
+  //     console.log('toggle work clicked - if condition === true')
+  //   } else {
+  //     workEl.addClass("showme");
+  //     workEl.css("z-index", "0.5");
+  //     aboutEl.css({ "display": "none", "z-index": "-0.5" });
+  //     contactEl.css({ "display": "none", "z-index": "-0.5" });
+  //     fettiPro.css("display", "none");
+  //     changeNav()
+  //     console.log('toggle work clicked - if condition !=== true')
+  //   }
+  // };
 
   //toggle about menu
   function toggleAbout() {
@@ -42,7 +63,9 @@ $(document).ready(function () {
     aboutEl.css('z-index', '0.5');
     workEl.css({ "display": "none", "z-index": "-0.5" });
     contactEl.css({ "display": "none", "z-index": "-0.5", "transition": "0.5s" });
-    $('nav a').css("color", "white");
+    console.log('toggle about clicked')
+    closeBtn.addClass('showme');
+    $('nav a').addClass('white');
   }
 
   //toggle contact menu
@@ -51,7 +74,9 @@ $(document).ready(function () {
     aboutEl.css({ "display": "none", "z-index": "-0.5" });
     contactEl.toggle('showme');
     contactEl.css("z-index", "0.5");
-    $('nav a').css("color", "white");
+    // changeNav()
+    closeBtn.addClass('showme');
+    $('nav a').addClass('white');
   }
 
   //Nav event listeners
@@ -59,14 +84,36 @@ $(document).ready(function () {
   aboutNav.click(toggleAbout);
   contactNav.click(toggleContact);
   homeLogoBtn.click(closeAllMenus);
+  closeBtn.click(closeAllMenus);
 
 
-  //change colours of nav el when menus open
-  // if ($('.work.showme') || $('.about.showme') || $('.contact.showme')) {
-  //   $('nav').children().css("color", "white");
-  // } else {
-  //   $('nav').children().css("color", "black");
+  // change colours of nav el when menus open
+  // function changeNav() {
+  //   //if any of the nav elements have the class 'showme', then change the text to white, if not, change the text to black
+  //   if (workEl.hasClass('showme') || aboutEl.hasClass('showme') || contactEl.hasClass('showme')) {
+  //     // $('nav a').addClass("white");
+  //     $('nav a').css('color', 'white');
+  //     console.log("true - one of the nav modules is open");
+  //   } else {
+  //     // $('nav a').removeClass("white");
+  //     $('nav a').css('color', 'black');
+  //     console.log("none of the nav modules are open");
+  //   }
   // }
+
+  // function changeNav() {
+  //   //if any of the nav elements have the class 'showme', then change the text to white, if not, change the text to black
+  //   if (workEl.hasClass('showme') || aboutEl.hasClass('showme') || contactEl.hasClass('showme')) {
+  //     // $('nav a').addClass("white");
+  //     $('nav a').css('color', 'white');
+  //     console.log("true - one of the nav modules is open");
+  //   } else {
+  //     // $('nav a').removeClass("white");
+  //     $('nav a').css('color', 'black');
+  //     console.log("none of the nav modules are open");
+  //   }
+  // }
+
 
   // const workElAttr = workEl.attr('showme');
 
