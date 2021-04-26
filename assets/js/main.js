@@ -1,6 +1,7 @@
-
 $(document).ready(function () {
   //js will only run once HTML doc has loaded - will speed up response time^^
+
+  var sideNav = $('#sidenav');
 
   var workNav = $('.worknav');
   var workEl = $('.work');
@@ -30,7 +31,9 @@ $(document).ready(function () {
 
   // toggle work menu
   function toggleWork() {
-    workEl.toggle("showme");
+    // sideNav.addClass('show')
+    sideNav.toggle('showme');
+    // workEl.toggle("showme");
     workEl.css("z-index", "0.5");
     aboutEl.css({ "display": "none", "z-index": "-0.5" });
     contactEl.css({ "display": "none", "z-index": "-0.5" });
@@ -59,7 +62,8 @@ $(document).ready(function () {
 
   //toggle about menu
   function toggleAbout() {
-    aboutEl.toggle('showme');
+    sideNav.toggle('showme');
+    // aboutEl.toggle('showme');
     aboutEl.css('z-index', '0.5');
     workEl.css({ "display": "none", "z-index": "-0.5" });
     contactEl.css({ "display": "none", "z-index": "-0.5", "transition": "0.5s" });
@@ -70,9 +74,10 @@ $(document).ready(function () {
 
   //toggle contact menu
   function toggleContact() {
+    sideNav.toggle('showme');
     workEl.css({ "display": "none", "z-index": "-0.5" });
     aboutEl.css({ "display": "none", "z-index": "-0.5" });
-    contactEl.toggle('showme');
+    // contactEl.toggle('showme');
     contactEl.css("z-index", "0.5");
     // changeNav()
     closeBtn.addClass('showme');
