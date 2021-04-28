@@ -21,7 +21,7 @@ nav{
     right: -250px;
     bottom: 250px;
     transform: rotate(90deg);
-    z-index: 1;
+    z-index: 99;
 }
 
 #menu{
@@ -171,7 +171,7 @@ h4{
     position:fixed;
     top: 0;
     right: 0;
-    display: block;
+    display: none;
     transition: all 0.5s linear;
     overflow-y: hidden;
 }
@@ -183,7 +183,7 @@ h4{
 #project-img-container{
     overflow-y: scroll;
 }
-/* left menu display and overflow */
+/* RIGHT menu display and overflow */
 .work,
 .about,
 .contact{
@@ -433,7 +433,7 @@ form textarea,
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
 }
-/* RIGHT SIDE - Project sections */
+/* LEFT SIDE - Project sections */
 #project-img-container > section{
     width: 50vw;
     min-height: 100vh;
