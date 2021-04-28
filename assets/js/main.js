@@ -15,6 +15,8 @@ $(document).ready(function () {
   var homeLogoBtn = $('.homelogo');
   var closeBtn = $('.closenav');
 
+  var leftSide = $('.leftside');
+
   var nav = $('nav');
 
 
@@ -27,6 +29,7 @@ $(document).ready(function () {
     closeBtn.removeClass('showme');
     $('nav a').removeClass('white');
     console.log("Close menus");
+    leftSide.css("display", "none");
   }
 
   // toggle work menu
@@ -79,7 +82,7 @@ $(document).ready(function () {
     aboutEl.css({ "display": "none", "z-index": "-0.5" });
     // contactEl.toggle('showme');
     contactEl.css("z-index", "0.5");
-    // changeNav()
+
     closeBtn.addClass('showme');
     $('nav a').addClass('white');
   }
