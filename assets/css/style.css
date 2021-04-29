@@ -11,97 +11,13 @@ body{
     font-weight:lighter;
     font-style: normal;
 }
-
-nav{
-    font-family: degular, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 20px;
-    position: fixed;
-    right: -250px;
-    bottom: 250px;
-    transform: rotate(90deg);
-    z-index: 99;
-}
-
-#menu{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:flex-end;
-    list-style: none;
-    padding: 20px 50px 20px 50px;
-}
-
-nav a{
-    text-decoration: none;
-    color: var(--amBlack);
-    z-index: 99;
-    /* transition: 0.5s; */
-}
-
-nav a.white{
-    color: var(--amWhite);
-}
-
-li a:hover{
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
-
-.closenav{
-    visibility: hidden;
-}
-
-.closenav.showme{
-    visibility: visible;
-}
-
-.homelogo{
+#homelogo{
     position: fixed;
     top: 40px;
     left: 40px;
     z-index: 1;
     cursor: pointer;
 }
-
-/* Slideshow */
-.slideshow-container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-}
-    .mySlides{
-        position: absolute;
-        margin-top: -200px;
-        margin-left: -250px;
-    }
-
-    .fadeslide img{
-        opacity:0; 
-        animation-name: fadeInSlide; 
-        animation-duration: 15s; 
-        animation-iteration-count: infinite;
-    }
-
-    @keyframes fadeInSlide {
-        0%   { opacity: 0; }
-        20%   { opacity: 1; }
-        40%  { opacity: 1; }
-        60%  { opacity: 0; }
-        80%  {opacity: 0;}
-        100% { opacity: 0; }
-    }
-
-    #delay1 { animation-delay: 1s; }
-    #delay2 { animation-delay: 4s; }
-    #delay3 { animation-delay: 7s; }
-    #delay4 { animation-delay: 10s; }
-    #delay5 { animation-delay: 12s; }
-
 /*consistent styling throughout*/
 p{
     font-style: normal;
@@ -163,20 +79,85 @@ h4{
 
 /* MENU FUNCTIONALITY */
 
+/* styling of ALL nav elements */
+nav{
+    font-family: degular, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    position: fixed;
+    right: -250px;
+    bottom: 250px;
+    transform: rotate(90deg);
+    z-index: 99;
+}
+/* positioning of nav elements */
+nav li{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-end;
+    list-style: none;
+    padding: 20px 50px 20px 50px;
+    cursor: pointer;
+}
+nav{
+    text-decoration: none;
+    color: var(--amBlack);
+    z-index: 99;
+}
+
+.menu{
+    visibility: hidden;
+    /* transition: 0.5s; */
+}
+
+.menu:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.menu.showme{
+    visibility: visible;
+}
+
+.menu.white{
+    color: var(--amWhite);
+}
+
+#navBtn{
+    visibility: visible;
+    transform: rotate(45deg);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#navBtn:hover{
+    text-decoration: none;
+}
+
+#navBtn.showme{
+    transform: rotate(0deg);
+}
+#navBtn.white{
+    color: var(--amWhite);
+}
 
 /* sidenav */
 #sidenav{
-    width: 50%;
+    width: 0;
     background-color: black;
     position:fixed;
     top: 0;
     right: 0;
-    display: none;
-    transition: all 0.5s linear;
+    opacity: 0;
     overflow-y: hidden;
+    transition: 0.75s;
 }
 #sidenav.showme{
+    width: 50%;
     display: block;
+    opacity: 1;
     z-index: 1;
 }
 /* right container overflow */
@@ -187,15 +168,26 @@ h4{
 .work,
 .about,
 .contact{
-    display: block;
+    opacity: 0;
+    display: none;
     height: 100vh;
     overflow-y: scroll;
-    transition: 0.5s linear;
+    transform: translateX(100%);
+    transition: 0.75s;
 }
 /* on hover, allow scroll */
 .work:hover{
     overflow: scroll;
 }
+
+.work.showme,
+.about.showme,
+.contact.showme{
+    opacity: 1;
+    display: block;
+    transform: translateX(0%);
+}
+
 /* grid CONTAINER structure of WORK */
 .grid-container-workmenu{
     display: grid;
@@ -205,12 +197,18 @@ h4{
     column-gap: 2em;
     row-gap: 3em;
 }
+.work h1{
+    padding-left: 0px;
+    transition: padding-left 0.25s;
+}
 /* underline on hover of project headings */
 .work h1:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
     cursor: grab;
+    padding-left: 20px;
+    transition: padding-left 0.25s;
 }
 /*toggle descriptions in work menu*/
 .work p{
@@ -221,7 +219,7 @@ h4{
 }
 /* grid CONTAINER structure of ABOUT */
 .grid-container-about{
-    width: 100%;
+    width: 50vw;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
@@ -269,7 +267,7 @@ h4{
         grid-template-rows: 45px auto;
         column-gap: 1em;
         row-gap: 1em;
-
+        color: var(--amWhite);
     }
 /*FADE IN ANIMATION*/
 #fade,
@@ -326,7 +324,7 @@ h4{
 
 /* grid CONTAINER structure of CONTACT */
 .grid-container-contact{
-    width: 100%;
+    width: 50vw;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
@@ -462,3 +460,42 @@ form textarea,
     display: flex;
     z-index: 1;
 }
+
+
+
+/* Slideshow */
+.slideshow-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+    .mySlides{
+        position: absolute;
+        margin-top: -200px;
+        margin-left: -250px;
+    }
+
+    .fadeslide img{
+        opacity:0; 
+        animation-name: fadeInSlide; 
+        animation-duration: 15s; 
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes fadeInSlide {
+        0%   { opacity: 0; }
+        20%   { opacity: 1; }
+        40%  { opacity: 1; }
+        60%  { opacity: 0; }
+        80%  {opacity: 0;}
+        100% { opacity: 0; }
+    }
+
+    #delay1 { animation-delay: 1s; }
+    #delay2 { animation-delay: 4s; }
+    #delay3 { animation-delay: 7s; }
+    #delay4 { animation-delay: 10s; }
+    #delay5 { animation-delay: 12s; }
