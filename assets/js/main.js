@@ -4,7 +4,7 @@ $(document).ready(function () {
   // ELEMENTS
   const menuEl = $(".menu");
   const navEl = $("nav");
-  const sideNav = $("#sidenav");
+  const rightCont = $("#rightcont");
   const workEl = $(".work")
   const aboutEl = $(".about")
   const contactEl = $(".contact")
@@ -16,41 +16,109 @@ $(document).ready(function () {
   const contactNav = $("#contactNav")
   const amLogo = $("#homelogo")
 
+  // BOOLEANS TO DEFINE WHETHER OR NOT SECTIONS ARE OPEN
+  var isRightContOpen = false;
+  var isWorkElOpen = false;
+  var isAboutElOpen = false;
+  var isContactElOpen = false;
+
   // SHOW - HIDE MENU ON HOVER
   function showMenu() {
     menuEl.addClass("showme");
     navBtn.addClass("showme");
+    console.log("show menu on hover")
   }
+
   function hideMenu() {
     menuEl.removeClass("showme white");
     navBtn.removeClass("showme white");
     workEl.removeClass("showme");
     aboutEl.removeClass("showme");
     contactEl.removeClass("showme");
+
+    workNav.removeClass("underline");
+    aboutNav.removeClass("underline");
+
+    console.log("menu hidden")
   }
 
-  // HANDLE MENU FUNCTION FOR ALL NAV ITEMS
+  // HANDLE MENU FUNCTION FOR ALL NAV ITEMS - changing text to white etc.
   function handleMenu() {
     menuEl.removeClass("showme");
-    sideNav.toggleClass("showme");
-    menuEl.toggleClass("showme white");
-    navBtn.toggleClass("white");
+    rightCont.addClass("showme");
+    menuEl.addClass("showme white");
+    navBtn.addClass("white");
+
+    isRightContOpen = false;
+    isWorkElOpen = false;
+    isAboutElOpen = false;
   }
   // SHOW WORK EL
   function showWork() {
-    handleMenu();
+    if (isRightContOpen == false) {
+      handleMenu();
+      workNav.addClass("underline");
+      workEl.addClass("showme");
 
-    aboutEl.removeClass("showme");
-    contactEl.removeClass("showme");
-    workEl.toggleClass("showme");
+      isRightContOpen = true;
+      isWorkElOpen = true;
+    } else if (isRightContOpen == true && isWorkElOpen === true) {
+      hideMenu();
+      isRightContOpen = false;
+      isWorkElOpen = false;
+    }
   }
+
   // SHOW ABOUT EL
   function showAbout() {
-    handleMenu();
-    workEl.removeClass("showme");
-    contactEl.removeClass("showme");
-    aboutEl.addClass("showme");
+    if (isRightContOpen == false) {
+      handleMenu();
+      aboutNav.addClass("underline");
+      aboutEl.addClass("showme");
+
+      isRightContOpen = true;
+      isAboutElOpen = true;
+    } else if (isRightContOpen == true && isAboutElOpen === true) {
+      hideMenu();
+      isRightContOpen = false;
+      isAboutElOpen = false;
+    }
   }
+
+
+
+  // SHOW ABOUT EL
+  // function showAbout() {
+  //   handleMenu();
+  //   workEl.removeClass("showme");
+  //   contactEl.removeClass("showme");
+  //   aboutEl.addClass("showme");
+  // }
+
+  // handleMenu();
+  // contactEl.removeClass("showme");
+  // aboutEl.removeClass("showme");
+  // workEl.addClass("showme");
+
+  // workNav.css({ "text-decoration": "underline", "text-underline-offset": "3px" });
+
+  // function handleWork() {
+  //   if (!workEl.hasClass("showme")) {
+  //     aboutEl.removeClass("showme");
+  //     contactEl.removeClass("showme");
+  //     handleMenu();
+  //     workEl.addClass("showme");
+  //     console.log("add class")
+  //   } else {
+  //     workEl.removeClass("showme");
+  //     hideMenu();
+  //     console.log("handle work function returned");
+  //     return
+  //   }
+  // }
+
+
+
   // SHOW CONTACT EL
   function showContact() {
     handleMenu();
@@ -69,11 +137,39 @@ $(document).ready(function () {
 
 
 
-  // TO DO: add function to open and close menu
-  // TO DO: add function to close menu when AM logo is clicked
-  // TO DO: add function to change the nav menu text to white when menu is open (and background is black)
+
   // TO DO: add function to show project images on LEFT hand side when their corresponding project headings are clicked
   // TO DO: add function to show/hide the list of services on hover
   // TO DO: add functionality of form!!
 
+
+
+  // 	$('.grid-container-workmenu').on('click', 'div', function() {
+  // 		showTarget($(this));
+  // 	});
+
+  // // show the hovered list item stuff
+  // function showTarget(e) {
+  // 	// $('.grid-container-workmenu').removeClass('hover');
+
+  // 	var target = $(e).attr('data-target');
+  // 	var showcaseHeight = $('.showcase-menu').outerHeight();
+
+  // 	showcaseHeight = (showcaseHeight * target) * -1;
+
+  // 	$('.showcase-menu').css({
+  // 		top: showcaseHeight
+  // 	});
+
+  // 	$(e).addClass('hover');
+  // }
+
+
+
+
+
+
+
+
 });
+

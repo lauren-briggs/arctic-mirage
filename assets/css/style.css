@@ -107,6 +107,13 @@ nav{
     z-index: 99;
 }
 
+#workNav.underline,
+#aboutNav.underline,
+#contactNav.underline{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .menu{
     visibility: hidden;
     /* transition: 0.5s; */
@@ -143,21 +150,19 @@ nav{
     color: var(--amWhite);
 }
 
-/* sidenav */
-#sidenav{
+/* right container */
+#rightcont{
     width: 0;
     background-color: black;
     position:fixed;
     top: 0;
     right: 0;
-    opacity: 0;
     overflow-y: hidden;
     transition: 0.75s;
 }
-#sidenav.showme{
+#rightcont.showme{
     width: 50%;
     display: block;
-    opacity: 1;
     z-index: 1;
 }
 /* right container overflow */
@@ -168,12 +173,11 @@ nav{
 .work,
 .about,
 .contact{
-    opacity: 0;
     display: none;
     height: 100vh;
     overflow-y: scroll;
     transform: translateX(100%);
-    transition: 0.75s;
+    transition: 0.75;
 }
 /* on hover, allow scroll */
 .work:hover{
@@ -183,7 +187,6 @@ nav{
 .work.showme,
 .about.showme,
 .contact.showme{
-    opacity: 1;
     display: block;
     transform: translateX(0%);
 }
