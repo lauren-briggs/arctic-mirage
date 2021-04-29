@@ -30,6 +30,7 @@ $(document).ready(function () {
   }
 
   function hideMenu() {
+    rightCont.removeClass("showme");
     menuEl.removeClass("showme white");
     navBtn.removeClass("showme white");
     workEl.removeClass("showme");
@@ -38,6 +39,7 @@ $(document).ready(function () {
 
     workNav.removeClass("underline");
     aboutNav.removeClass("underline");
+    contactNav.removeClass("underline");
 
     console.log("menu hidden")
   }
@@ -52,80 +54,135 @@ $(document).ready(function () {
     isRightContOpen = false;
     isWorkElOpen = false;
     isAboutElOpen = false;
+    isContactElOpen = false;
   }
-  // SHOW WORK EL
+  // WORK WORK WORK
+  // WHEN WORK IS OPEN ADD UNDERLINE AND SHOW DIV
+  function workActive() {
+    workNav.addClass("underline");
+    workEl.addClass("showme");
+  }
+
+  // SHOW WORK FUNCTIONALITY AND CONDITIONS
   function showWork() {
-    if (isRightContOpen == false) {
+    if (isRightContOpen === false) {
       handleMenu();
-      workNav.addClass("underline");
-      workEl.addClass("showme");
+      workActive();
 
       isRightContOpen = true;
       isWorkElOpen = true;
-    } else if (isRightContOpen == true && isWorkElOpen === true) {
+    } else if (isAboutElOpen === true || isContactElOpen === true) {
+      console.log(`Is about open: ${isAboutElOpen}`);
+      // closing About and Contact sections and removing their underline
+      aboutEl.removeClass("showme");
+      aboutNav.removeClass("underline");
+      isAboutElOpen = false;
+      contactEl.removeClass("showme");
+      contactNav.removeClass("underline");
+      isContactElOpen = false;
+
+      console.log(`Is about still open: ${isAboutElOpen}`);
+
+      // handle basic menu function and show Work
+      handleMenu();
+      workActive();
+
+      // redefine values as true
+      isRightContOpen = true;
+      isWorkElOpen = true;
+
+    } else if (isRightContOpen === true && isWorkElOpen === true) {
       hideMenu();
       isRightContOpen = false;
       isWorkElOpen = false;
     }
   }
 
-  // SHOW ABOUT EL
+  // ABOUT ABOUT ABOUT
+  // WHEN ABOUT IS OPEN ADD UNDERLINE AND SHOW DIV
+  function aboutActive() {
+    aboutNav.addClass("underline");
+    aboutEl.addClass("showme");
+  }
+
+  // SHOW ABOUT FUNCTIONALITY AND CONDITIONS
   function showAbout() {
-    if (isRightContOpen == false) {
+    if (isRightContOpen === false) {
       handleMenu();
-      aboutNav.addClass("underline");
-      aboutEl.addClass("showme");
+      aboutActive();
 
       isRightContOpen = true;
       isAboutElOpen = true;
-    } else if (isRightContOpen == true && isAboutElOpen === true) {
+    } else if (isWorkElOpen === true || isContactElOpen === true) {
+      console.log(`Is work open: ${isWorkElOpen}`);
+      // closing About and Contact sections and removing their underline
+      workEl.removeClass("showme");
+      workNav.removeClass("underline");
+      isWorkElOpen = false;
+      contactEl.removeClass("showme");
+      contactNav.removeClass("underline");
+      isContactElOpen = false;
+
+
+      console.log(`Is work still open: ${isWorkElOpen}`);
+
+      // handle basic menu function and show Work
+      handleMenu();
+      aboutActive();
+
+      // redefine values as true
+      isRightContOpen = true;
+      isAboutElOpen = true;
+
+    } else if (isRightContOpen === true && isAboutElOpen === true) {
       hideMenu();
       isRightContOpen = false;
       isAboutElOpen = false;
     }
   }
-
-
-
-  // SHOW ABOUT EL
-  // function showAbout() {
-  //   handleMenu();
-  //   workEl.removeClass("showme");
-  //   contactEl.removeClass("showme");
-  //   aboutEl.addClass("showme");
-  // }
-
-  // handleMenu();
-  // contactEl.removeClass("showme");
-  // aboutEl.removeClass("showme");
-  // workEl.addClass("showme");
-
-  // workNav.css({ "text-decoration": "underline", "text-underline-offset": "3px" });
-
-  // function handleWork() {
-  //   if (!workEl.hasClass("showme")) {
-  //     aboutEl.removeClass("showme");
-  //     contactEl.removeClass("showme");
-  //     handleMenu();
-  //     workEl.addClass("showme");
-  //     console.log("add class")
-  //   } else {
-  //     workEl.removeClass("showme");
-  //     hideMenu();
-  //     console.log("handle work function returned");
-  //     return
-  //   }
-  // }
-
-
-
-  // SHOW CONTACT EL
-  function showContact() {
-    handleMenu();
-    workEl.removeClass("showme");
-    aboutEl.removeClass("showme");
+  // CONTACT CONTACT CONTACT
+  // WHEN CONTACT IS OPEN ADD UNDERLINE AND SHOW DIV
+  function contactActive() {
+    contactNav.addClass("underline");
     contactEl.addClass("showme");
   }
+
+  // SHOW CONTACT FUNCTIONALITY AND CONDITIONS
+  function showContact() {
+    if (isRightContOpen === false) {
+      handleMenu();
+      contactActive();
+
+      isRightContOpen = true;
+      isContactElOpen = true;
+    } else if (isWorkElOpen === true || isAboutElOpen === true) {
+      console.log(`Is work open: ${isWorkElOpen}`);
+      // closing About and Contact sections and removing their underline
+      workEl.removeClass("showme");
+      workNav.removeClass("underline");
+      isWorkElOpen = false;
+      aboutEl.removeClass("showme");
+      aboutNav.removeClass("underline");
+      isAboutElOpen = false;
+
+      console.log(`Is work still open: ${isWorkElOpen}`);
+
+      // handle basic menu function and show Work
+      handleMenu();
+      contactActive();
+
+      // redefine values as true
+      isRightContOpen = true;
+      isContactElOpen = true;
+
+    } else if (isRightContOpen === true && isContactElOpen === true) {
+      hideMenu();
+      isRightContOpen = false;
+      isContactElOpen = false;
+    }
+  }
+
+
 
   // CALLING FUNCTIONS
   navBtn.mouseenter(showMenu);
@@ -139,7 +196,6 @@ $(document).ready(function () {
 
 
   // TO DO: add function to show project images on LEFT hand side when their corresponding project headings are clicked
-  // TO DO: add function to show/hide the list of services on hover
   // TO DO: add functionality of form!!
 
 

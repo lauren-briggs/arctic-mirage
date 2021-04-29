@@ -158,11 +158,13 @@ nav{
     top: 0;
     right: 0;
     overflow-y: hidden;
+    transform: translateX(100%);
     transition: 0.75s;
 }
 #rightcont.showme{
     width: 50%;
     display: block;
+    transform: translateX(0%);
     z-index: 1;
 }
 /* right container overflow */
@@ -273,17 +275,17 @@ nav{
         color: var(--amWhite);
     }
 /*FADE IN ANIMATION*/
-#fade,
+/* #fade,
 .fade{
     opacity: 1;
     animation: fadeIn;
-    animation-duration: 2s;
+    animation-duration: 0.5s;
 }
 
 @keyframes fadeIn{
     from{ opacity: 0;}
     to{ opacity: 1;}
-}
+} */
 /* grid composition of ABOUT TEAM */
     #alex,
     #ahna{
