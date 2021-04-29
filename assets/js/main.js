@@ -5,6 +5,7 @@ $(document).ready(function () {
   const menuEl = $(".menu");
   const navEl = $("nav");
   const rightCont = $("#rightcont");
+  // const leftCont = $(".leftCont");
   const workEl = $(".work")
   const aboutEl = $(".about")
   const contactEl = $(".contact")
@@ -183,6 +184,19 @@ $(document).ready(function () {
   }
 
 
+  // SHOW PROJECT IMAGES ON CLICK
+
+  function showProject() {
+    var thisProject = $(this).attr("id");
+    console.log(thisProject);
+
+    // TO DO: connect thisProject variable with the class name in DOM to show/hide project imgs
+    var thisProClass = $(".project" + thisProject);
+    console.log(`clicked on: ${thisProClass}`);
+
+    thisProClass.addClass("showme");
+  }
+
 
   // CALLING FUNCTIONS
   navBtn.mouseenter(showMenu);
@@ -191,6 +205,7 @@ $(document).ready(function () {
   workNav.click(showWork);
   aboutNav.click(showAbout);
   contactNav.click(showContact);
+  $(".grid-item-workmenu").click(showProject);
 
 
 

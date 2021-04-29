@@ -1,0 +1,123 @@
+
+@media screen and (max-width: 1350px ) {
+    h1{
+        font-size: 34px;
+    }
+    h2{
+        font-size: 26px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .grid-container-workmenu{
+        row-gap: 2.5em;
+    }
+    /* ABOUT SECTION RESIZING */
+    .grid-container-about{
+        row-gap: 1.5em;
+    }
+    .grid-item-about{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+    }
+    #alex-text{
+        grid-row: 3;
+    }
+    #minka-img{
+        grid-row: 6;
+    }
+    #minka-text{
+        grid-row: 7;
+    }
+    #about-services{
+        grid-row: 10;
+        margin-top: 2em;
+    }
+    #about-client{
+        grid-row: 19;
+        padding-top: 2em;
+    }
+    #about-client-text{
+        grid-row: 20;
+    }
+    #about-client-img{
+        grid-row: 21;
+    }
+    #grid-container-services{
+        grid-template-rows: auto;
+    }
+    #grid-container-clients{
+        grid-template-columns: auto auto;
+    }
+    /* CONTACT SECTION RESIZING */
+    .grid-container-contact{
+        padding-bottom: 10em;
+        row-gap: 1em;
+        height: 90vh;
+    }
+    #contact-socials{
+        grid-row: 6;
+    }
+    .grid-container-socials{
+        grid-template-columns: auto auto auto;
+        row-gap: 0.75em;
+        padding-bottom: 3em;
+    }
+    #amCopyright{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row: 2;
+        justify-self: center;
+    }
+}
+@media screen and (max-width: 1200px) {
+    /* CONTACT SECTION RESIZING */
+    #contact-socials{
+        grid-row: 6;
+    }        
+    #address,
+    #enquiries{
+        grid-column: 1 /span 2;
+    }
+    #contact-form{
+        grid-row: 4;
+    }
+
+}
+@media screen and (max-width: 1024px ) {
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    /* CONTACT SECTION RESIZING */
+    .grid-container-socials{
+        grid-template-columns: auto auto;
+        row-gap: 0.75em;
+        padding-bottom: 3em;
+    }
+    #amCopyright{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row: 3;
+        justify-self: center;
+    }
+    .grid-item-contact-sub{
+        justify-self: center;
+    }
+    .grid-item-contact-sub:last-child{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+    }
+
+}
+
+@media screen and (max-width: 768px ) {
+
+}
+@media screen and (max-width: 480px ) {
+
+
+}
