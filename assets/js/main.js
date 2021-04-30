@@ -3,9 +3,9 @@ $(document).ready(function () {
 
   // ELEMENTS
   const menuEl = $(".menu");
-  const navEl = $("nav");
+  // const navEl = $("nav");
   const rightCont = $("#rightcont");
-  // const leftCont = $(".leftCont");
+  const leftCont = $(".leftCont");
   const workEl = $(".work")
   const aboutEl = $(".about")
   const contactEl = $(".contact")
@@ -187,14 +187,15 @@ $(document).ready(function () {
   // SHOW PROJECT IMAGES ON CLICK
 
   function showProject() {
-    var thisProject = $(this).attr("id");
-    console.log(thisProject);
-
+    var i = $(this).attr("id");
+    console.log(i);
+    // TO DO: close imgs when another is clicked
+    // TO DO: close imgs when menu is closed
     // TO DO: connect thisProject variable with the class name in DOM to show/hide project imgs
-    var thisProClass = $(".project" + thisProject);
-    console.log(`clicked on: ${thisProClass}`);
+    var thisProClass = `.project${i}`;
+    console.log(thisProClass);
 
-    thisProClass.addClass("showme");
+    $(`${thisProClass}`).css("display", "flex");
   }
 
 

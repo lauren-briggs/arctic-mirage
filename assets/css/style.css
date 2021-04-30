@@ -10,6 +10,7 @@ body{
     font-family: degular, sans-serif;
     font-weight:lighter;
     font-style: normal;
+    cursor: default;
 }
 #homelogo{
     position: fixed;
@@ -269,7 +270,7 @@ nav{
     #grid-container-services{
         display: grid;
         grid-template-columns: 45px auto;
-        grid-template-rows: 45px auto;
+        grid-template-rows: 40px auto;
         column-gap: 1em;
         row-gap: 1em;
         color: var(--amWhite);
@@ -392,7 +393,8 @@ form textarea,
     margin: 0.5em 0em;
     color: white;
     background-color: black;
-    border: 1px solid white;
+    border: none;
+    border-bottom: 2px solid var(--amWhite);
     justify-content: space-around;
     font-family: degular, sans-serif;
     font-weight:lighter;
@@ -401,20 +403,31 @@ form textarea,
     text-transform: uppercase;
 }
 #submit:hover{
-    background-color: white;
-    color: black;
+    background-color: var(--amWhite);
+    color: var(--amBlack);
+    cursor: pointer;
+}
+::placeholder{
+    color: var(--amWhite);
 }
 #name:hover,
 #email:hover,
 #subject:hover,
 #message:hover{
-    border: 2px solid white;
+    /* color: var(--amBlack); */
+    background-color: rgb(254, 254, 247);
 }
+
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+    color: var(--amBlack);
+}
+
 #name:focus,
 #email:focus,
 #subject:focus,
 #message:focus{
-    border: 2px solid white;
+    border: 2px solid var(--amWhite);
     outline: none;
 }
 /*social links style*/
@@ -426,11 +439,11 @@ form textarea,
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    color: white;
+    color: var(--amWhite);
 }
 .contact a:link,
 .contact a:visited{
-    color: white;
+    color: var(--amWhite);
     text-decoration: none;
 }
 .contact a:hover{
@@ -446,7 +459,7 @@ form textarea,
 #project-img-container > section{
     width: 50vw;
     min-height: 100vh;
-    background-color: white;
+    background-color: var(--amWhite);
     position:absolute;
     top: 0px;
     left: 0px;
@@ -471,8 +484,6 @@ form textarea,
     display: flex;
     z-index: 1;
 }
-
-
 
 /* Slideshow */
 .slideshow-container{
