@@ -422,6 +422,10 @@ input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder {
     color: var(--amBlack);
 }
+input:hover,
+textarea:hover{
+    color: var(--amBlack);
+}
 
 #name:focus,
 #email:focus,
@@ -467,22 +471,14 @@ textarea:hover::-webkit-input-placeholder {
     margin: 0px;
     z-index: 99;
     display: none;
+    transform: translateX(-100%);
+    transition: 0.75s;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .project .img{
     display: flex;
-}
-/* FETTI */
-.projectfetti.showme{
-    display: flex;
-    z-index: 1;
-}
-/* FARMER */
-.projectfarmer.showme{
-    display: flex;
-    z-index: 1;
 }
 
 /* Slideshow */

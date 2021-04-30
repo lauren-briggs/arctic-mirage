@@ -5,7 +5,7 @@ $(document).ready(function () {
   const menuEl = $(".menu");
   // const navEl = $("nav");
   const rightCont = $("#rightcont");
-  const leftCont = $(".leftCont");
+  const leftCont = $(".leftcont");
   const workEl = $(".work")
   const aboutEl = $(".about")
   const contactEl = $(".contact")
@@ -19,30 +19,43 @@ $(document).ready(function () {
 
   // BOOLEANS TO DEFINE WHETHER OR NOT SECTIONS ARE OPEN
   var isRightContOpen = false;
+  var isLeftContOpen = false;
   var isWorkElOpen = false;
   var isAboutElOpen = false;
-  var isContactElOpen = false;
+  var isContactElOpen = false;  
 
-  // SHOW - HIDE MENU ON HOVER
+  // SHOW INITIAL MENU ON HOVER
   function showMenu() {
     menuEl.addClass("showme");
     navBtn.addClass("showme");
-    console.log("show menu on hover")
   }
 
-  function hideMenu() {
-    rightCont.removeClass("showme");
+// HIDE MENU/CLOSE ALL
+  function closeAll() {
+    // checking if right container is open and closing if true
+    if(isRightContOpen === true){
+      rightCont.removeClass("showme");
+    }
+    // closing menu, navBtn, work, about and contact and removing white text class
     menuEl.removeClass("showme white");
     navBtn.removeClass("showme white");
     workEl.removeClass("showme");
     aboutEl.removeClass("showme");
     contactEl.removeClass("showme");
 
+    // checking if left container is open and closing if true
+    if (isLeftContOpen === true) {
+      $(".leftcont").children().each(function(){
+        $(this).css("display","none")});
+      }
+    // redefining booleans
+    isRightContOpen = false;
+    isLeftContOpen = false;
+
+    // removing underlines
     workNav.removeClass("underline");
     aboutNav.removeClass("underline");
     contactNav.removeClass("underline");
-
-    console.log("menu hidden")
   }
 
   // HANDLE MENU FUNCTION FOR ALL NAV ITEMS - changing text to white etc.
@@ -73,7 +86,6 @@ $(document).ready(function () {
       isRightContOpen = true;
       isWorkElOpen = true;
     } else if (isAboutElOpen === true || isContactElOpen === true) {
-      console.log(`Is about open: ${isAboutElOpen}`);
       // closing About and Contact sections and removing their underline
       aboutEl.removeClass("showme");
       aboutNav.removeClass("underline");
@@ -81,8 +93,6 @@ $(document).ready(function () {
       contactEl.removeClass("showme");
       contactNav.removeClass("underline");
       isContactElOpen = false;
-
-      console.log(`Is about still open: ${isAboutElOpen}`);
 
       // handle basic menu function and show Work
       handleMenu();
@@ -93,7 +103,7 @@ $(document).ready(function () {
       isWorkElOpen = true;
 
     } else if (isRightContOpen === true && isWorkElOpen === true) {
-      hideMenu();
+      closeAll();
       isRightContOpen = false;
       isWorkElOpen = false;
     }
@@ -115,7 +125,6 @@ $(document).ready(function () {
       isRightContOpen = true;
       isAboutElOpen = true;
     } else if (isWorkElOpen === true || isContactElOpen === true) {
-      console.log(`Is work open: ${isWorkElOpen}`);
       // closing About and Contact sections and removing their underline
       workEl.removeClass("showme");
       workNav.removeClass("underline");
@@ -123,9 +132,11 @@ $(document).ready(function () {
       contactEl.removeClass("showme");
       contactNav.removeClass("underline");
       isContactElOpen = false;
-
-
-      console.log(`Is work still open: ${isWorkElOpen}`);
+      if (isLeftContOpen === true) {
+        $(".leftcont").children().each(function(){
+          $(this).css("display","none")});
+        }
+        isLeftContOpen = false;
 
       // handle basic menu function and show Work
       handleMenu();
@@ -136,7 +147,7 @@ $(document).ready(function () {
       isAboutElOpen = true;
 
     } else if (isRightContOpen === true && isAboutElOpen === true) {
-      hideMenu();
+      closeAll();
       isRightContOpen = false;
       isAboutElOpen = false;
     }
@@ -157,7 +168,6 @@ $(document).ready(function () {
       isRightContOpen = true;
       isContactElOpen = true;
     } else if (isWorkElOpen === true || isAboutElOpen === true) {
-      console.log(`Is work open: ${isWorkElOpen}`);
       // closing About and Contact sections and removing their underline
       workEl.removeClass("showme");
       workNav.removeClass("underline");
@@ -165,8 +175,12 @@ $(document).ready(function () {
       aboutEl.removeClass("showme");
       aboutNav.removeClass("underline");
       isAboutElOpen = false;
-
-      console.log(`Is work still open: ${isWorkElOpen}`);
+      // 
+      if (isLeftContOpen === true) {
+        $(".leftcont").children().each(function(){
+          $(this).css("display","none")});
+        }
+        isLeftContOpen = false;
 
       // handle basic menu function and show Work
       handleMenu();
@@ -177,7 +191,7 @@ $(document).ready(function () {
       isContactElOpen = true;
 
     } else if (isRightContOpen === true && isContactElOpen === true) {
-      hideMenu();
+      closeAll();
       isRightContOpen = false;
       isContactElOpen = false;
     }
@@ -185,27 +199,34 @@ $(document).ready(function () {
 
 
   // SHOW PROJECT IMAGES ON CLICK
-
   function showProject() {
+    // Checking if left side/other project images are open and closing them if true
+    if (isLeftContOpen === true) {
+      $(".leftcont").children().each(function(){
+        $(this).css("display","none")});
+    }
+    
+    // Getting the id value of the target el
     var i = $(this).attr("id");
-    console.log(i);
-    // TO DO: close imgs when another is clicked
-    // TO DO: close imgs when menu is closed
-    // TO DO: connect thisProject variable with the class name in DOM to show/hide project imgs
-    var thisProClass = `.project${i}`;
-    console.log(thisProClass);
 
-    $(`${thisProClass}`).css("display", "flex");
+    // creating a variable that holds the class name using i value and changing display to flex
+    var thisProClass = `.project${i}`;
+
+    // TO DO: translateX - animate in
+    $(`${thisProClass}`).css({"display": "flex","transform": "translateX(0%)"});
+
+    isLeftContOpen = true;
   }
 
 
   // CALLING FUNCTIONS
   navBtn.mouseenter(showMenu);
-  navBtn.click(hideMenu);
-  amLogo.click(hideMenu);
+  navBtn.click(closeAll);
+  amLogo.click(closeAll);
   workNav.click(showWork);
   aboutNav.click(showAbout);
   contactNav.click(showContact);
+  $(".slideshow-container").click(closeAll);
   $(".grid-item-workmenu").click(showProject);
 
 
