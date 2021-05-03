@@ -232,37 +232,8 @@ $(document).ready(function () {
 
 
 
-  // TO DO: add function to show project images on LEFT hand side when their corresponding project headings are clicked
   // TO DO: add functionality of form!!
 
-
-
-  // 	$('.grid-container-workmenu').on('click', 'div', function() {
-  // 		showTarget($(this));
-  // 	});
-
-  // // show the hovered list item stuff
-  // function showTarget(e) {
-  // 	// $('.grid-container-workmenu').removeClass('hover');
-
-  // 	var target = $(e).attr('data-target');
-  // 	var showcaseHeight = $('.showcase-menu').outerHeight();
-
-  // 	showcaseHeight = (showcaseHeight * target) * -1;
-
-  // 	$('.showcase-menu').css({
-  // 		top: showcaseHeight
-  // 	});
-
-  // 	$(e).addClass('hover');
-  // }
-
-
-
-
-
-
-
-
+  
 });
 

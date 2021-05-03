@@ -16,7 +16,7 @@ body{
     position: fixed;
     top: 40px;
     left: 40px;
-    z-index: 1;
+    z-index: 100;
     cursor: pointer;
 }
 /*consistent styling throughout*/
@@ -47,7 +47,7 @@ h4{
 
 /* h1 styling for project titles in menu */
 h1{
-    font-size: 40px;
+    font-size: 26px;
     font-weight: 300;
     line-height: 1.5;
 }
@@ -163,12 +163,12 @@ nav{
     transition: 0.75s;
 }
 #rightcont.showme{
-    width: 50%;
+    width: 40%;
     display: block;
     transform: translateX(0%);
     z-index: 1;
 }
-/* right container overflow */
+/* left container overflow */
 #project-img-container{
     overflow-y: scroll;
 }
@@ -225,7 +225,7 @@ nav{
 }
 /* grid CONTAINER structure of ABOUT */
 .grid-container-about{
-    width: 50vw;
+    width: 40vw;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
@@ -275,18 +275,6 @@ nav{
         row-gap: 1em;
         color: var(--amWhite);
     }
-/*FADE IN ANIMATION*/
-/* #fade,
-.fade{
-    opacity: 1;
-    animation: fadeIn;
-    animation-duration: 0.5s;
-}
-
-@keyframes fadeIn{
-    from{ opacity: 0;}
-    to{ opacity: 1;}
-} */
 /* grid composition of ABOUT TEAM */
     #alex,
     #ahna{
@@ -330,7 +318,7 @@ nav{
 
 /* grid CONTAINER structure of CONTACT */
 .grid-container-contact{
-    width: 50vw;
+    width: 40vw;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
@@ -461,7 +449,7 @@ textarea:hover{
     display: none;
 } */
 #project-img-container > section{
-    width: 50vw;
+    width: 60vw;
     min-height: 100vh;
     background-color: var(--amWhite);
     position:absolute;
