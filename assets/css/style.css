@@ -61,21 +61,29 @@ h2{
 
 /* job title */
 h3{
+    font-weight:300;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+/* number and service heading */
+h4{
     font-weight: 300;
     font-size: 16px;
     text-decoration: underline;
     text-transform:uppercase;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
-    line-height: 1.5;
+    line-height: 19px;
 }
 
-/* number and service heading */
-h4{
-    font-size: 14px;
+h5{
+    font-size: 15px;
     font-weight: normal;
-    line-height: 1.25;
+    line-height: 19px;
 }
+
+
 /* end consistent styling section */
 
 /* MENU FUNCTIONALITY */
@@ -246,36 +254,38 @@ nav li{
     padding-top: 15px;
 }
 /* grid CONTAINER structure of ABOUT */
+#about-intro{
+    width: 100%;
+    padding: 3em 10em 4em 4em;
+}
 .grid-container-about{
     width: 40vw;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
-    padding: 3em 10em 4em 4em;
+    padding: 3em 10em 3em 4em;
     column-gap: 2em;
     row-gap: 3em;
 }
 /* grid ITEMS composition of ABOUT */
-    #about-intro{
-        grid-column: 1 / span 2;
-    }
     .grid-container-about img{
         grid-column: 1 / span 2;
     }
-    #about-client{
-        grid-column-start: 1;
-        grid-column-end: span 2;
-        grid-row: 11;
+    #team-heading{
+        grid-column: 1 / span 2;
     }
     #about-client-text{
         grid-column-start: 1;
         grid-column-end: span 2;
-        grid-row: 12;
+        grid-row: 11;
+    }
+    #client-heading{
+        padding-bottom: 1em;
     }
     #about-client-img{
         grid-column-start: 1;
         grid-column-end: span 2;
-        grid-row: 13;
+        grid-row: 12;
     }
     #about-services{
         grid-column-start: 1;
@@ -314,12 +324,6 @@ nav li{
     }
 
 /*list of services*/
-.about h4{  
-    font-size: 18px;
-    text-transform: none;
-    font-weight: 400;
-
-}
 .about li{
     list-style:none;
     font-size: 16px;
@@ -350,7 +354,7 @@ nav li{
     padding:3em 11em 3em 4em;
     column-gap: 2em;
     row-gap: 2.5em;
-    height: 100vh;
+    /* height: 100vh; */
     align-content: space-between;
 }
 /* grid ITEMS composition of CONTACT */
@@ -358,13 +362,16 @@ nav li{
     grid-column: 1 / span 2;
 }
 #contact-form{
-    grid-column-start: 1;
+    padding:3em 11em 3em 4em;
+    /* grid-column-start: 1;
     grid-column-end: span 2;
-    grid-row: 3;
+    grid-row: 3; */
 }
 #contact-socials{
-    grid-column-start: 1;
-    grid-column-end: span 2;
+
+    padding:0em 11em 3em 4em;
+    /* grid-column-start: 1;
+    grid-column-end: span 2; */
     grid-row: 5;
     display: flex;
     padding-bottom: 2em;
@@ -384,9 +391,9 @@ nav li{
 #address,
 #enquiries{
     max-width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-start; */
     flex: 1 0 20%;
     /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
