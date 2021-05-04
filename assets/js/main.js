@@ -22,7 +22,7 @@ $(document).ready(function () {
   var isLeftContOpen = false;
   var isWorkElOpen = false;
   var isAboutElOpen = false;
-  var isContactElOpen = false;  
+  var isContactElOpen = false;
 
   // SHOW INITIAL MENU ON HOVER
   function showMenu() {
@@ -30,10 +30,10 @@ $(document).ready(function () {
     navBtn.addClass("showme");
   }
 
-// HIDE MENU/CLOSE ALL
+  // HIDE MENU/CLOSE ALL
   function closeAll() {
     // checking if right container is open and closing if true
-    if(isRightContOpen === true){
+    if (isRightContOpen === true) {
       rightCont.removeClass("showme");
     }
     // closing menu, navBtn, work, about and contact and removing white text class
@@ -45,9 +45,10 @@ $(document).ready(function () {
 
     // checking if left container is open and closing if true
     if (isLeftContOpen === true) {
-      $(".leftcont").children().each(function(){
-        $(this).css("display","none")});
-      }
+      $(".leftcont").children().each(function () {
+        $(this).css("display", "none")
+      });
+    }
     // redefining booleans
     isRightContOpen = false;
     isLeftContOpen = false;
@@ -133,10 +134,11 @@ $(document).ready(function () {
       contactNav.removeClass("underline");
       isContactElOpen = false;
       if (isLeftContOpen === true) {
-        $(".leftcont").children().each(function(){
-          $(this).css("display","none")});
-        }
-        isLeftContOpen = false;
+        $(".leftcont").children().each(function () {
+          $(this).css("display", "none")
+        });
+      }
+      isLeftContOpen = false;
 
       // handle basic menu function and show Work
       handleMenu();
@@ -177,10 +179,11 @@ $(document).ready(function () {
       isAboutElOpen = false;
       // 
       if (isLeftContOpen === true) {
-        $(".leftcont").children().each(function(){
-          $(this).css("display","none")});
-        }
-        isLeftContOpen = false;
+        $(".leftcont").children().each(function () {
+          $(this).css("display", "none")
+        });
+      }
+      isLeftContOpen = false;
 
       // handle basic menu function and show Work
       handleMenu();
@@ -202,10 +205,11 @@ $(document).ready(function () {
   function showProject() {
     // Checking if left side/other project images are open and closing them if true
     if (isLeftContOpen === true) {
-      $(".leftcont").children().each(function(){
-        $(this).css("display","none")});
+      $(".leftcont").children().each(function () {
+        $(this).css("display", "none")
+      });
     }
-    
+
     // Getting the id value of the target el
     var i = $(this).attr("id");
 
@@ -213,7 +217,11 @@ $(document).ready(function () {
     var thisProClass = `.project${i}`;
 
     // TO DO: translateX - animate in
-    $(`${thisProClass}`).css({"display": "flex","transform": "translateX(0%)"});
+    $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
+
+    // Showing project description
+    var children = $(`.${i}descr`);
+    children.css("display", "block");
 
     isLeftContOpen = true;
   }
@@ -234,6 +242,6 @@ $(document).ready(function () {
 
   // TO DO: add functionality of form!!
 
-  
+
 });
 
