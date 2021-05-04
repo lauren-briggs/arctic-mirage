@@ -259,6 +259,9 @@ nav li{
     #about-intro{
         grid-column: 1 / span 2;
     }
+    .grid-container-about img{
+        grid-column: 1 / span 2;
+    }
     #about-client{
         grid-column-start: 1;
         grid-column-end: span 2;
@@ -493,23 +496,31 @@ textarea:hover{
 
 /* Slideshow */
 .slideshow-container{
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
     position: fixed;
+    /* overflow: hidden; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
     .mySlides{
+        width: 100vw;
+        height: 100vh;
         position: absolute;
-        margin-top: -200px;
-        margin-left: -250px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 auto;
     }
 
     .fadeslide img{
         opacity:0; 
         animation-name: fadeInSlide; 
-        animation-duration: 15s; 
+        animation-duration: 20s; 
         animation-iteration-count: infinite;
     }
 
@@ -522,8 +533,8 @@ textarea:hover{
         100% { opacity: 0; }
     }
 
-    #delay1 { animation-delay: 1s; }
-    #delay2 { animation-delay: 4s; }
-    #delay3 { animation-delay: 7s; }
-    #delay4 { animation-delay: 10s; }
-    #delay5 { animation-delay: 12s; }
+    #delay1 { animation-delay: 0s; }
+    #delay2 { animation-delay: 5s; }
+    #delay3 { animation-delay: 10s; }
+    #delay4 { animation-delay: 15s; }
+    /* #delay5 { animation-delay: 12s; } */
