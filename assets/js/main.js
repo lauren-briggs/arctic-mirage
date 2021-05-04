@@ -23,6 +23,7 @@ $(document).ready(function () {
   var isWorkElOpen = false;
   var isAboutElOpen = false;
   var isContactElOpen = false;
+  var isDescrOpen = false;
 
   // SHOW INITIAL MENU ON HOVER
   function showMenu() {
@@ -49,9 +50,20 @@ $(document).ready(function () {
         $(this).css("display", "none")
       });
     }
+    // Checking if other descriptions are open and closing if true
+    if (isDescrOpen === true) {
+      $(".grid-item-workmenu").children("div").each(function () {
+        $(this).children("p").each(function () {
+          $(this).css("display", "none");
+        })
+      });
+      isDescrOpen = false;
+    }
+
     // redefining booleans
     isRightContOpen = false;
     isLeftContOpen = false;
+    isDescrOpen = false;
 
     // removing underlines
     workNav.removeClass("underline");
@@ -65,6 +77,12 @@ $(document).ready(function () {
     rightCont.addClass("showme");
     menuEl.addClass("showme white");
     navBtn.addClass("white");
+
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
 
     isRightContOpen = false;
     isWorkElOpen = false;
@@ -201,7 +219,7 @@ $(document).ready(function () {
   }
 
 
-  // SHOW PROJECT IMAGES ON CLICK
+  // SHOW PROJECT IMAGES AND DESCRIPTION ON CLICK
   function showProject() {
     // Checking if left side/other project images are open and closing them if true
     if (isLeftContOpen === true) {
@@ -209,6 +227,11 @@ $(document).ready(function () {
         $(this).css("display", "none")
       });
     }
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
 
     // Getting the id value of the target el
     var i = $(this).attr("id");
@@ -219,13 +242,23 @@ $(document).ready(function () {
     // TO DO: translateX - animate in
     $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
 
+
+    // Checking if other descriptions are open and closing if true
+    if (isDescrOpen === true) {
+      $(".grid-item-workmenu").children("div").each(function () {
+        $(this).children("p").each(function () {
+          $(this).css("display", "none");
+        })
+      });
+      isDescrOpen = false;
+    }
     // Showing project description
     var children = $(`.${i}descr`);
     children.css("display", "block");
 
+    isDescrOpen = true;
     isLeftContOpen = true;
   }
-
 
   // CALLING FUNCTIONS
   navBtn.mouseenter(showMenu);

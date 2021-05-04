@@ -150,6 +150,7 @@ nav li{
 
 #navBtn:hover{
     text-decoration: none;
+    cursor: pointer;
 }
 
 #navBtn.showme{
@@ -209,7 +210,7 @@ nav li{
     grid-template-rows: auto;
     padding: 3em 10em 4em 3em;
     column-gap: 2em;
-    row-gap: 2.5em;
+    row-gap: 3em;
 }
 .grid-item-workmenu{
     vertical-align: baseline;
@@ -295,6 +296,9 @@ nav li{
         column-gap: 1em;
         row-gap: 1em;
         color: var(--amWhite);
+    }
+    .grid-item-about-sub{
+        cursor: pointer;
     }
 /* grid composition of ABOUT TEAM */
     #alex,
