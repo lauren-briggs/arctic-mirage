@@ -362,19 +362,18 @@ nav li{
     grid-column: 1 / span 2;
 }
 #contact-form{
-    padding:3em 11em 3em 4em;
-    /* grid-column-start: 1;
+    /* padding:3em 11em 3em 4em; */
+    grid-column-start: 1;
     grid-column-end: span 2;
-    grid-row: 3; */
+    /* grid-row: 3; */
 }
 #contact-socials{
-
-    padding:0em 11em 3em 4em;
+    /* padding:0em 11em 3em 4em; */
     /* grid-column-start: 1;
     grid-column-end: span 2; */
     grid-row: 5;
     display: flex;
-    padding-bottom: 2em;
+    /* padding-bottom: 2em; */
     justify-content: space-around;
     align-items: flex-end;
 }

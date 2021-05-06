@@ -1,10 +1,35 @@
 
+@media screen and (max-width: 1500px ) {
+    #grid-container-services{
+        grid-column: 1 / span 2;
+        grid-template-rows: auto;
+    }
+    #about-client-text{
+        grid-row: 15;
+    }
+    #about-client-img{
+        grid-row: 16;
+    }
+    .grid-container-socials{
+        grid-template-columns: auto auto auto;
+        row-gap: 0.75em;
+        padding-bottom: 3em;
+    }
+    #amCopyright{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row: 2;
+        justify-self: center;
+    }
+}
+
+
 @media screen and (max-width: 1350px ) {
     h1{
-        font-size: 34px;
+        /* font-size: 34px; */
     }
     h2{
-        font-size: 26px;
+        /* font-size: 26px; */
     }
     p{
         font-size: 16px;
@@ -52,42 +77,31 @@
     }
     /* CONTACT SECTION RESIZING */
     .grid-container-contact{
-        padding-bottom: 10em;
-        row-gap: 1em;
-        height: 90vh;
+        padding-bottom: 4em;
+        row-gap: 1.25em;
+        height: auto;
     }
-    #contact-socials{
-        grid-row: 6;
-    }
-    .grid-container-socials{
-        grid-template-columns: auto auto auto;
-        row-gap: 0.75em;
-        padding-bottom: 3em;
-    }
-    #amCopyright{
-        grid-column-start: 1;
-        grid-column-end: span 3;
-        grid-row: 2;
-        justify-self: center;
-    }
-}
-@media screen and (max-width: 1200px) {
-    /* CONTACT SECTION RESIZING */
-    #contact-socials{
-        grid-row: 6;
-    }        
     #address,
     #enquiries{
         grid-column: 1 /span 2;
     }
+    #contact-socials{
+        grid-row: 6;
+    }
+}
+@media screen and (max-width: 1200px) {
+    /* CONTACT SECTION RESIZING */
+    /* #contact-socials{
+        grid-row: 6;
+    }        
     #contact-form{
         grid-row: 4;
-    }
+    } */
 
 }
 @media screen and (max-width: 1024px ) {
     h1{
-        font-size: 32px;
+        font-size: 24px;
     }
     h2{
         font-size: 24px;
