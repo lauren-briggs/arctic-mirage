@@ -369,12 +369,12 @@ nav li{
 }
 #contact-socials{
     /* padding:0em 11em 3em 4em; */
-    /* grid-column-start: 1;
-    grid-column-end: span 2; */
-    grid-row: 5;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    /* grid-row: 5; */
     display: flex;
     /* padding-bottom: 2em; */
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: flex-end;
 }
 /* grid CONTAINER structure of SOCIALS in CONTACT */
