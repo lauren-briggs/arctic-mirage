@@ -84,6 +84,13 @@ $(document).ready(function () {
       behavior: 'smooth'
     });
 
+    // TO DO: replace logo with white version on smaller screen
+    // if (window.width() < 1024) {
+    //   $("#homelogo").html(`<img src="assets/img/AM20-29_TAM Internal Marketing_Logo_Fin_AM_Rev.png" width="80px" alt="Arctic Mirage Logo">`);
+    // } else {
+    //   return;
+    // }
+
     isRightContOpen = false;
     isWorkElOpen = false;
     isAboutElOpen = false;

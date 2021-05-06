@@ -50,12 +50,6 @@
 
 
 @media screen and (max-width: 1350px ) {
-    h1{
-        /* font-size: 34px; */
-    }
-    h2{
-        /* font-size: 26px; */
-    }
     p{
         font-size: 16px;
         line-height: 19px;
@@ -147,10 +141,6 @@
     }
     .grid-container-about{
         grid-template-columns: 50% 50%;
-        grid-template-rows: auto;
-        padding: 3em 10em 3em 4em;
-        column-gap: 2em;
-        row-gap: 3em;
     }
     /* grid ITEMS composition of ABOUT */
     /* ABOUT SECTION RESIZING */
@@ -238,9 +228,109 @@
 }
 
 @media screen and (max-width: 768px ) {
+    #address,
+    #enquiries{
+        grid-column: 1 /span 2;
+    }
+    .grid-container-socials{
+        grid-template-columns: auto auto auto;
+        row-gap: 0.75em;
+    }
+    #amCopyright{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row: 2;
+        justify-self: flex-start;
+    }
+    #grid-container-services{
+        grid-column: span 2;
+        grid-template-rows: auto;
+    }
+
+    /* ABOUT SECTION RESIZING */
+    .grid-item-about, 
+    .team{
+        grid-column: 1 / span 2;
+    }
+
+    #alex-text{
+        grid-row: 3;
+    }
+    #ahna-img{
+        grid-column: 1 / span 2;
+        grid-row: 4;
+    }
+    #ahna-text{
+        grid-column: 1 / span 2;
+        grid-row: 5;
+    }
+    #minka-img{
+        grid-row: 6;
+    }
+    #minka-text{
+        grid-row: 7;
+    }
+    #lauren-img{
+        grid-column: 1 / span 2;
+        grid-row: 8;
+    }
+    #lauren-text{
+        grid-column: 1 / span 2;
+        grid-row: 9;
+    }
+
+    #about-services{
+        grid-row: 10;
+        margin-top: 2em;
+    }
+    #about-client{
+        grid-row: 19;
+        padding-top: 2em;
+    }
+    #about-client-text{
+        grid-row: 20;
+    }
+    #about-client-img{
+        grid-row: 21;
+    }
+    #grid-container-services{
+        grid-template-rows: auto;
+    }
+
+    #grid-container-clients{
+        grid-template-columns: auto auto auto auto;
+    }
 
 }
+@media screen and (max-width: 600px ) {
+    .grid-container-workmenu,
+    #about-intro,
+    .grid-container-contact{
+        padding: 8em 8em 4em 3em;
+    }
+    .grid-container-about{
+        padding: 3em 8em 4em 3em;
+    }
+
+}
+
 @media screen and (max-width: 480px ) {
-
-
+    nav{
+        font-size: 16px;
+        top: 205px;
+    }
+    h1{
+        font-size: 20px;
+        line-height: 22px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h4{
+        font-size: 14px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
