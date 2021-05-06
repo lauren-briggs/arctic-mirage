@@ -78,12 +78,6 @@ $(document).ready(function () {
     menuEl.addClass("showme white");
     navBtn.addClass("white");
 
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-
     // TO DO: replace logo with white version on smaller screen
     // if (window.width() < 1024) {
     //   $("#homelogo").html(`<img src="assets/img/AM20-29_TAM Internal Marketing_Logo_Fin_AM_Rev.png" width="80px" alt="Arctic Mirage Logo">`);
@@ -133,6 +127,11 @@ $(document).ready(function () {
       isRightContOpen = false;
       isWorkElOpen = false;
     }
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   // ABOUT ABOUT ABOUT
@@ -158,11 +157,22 @@ $(document).ready(function () {
       contactEl.removeClass("showme");
       contactNav.removeClass("underline");
       isContactElOpen = false;
+
+      // Checking if project photos are open and closing if true
       if (isLeftContOpen === true) {
         $(".leftcont").children().each(function () {
           $(this).css("display", "none")
         });
       }
+      // Checking if project descriptions are open and closing if true
+      if (isDescrOpen === true) {
+        $(".grid-item-workmenu").children("div").each(function () {
+          $(this).children("p").each(function () {
+            $(this).css("display", "none");
+          })
+        });
+      }
+      isDescrOpen = false;
       isLeftContOpen = false;
 
       // handle basic menu function and show Work
@@ -178,6 +188,11 @@ $(document).ready(function () {
       isRightContOpen = false;
       isAboutElOpen = false;
     }
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
   // CONTACT CONTACT CONTACT
   // WHEN CONTACT IS OPEN ADD UNDERLINE AND SHOW DIV
@@ -202,12 +217,22 @@ $(document).ready(function () {
       aboutEl.removeClass("showme");
       aboutNav.removeClass("underline");
       isAboutElOpen = false;
-      // 
+
+      // Checking if project photos are open and closing if true
       if (isLeftContOpen === true) {
         $(".leftcont").children().each(function () {
           $(this).css("display", "none")
         });
       }
+      // Checking if project descriptions are open and closing if true
+      if (isDescrOpen === true) {
+        $(".grid-item-workmenu").children("div").each(function () {
+          $(this).children("p").each(function () {
+            $(this).css("display", "none");
+          })
+        });
+      }
+      isDescrOpen = false;
       isLeftContOpen = false;
 
       // handle basic menu function and show Work
@@ -223,6 +248,11 @@ $(document).ready(function () {
       isRightContOpen = false;
       isContactElOpen = false;
     }
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
 
