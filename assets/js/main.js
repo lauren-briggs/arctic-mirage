@@ -252,6 +252,9 @@ $(document).ready(function () {
       });
       isDescrOpen = false;
     }
+
+    // TO DO: check if description/project is open and close when title is clicked
+
     // Showing project description
     var children = $(`.${i}descr`);
     children.css("display", "block");
