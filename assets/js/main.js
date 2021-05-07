@@ -315,7 +315,7 @@ $(document).ready(function () {
 
   // SLICK CAROUSEL
 
-  $('.slick-fetti').slick({
+  $('.slick').slick({
     adaptiveHeight: true,
     arrows: true,
     autoplay: true,
