@@ -94,7 +94,10 @@
     display: block;
     min-height: 100vh;
     object-fit: cover;
-    width: 100%;
+    width: 100.25%;
+    margin: -1px;
+    padding: 0px;
+    overflow: hidden;
 }
 .slick-slide.slick-loading img
 {

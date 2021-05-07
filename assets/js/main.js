@@ -309,53 +309,23 @@ $(document).ready(function () {
   // SLICK CAROUSEL
 
   $('.slick-fetti').slick({
+    adaptiveHeight: true,
+    arrows: true,
     autoplay: true,
     autoplaySpeed: 1500,
-    arrows: true,
-    draggable: true,
-    // fade: true,
-    // dots: true,
-    // dotsClass: "slick-dots",
     cssEase: "ease",
+    draggable: true,
     easing: "linear",
-    // mobileFirst: true,
-    prevArrow: '<img width="20px" class="slick-prev" src="assets/img/A-Up-Arrow.png">',
     nextArrow: '<img width="20px" class="slick-next" src="assets/img/A-Down-Arrow.png">',
-    // appendDots
-    // pauseOnDotsHover: true,
-    swipe: true,
+    prevArrow: '<img width="20px" class="slick-prev" src="assets/img/A-Up-Arrow.png">',
     slideToShow: 1,
+    speed: 1500,
+    swipe: true,
     swipeToSlide: true,
     touchMove: true,
     vertical: true,
     verticalSwiping: true,
-    adaptiveHeight: true,
-    // variableWidth: true,
   });
-
-  // SPLIDE CAROUSEL
-
-
-  // var splide = new Splide('#splide');
-  // splide.mount();
-
-  // mount(Extensions = {}, Transition = null)
-  // import Splide from '@splidejs/splide';
-  // document.addEventListener('DOMContentLoaded', function () {
-  //   new Splide('#image-slider', {
-  //     width: "50vw",
-  //     type: "fade",
-  //     perPage: 1,
-  //     gap: 0,
-  //     padding: 0,
-  //     height: "50vh",
-  //     autoplay: true,
-  //     pauseOnHover: true,
-  //     drag: true,
-  //     cover: true,
-  //     direction: "ttb",
-  //   }).mount();
-  // });
 
   // CALLING FUNCTIONS
   navBtn.mouseenter(showMenu);
