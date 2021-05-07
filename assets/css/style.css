@@ -19,6 +19,7 @@ body{
     z-index: 100;
     cursor: pointer;
 }
+
 /*consistent styling throughout*/
 p{
     font-style: normal;
@@ -507,17 +508,13 @@ textarea:hover{
 
 /* Slideshow */
 .slideshow-container{
-    /* width: 100vw; */
     height: 100vh;
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     margin: 0 auto;
     position: fixed;
-    /* overflow: hidden; */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
+    overflow: hidden;
 }
     .mySlides{
         object-fit: cover;

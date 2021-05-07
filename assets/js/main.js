@@ -60,6 +60,10 @@ $(document).ready(function () {
       isDescrOpen = false;
     }
 
+    // Change AM logo back to black version
+    $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
+
+
     // redefining booleans
     isRightContOpen = false;
     isLeftContOpen = false;
@@ -78,12 +82,7 @@ $(document).ready(function () {
     menuEl.addClass("showme white");
     navBtn.addClass("white");
 
-    // TO DO: replace logo with white version on smaller screen
-    // if (window.width() < 1024) {
-    //   $("#homelogo").html(`<img src="assets/img/AM20-29_TAM Internal Marketing_Logo_Fin_AM_Rev.png" width="80px" alt="Arctic Mirage Logo">`);
-    // } else {
-    //   return;
-    // }
+    swapLogo();
 
     isRightContOpen = false;
     isWorkElOpen = false;
@@ -255,6 +254,14 @@ $(document).ready(function () {
     });
   }
 
+  // Changing AM logo to white version when screen is less than 1024px
+  function swapLogo() {
+    if ($(window).width() < 1024) {
+      $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM_Rev.png");
+    } else {
+      return;
+    }
+  };
 
   // SHOW PROJECT IMAGES AND DESCRIPTION ON CLICK
   function showProject() {
@@ -316,8 +323,8 @@ $(document).ready(function () {
     cssEase: "ease",
     draggable: true,
     easing: "linear",
-    nextArrow: '<img width="20px" class="slick-next" src="assets/img/A-Down-Arrow.png">',
-    prevArrow: '<img width="20px" class="slick-prev" src="assets/img/A-Up-Arrow.png">',
+    nextArrow: '<img width="20px" class="slick-next" src="assets/img/am-collateral/A-Down-Arrow.png">',
+    prevArrow: '<img width="20px" class="slick-prev" src="assets/img/am-collateral/A-Up-Arrow.png">',
     slideToShow: 1,
     speed: 1500,
     swipe: true,
