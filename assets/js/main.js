@@ -316,7 +316,6 @@ $(document).ready(function () {
     // fade: true,
     // dots: true,
     // dotsClass: "slick-dots",
-    centerMode: true,
     cssEase: "ease",
     easing: "linear",
     // mobileFirst: true,
