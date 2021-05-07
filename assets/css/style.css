@@ -101,7 +101,7 @@ nav{
     transform: rotate(90deg);
     text-decoration: none;
     color: var(--amBlack);
-    z-index: 99;
+    z-index: 1001;
 }
 /* positioning of nav elements */
 nav li{
@@ -149,7 +149,7 @@ nav li{
     right: 40px;
     bottom: 40px;
     transform: rotate(90deg);
-    z-index: 99;
+    z-index: 1000;
     visibility: visible;
     transform: rotate(45deg);
     text-decoration: none;
@@ -497,6 +497,12 @@ textarea:hover{
 }
 .project .img{
     display: flex;
+    line-height: 0  ;
+    float: top;
+}
+
+.projectfetti{
+    object-fit: cover;
 }
 
 /* Slideshow */
@@ -514,6 +520,7 @@ textarea:hover{
     background-size: cover;
 }
     .mySlides{
+        object-fit: cover;
         width: 100vw;
         height: 100vh;
         position: absolute;

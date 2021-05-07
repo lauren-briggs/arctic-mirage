@@ -1,0 +1,22 @@
+{
+  "name": "arctic-mirage",
+  "version": "1.0.0",
+  "description": "Arctic Mirage Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauren-briggs/arctic-mirage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauren-briggs/arctic-mirage/issues"
+  },
+  "homepage": "https://github.com/lauren-briggs/arctic-mirage#readme",
+  "dependencies": {
+    "@splidejs/splide": "^2.4.21"
+  }
+}

@@ -120,6 +120,7 @@
 
 }
 @media screen and (max-width: 1024px ) {
+
     h1{
         font-size: 24px;
     }
@@ -136,14 +137,13 @@
     .grid-container-contact{
         padding-left: 11em;
     }
+    /* ABOUT SECTION RESIZING */
     .grid-container-about{
         width: 100%;
     }
     .grid-container-about{
         grid-template-columns: 50% 50%;
     }
-    /* grid ITEMS composition of ABOUT */
-    /* ABOUT SECTION RESIZING */
     .grid-container-about{
         row-gap: 1.5em;
     }
@@ -190,41 +190,57 @@
         grid-template-rows: auto auto;
         grid-column: span 1;
     }
-    /* .col-2{
-        grid-column-start: 2;
-        grid-column-end: span 1;
-    } */
     #grid-container-clients{
         grid-template-columns: auto auto auto auto;
     }
-
-        /* CONTACT SECTION RESIZING */
-        .grid-container-contact{
-            width: 100%;
-            padding-bottom: 4em;
-            row-gap: 1.25em;
-            height: auto;
-        }
-        #address{
-            grid-column: 1 / span 1;
-        }
-        #enquiries{
-            grid-column: 2 / span 2;
-        }
-        #contact-socials{
-            grid-row: 6;
-            grid-column: 1 / span 2;
-            justify-content: space-between;
-        }
-        .grid-container-socials{
-            grid-template-columns: auto auto auto auto;
-        }
-        #amCopyright{
-            grid-column-start: 4;
-            grid-column-end: span 1;
-            grid-row: 1;
-            justify-self: center;
-        }
+    /* CONTACT SECTION RESIZING */
+    .grid-container-contact{
+        width: 100%;
+        padding-bottom: 4em;
+        row-gap: 1.25em;
+        height: auto;
+    }
+    #address{
+        grid-column: 1 / span 1;
+    }
+    #enquiries{
+        grid-column: 2 / span 2;
+    }
+    #contact-socials{
+        grid-row: 6;
+        grid-column: 1 / span 2;
+        justify-content: space-between;
+    }
+    .grid-container-socials{
+        grid-template-columns: auto auto auto auto;
+    }
+    #amCopyright{
+        grid-column-start: 4;
+        grid-column-end: span 1;
+        grid-row: 1;
+        justify-self: center;
+    }
+    /* RESIZING LEFT CONT TO APPEAR FROM BOTTOM */
+    .leftcont{
+        height: 50vh;
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+    }
+    #project-img-container > section{
+        width: 100vw;
+        background-color: var(--amWhite);
+        position:absolute;
+        padding: 0px;
+        margin: 0px;
+        z-index: 99;
+        display: none;
+        transform: translateX(-100%);
+        transition: 0.75s;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 768px ) {
