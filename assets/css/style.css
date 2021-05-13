@@ -3,7 +3,11 @@
     cursor: url("assets/img/am21-04_logo_cursor_a.png");
 
     --amBlack: #000000;
-    --amWhite: #fefef7;
+    --amWhite: #ffffff;
+}
+::selection{
+    color: var(--amBlack);
+    background-color: var(--amWhite);
 }
 
 body{
@@ -585,3 +589,18 @@ textarea:hover{
     #delay3 { animation-delay: 10s; }
     #delay4 { animation-delay: 15s; }
     /* #delay5 { animation-delay: 12s; } */
+
+    .fade{
+        opacity: 0;
+        transition: ease-in-out;
+        animation-name: fade;
+        animation-duration: 2.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fade {
+        0% {opacity: 0;}
+        50% {opacity: 50;}
+        100% {opacity: 100;}
+    }
