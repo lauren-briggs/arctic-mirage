@@ -1,7 +1,5 @@
 /*header - main styling*/
 :root{
-    cursor: url("assets/img/am21-04_logo_cursor_a.png");
-
     --amBlack: #000000;
     --amWhite: #ffffff;
 }
@@ -9,12 +7,14 @@
     color: var(--amBlack);
     background-color: var(--amWhite);
 }
+*{
+    cursor: url(../img/am-collateral/am21-04_logo_cursor_a.png), url(../img/am-collateral/am21-04_logo_cursor_a-rev.png), url(../img/am-collateral/am21-04_logo_cursor_a.cur);
+}
 
 body{
     font-family: degular, sans-serif;
     font-weight:lighter;
     font-style: normal;
-    cursor: default;
 }
 #homelogo{
     position: fixed;
@@ -342,7 +342,7 @@ nav li{
 .hidden-list li{
     display: none;
     opacity: 0;
-    transition: 0.5s ease-in;
+    transition: all 0.5s ease-in;
     animation-name: drop-down; 
     animation-duration: 750ms; 
     animation-iteration-count: 1;
@@ -604,3 +604,9 @@ textarea:hover{
         50% {opacity: 50;}
         100% {opacity: 100;}
     }
+
+
+#map {
+    height: 400px;
+    width: 100%;
+  }

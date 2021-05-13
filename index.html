@@ -15,6 +15,33 @@
     <script src="assets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
     <!-- linking slick carousel js -->
     <script type="text/javascript" src="assets/slick-1.8.1/slick/slick.js"></script>
+
+    <!-- linking API for google map -->
+    <!-- <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByDtxzno7UFFGXhOZMhIoAPVIG1FobAOs&callback=initMap">
+        </script>
+    <script>            // Initialize and add the map
+        window.onload() = function () {
+            initMap() {
+                // The location of Uluru
+                const uluru = { lat: -25.344, lng: 131.036 };
+                // The map, centered at Uluru
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 4,
+                    center: uluru,
+                });
+                // The marker, positioned at Uluru
+                const marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                });
+            }
+        }
+        document.addEventListener('ondomready', function () {
+            function initMap() {
+                //
+            }
+        });</script> -->
     <script src="assets/js/main.js" charset="utf-8"></script>
     <title>Arctic Mirage</title>
 </head>
@@ -928,20 +955,22 @@
                     <div class="grid-item-contact" id="contact-form">
                         <h2 class="fade">CONTACT US</h2>
                         <br>
-                        <form autocomplete="on" class="fade">
-                            <!-- <label for="name">Name:</label> -->
-                            <input class="text-input" id="name" type="text" placeholder="Name">
+                        <form
+                            action="https://script.google.com/macros/s/AKfycbxJ257hCmpf0pUUBaTudcJl-CW_k11cTubiWRoIMVn52FrWR3OJZ_4t3hoWnCFGLHrMFQ/exec"
+                            method="POST" autocomplete="on" class="gform fade">
+                            <input class="text-input" id="name" type="text" name="name" placeholder="Name">
                             <br>
-                            <!-- <label for="email">Email:</label> -->
-                            <input class="text-input" id="email" type="text" placeholder="Email">
+                            <input class="text-input" id="email" type="text" name="email" placeholder="Email">
                             <br>
-                            <!-- <label for="subject">Subject:</label> -->
-                            <input class="text-input" id="subject" type="text" placeholder="Subject">
+                            <input class="text-input" id="subject" name="subject" type="text" placeholder="Subject">
                             <br>
-                            <!-- <label for="message">Message:</label> -->
-                            <textarea name="message" id="message" placeholder="Message"></textarea>
+                            <textarea name="message" id="message" name="message" placeholder="Message"></textarea>
                             <br>
                             <input class="submit-button" type="submit" id="submit" value="Submit" target="_self">
+                            <div style="display:none" class="thankyou_message">
+                                <p>Thanks for contacting us! We will get back to you soon!
+                                </p>
+                            </div>
                         </form>
                     </div>
                     <!-- address -->
@@ -985,14 +1014,14 @@
     &q=Space+Needle,Seattle+WA">
                 </iframe> -->
                 <img src="assets/img/am-collateral/AM_Location-Map.png" width="100%" alt="AM Location Map">
-
+                <!-- <div id="map"></div> -->
 
 
 
             </section>
         </div>
     </section>
-
+    <script data-cfasync="false" type="text/javascript" src="assets/js/form-submission-handler.js"></script>
 </body>
 
 </html>

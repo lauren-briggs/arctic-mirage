@@ -348,7 +348,5 @@ $(document).ready(function () {
 
 
   // TO DO: add functionality of form!!
-
-
 });
 
