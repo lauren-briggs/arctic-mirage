@@ -229,17 +229,9 @@
     }
     #project-img-container > section{
         width: 100vw;
-        background-color: var(--amWhite);
-        position:absolute;
-        padding: 0px;
-        margin: 0px;
-        z-index: 99;
-        display: none;
-        transform: translateX(-100%);
+        transform: translateX(0%);
+        transform: translateY(-100%);
         transition: 0.75s;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 }
 

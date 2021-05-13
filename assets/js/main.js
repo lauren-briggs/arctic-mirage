@@ -3,7 +3,6 @@ $(document).ready(function () {
 
   // ELEMENTS
   const menuEl = $(".menu");
-  // const navEl = $("nav");
   const rightCont = $("#rightcont");
   const leftCont = $(".leftcont");
   const workEl = $(".work")
@@ -283,7 +282,6 @@ $(document).ready(function () {
     // creating a variable that holds the class name using i value and changing display to flex
     var thisProClass = `.project${i}`;
 
-    // TO DO: translateX - animate in
     $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
 
 
@@ -311,6 +309,13 @@ $(document).ready(function () {
 
     isDescrOpen = true;
     isLeftContOpen = true;
+  }
+
+  if ($(window).width() < 1024) {
+    // $(`${thisProClass}`).css({ "display": "flex", "transform": "translateY(0%)" });
+    $(".leftcont").find("section").find(".slick img").css("min-height", "50vh");
+  } else {
+    $(".leftcont").find("section").find(".slick img").css("min-height", "100vh");
   }
 
   // SLICK CAROUSEL
@@ -343,10 +348,5 @@ $(document).ready(function () {
   contactNav.click(showContact);
   $(".slideshow-container").click(closeAll);
   $(".grid-item-workmenu").click(showProject);
-
-
-
-
-  // TO DO: add functionality of form!!
 });
 
