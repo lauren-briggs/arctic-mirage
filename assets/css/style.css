@@ -335,15 +335,53 @@ nav li{
     text-decoration: underline;
 }
 
-.hidden-list{
+.hidden-list li{
     display: none;
-    transition: 0.5s;
+    opacity: 0;
+    transition: 0.5s ease-in;
+    animation-name: drop-down; 
+    animation-duration: 750ms; 
+    animation-iteration-count: 1;
+    transform-origin: top center;
+    animation-fill-mode: forwards;
 }
 
-.hover:hover .hidden-list{
+.hover:hover .hidden-list li{
     display: block;
     transition: 0.5s;
 }
+       .drop-delay-1 { animation-delay: 0ms}
+       .drop-delay-2 { animation-delay: 50ms; }
+       .drop-delay-3 { animation-delay: 100ms; }
+       .drop-delay-4 { animation-delay: 150ms; }
+       .drop-delay-5 { animation-delay: 200ms; }
+       .drop-delay-6 { animation-delay: 250ms; }
+       .drop-delay-7 { animation-delay: 300ms; }
+       .drop-delay-8 { animation-delay: 350ms; }
+       .drop-delay-9 { animation-delay: 400ms; }
+       .drop-delay-10 { animation-delay: 450ms; }
+       .drop-delay-11 { animation-delay: 500ms; }
+       .drop-delay-12 { animation-delay: 550ms; }
+       .drop-delay-13 { animation-delay: 600ms; }
+       .drop-delay-14 { animation-delay: 650ms; }
+       .drop-delay-15 { animation-delay: 700ms; }
+
+@keyframes drop-down {
+  0% {
+    /* opacity: 0; */
+    /* transform: rotateX(-90deg); */
+    transform: translateY(-50px);
+  }
+  50% {
+      transform:translateY(-10)
+  }
+  100% {
+    opacity: 1;
+    /* transform: rotateX(0deg); */
+    transform: translateY(0px);
+  }
+}
+
 
 /* grid CONTAINER structure of CONTACT */
 .grid-container-contact{
@@ -482,7 +520,7 @@ textarea:hover{
 #project-img-container > section{
     width: 60vw;
     min-height: 100vh;
-    background-color: var(--amWhite);
+    background-color: white;
     position:absolute;
     top: 0px;
     left: 0px;
@@ -503,7 +541,7 @@ textarea:hover{
 }
 
 .projectfetti{
-    object-fit: cover;
+    background-color: #E0E0E1;
 }
 
 /* Slideshow */

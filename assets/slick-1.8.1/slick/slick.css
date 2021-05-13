@@ -128,16 +128,18 @@
 
 .slick-prev{
     position: fixed;
-    left: 30px;
-    bottom: 30px;
+    left: 40px;
+    bottom: 40px;
     z-index: 99;
     cursor: pointer;
     font-size: 20px;
+    font-weight: 100;
 }
 .slick-next{
+    font-family: tahoma, sans-serif;
     position: fixed;
-    left: 50px;
-    bottom: 30px;
+    left: 65px;
+    bottom: 40px;
     z-index: 99;
     cursor: pointer;
     font-size: 20px;
