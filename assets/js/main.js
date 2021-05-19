@@ -255,12 +255,14 @@ $(document).ready(function () {
 
   // Changing AM logo to white version when screen is less than 1024px
   function swapLogo() {
-    if ($(window).width() < 1024) {
+    if ($(window).width() <= 1024 && isRightContOpen === true) {
       $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM_Rev.png");
-    } else {
-      return;
+    } else if ($(window).width() > 1024 || isRightContOpen === false) {
+      $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
     }
   };
+
+  $(window).resize(swapLogo);
 
   // SHOW PROJECT IMAGES AND DESCRIPTION ON CLICK
   function showProject() {
@@ -311,12 +313,24 @@ $(document).ready(function () {
     isLeftContOpen = true;
   }
 
-  if ($(window).width() < 1024) {
-    // $(`${thisProClass}`).css({ "display": "flex", "transform": "translateY(0%)" });
-    $(".leftcont").find("section").find(".slick img").css("min-height", "50vh");
-  } else {
-    $(".leftcont").find("section").find(".slick img").css("min-height", "100vh");
-  }
+  // TO DO: change height of left/right divs depending on window width
+  $(window).on('load resize', function () {
+    if ($(window).width() < 1024) {
+      $(".leftcont").find(".resize").css("min-height", "50vh");
+      if (isLeftContOpen === false) {
+        console.log(`Is left container open: ${isLeftContOpen}`)
+      } else {
+        $(".work.showme").css({ "height": "50vh", "margin-top": "50vh" });
+        console.log($(".work.showme"))
+        console.log(`Is left container open: ${isLeftContOpen}`)
+      }
+    } else {
+      console.log(`Is left container open: ${isLeftContOpen}`)
+      $(".leftcont").find(".resize").css("min-height", "100vh");
+      $(".work.showme").css({ "height": "100vh", "margin-top": "0vh" });
+    }
+  })
+
 
   // SLICK CAROUSEL
 
