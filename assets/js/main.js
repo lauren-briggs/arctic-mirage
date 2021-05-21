@@ -342,10 +342,13 @@ $(document).ready(function () {
 
     // TO DO: check if description/project is open and close when title is clicked
 
+
+
+    // SCROLLING TO DESCRIPTION
+
     let position = $(this).position();
     console.log(position.top);
 
-    // SCROLLING TO DESCRIPTION
     // workGridCont.scroll({
     //   top: position.top,
     //   left: position.left,
@@ -366,24 +369,6 @@ $(document).ready(function () {
     isLeftContOpen = true;
     resizeWork();
   }
-
-  // TO DO: change height of left/right divs depending on window width
-  // $(window).on('load resize', function () {
-  //   if ($(window).width() < 1024) {
-  //     $(".leftcont").find(".resize").css("min-height", "50vh");
-  //     if (isLeftContOpen === false) {
-  //       console.log(`Is left container open: ${isLeftContOpen}`)
-  //     } else {
-  //       $(".work.showme").css({ "height": "50vh", "margin-top": "50vh" });
-  //       console.log($(".work.showme"))
-  //       console.log(`Is left container open: ${isLeftContOpen}`)
-  //     }
-  //   } else {
-  //     console.log(`Is left container open: ${isLeftContOpen}`)
-  //     $(".leftcont").find(".resize").css("min-height", "100vh");
-  //     $(".work.showme").css({ "height": "100vh", "margin-top": "0vh" });
-  //   }
-  // })
 
   // ----------------------------------------------------
   // RESIZE WORK
