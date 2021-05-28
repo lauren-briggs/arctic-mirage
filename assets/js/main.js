@@ -427,11 +427,6 @@ $(document).ready(function () {
     swiper.slidePrev(1500, true)
   });
 
-  // const swiper = new Swiper('.swiper-container1', {
-
-  // });
-
-
   // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------

@@ -649,8 +649,13 @@ textarea:hover{
     background-color: var(--amBlack);
     justify-content: center;
     align-items: center;
-    background-size: auto 100vh;
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .swiper-slide .bottom{
+      background-position: bottom !important;
   }
 
   .swiper-pagination{
@@ -660,6 +665,8 @@ textarea:hover{
   .swiper-pagination-bullet-active{
     background-color: var(--amBlack) !important;
   }
+
+ 
 
   /* .swiper-pagination >>> .swiper-pagination-bullet {
     opacity: 1;

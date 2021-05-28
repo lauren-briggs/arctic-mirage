@@ -227,8 +227,21 @@
         bottom: 0px;
         left: 0px;
     }
+    .swiper-container{
+        width: 100%;
+        height: 50px;
+      }
+      .swiper-wrapper{
+          height: 50px;
+      }
+      .swiper-slide{
+          height: 50px;
+          justify-content: flex-start;
+          align-items: center;
+      }
     #project-img-container > section{
         width: 100vw;
+        min-height: 50vh;
         transform: translateX(0%);
         transform: translateY(-100%);
         transition: 0.75s;
