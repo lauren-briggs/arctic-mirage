@@ -365,9 +365,6 @@ $(document).ready(function () {
       }
       // find all elements in the left container with class 'resize' and change the min-height to 50vh
       leftCont.find(".resize").css("min-height", "50vh");
-      // find arrows and move position
-      leftCont.find(".slick-prev").css("bottom", "53%");
-      leftCont.find(".slick-next").css("bottom", "53%");
       // if the left container is not open
       if (isLeftContOpen === false) {
         // changr the height of the right container/work descriptions/menu to 100vh and reset the margin to 0
@@ -383,9 +380,6 @@ $(document).ready(function () {
       // reset height to 100vh and remove margins
       leftCont.find(".resize").css("min-height", "100vh");
       $(".work.showme").css({ "height": "100vh", "margin-top": "0vh" });
-      // return arrow to original positions
-      leftCont.find(".slick-prev").css("bottom", "40px");
-      leftCont.find(".slick-next").css("bottom", "40px");
     }
   }
 
@@ -398,61 +392,45 @@ $(document).ready(function () {
 
 
   // ----------------------------------------------------
-  // SLICK CAROUSEL
-  // ----------------------------------------------------
-  $('.slick').slick({
-    adaptiveHeight: true,
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    cssEase: "ease",
-    draggable: true,
-    easing: "linear",
-    nextArrow: '<img class="slick-next" src="assets/img/am-collateral/AM-Arrow-02-Next.png" width="15px">',
-    prevArrow: '<img class="slick-prev" src="assets/img/am-collateral/AM-Arrow-02-Prev.png" width="15px">',
-    pauseOnHover: false,
-    slideToShow: 1,
-    speed: 1500,
-    // swipe: true,
-    swipeToSlide: true,
-    touchMove: true,
-    vertical: true,
-    verticalSwiping: true,
-  });
-
-
-  // ----------------------------------------------------
   // SWIPER CAROUSEL
   // ----------------------------------------------------
 
-  const swiper = new Swiper('.swiper-container', {
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    direction: 'vertical',
-    effect: "fade",
-    enabled: true,
-    loop: true,
-    mousewheel: {
-      invert: false,
-      sensitivity: 3,
-    },
-    on: {
-      init: function () {
-        console.log('swiper initialized');
+  $(".swiper-container").each(function (index) {
+    $(this).addClass("instance-" + index);
+    let swiper = new Swiper(".instance-" + index, {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
       },
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: 'true',
-      dynamicBullets: true,
-    },
-    speed: 2000,
+      direction: 'vertical',
+      effect: "fade",
+      enabled: true,
+      loop: true,
+      mousewheel: {
+        invert: false,
+        sensitivity: 3,
+      },
+      on: {
+        init: function () {
+          console.log('swiper initialized');
+        },
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: 'true',
+        dynamicBullets: true,
+      },
+      speed: 2000,
+    });
+
+    swiper.slideNext(1500, true)
+    swiper.slidePrev(1500, true)
   });
 
-  swiper.slideNext(1500, true)
-  swiper.slidePrev(1500, true)
+  // const swiper = new Swiper('.swiper-container1', {
+
+  // });
+
 
   // ----------------------------------------------------
   // CALLING FUNCTIONS

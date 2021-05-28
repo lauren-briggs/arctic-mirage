@@ -638,7 +638,7 @@ textarea:hover{
 
   /* SWIPER */
 
-  .swiper-container {
+  .swiper-container{
     background-color: var(--amWhite);
     width: 60%;
     height: 100vh;
