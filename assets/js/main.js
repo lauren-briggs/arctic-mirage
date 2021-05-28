@@ -3,6 +3,12 @@ $(document).ready(function () {
   //js will only run once HTML doc has loaded to speed up response time
 
   // ----------------------------------------------------
+  // IMPORT SWIPER NPM
+  // ----------------------------------------------------
+  // core version + navigation, pagination modules:
+  // import SwiperCore, { Navigation, Pagination } from 'swiper/core';
+
+  // ----------------------------------------------------
   // ELEMENTS
   // ----------------------------------------------------
   const menuEl = $(".menu");
@@ -303,11 +309,6 @@ $(document).ready(function () {
         $(this).css("display", "none")
       });
     }
-    // window.scroll({
-    //   top: 0,
-    //   left: 0,
-    //   behavior: 'smooth'
-    // });
 
     // Getting the id value of the target el
     let i = $(this).attr("id");
@@ -316,7 +317,6 @@ $(document).ready(function () {
     let thisProClass = `.project${i}`;
 
     $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
-
 
     // Checking if other descriptions are open and closing if true
     if (isDescrOpen === true) {
@@ -341,32 +341,12 @@ $(document).ready(function () {
     });
 
     // TO DO: check if description/project is open and close when title is clicked
-
-
-
-    // SCROLLING TO DESCRIPTION
-
-    let position = $(this).position();
-    console.log(position.top);
-
-    // workGridCont.scroll({
-    //   top: position.top,
-    //   left: position.left,
-    //   behavior: 'smooth'
-    // });
-
-
-    // $(this).scrollIntoView(true);
-    // $(`#${i}`).scrollIntoView({ behavior: "smooth", block: "start" });
-
-    // workGridCont.scrollTop = -50;
-    // rightCont.scrollTo({ top: `${position.top}`, left: `${position.left}` }, 800);
-
-    position = $(this).position()
+    // TO DO: scroll to description
 
 
     isDescrOpen = true;
     isLeftContOpen = true;
+
     resizeWork();
   }
 
@@ -430,6 +410,7 @@ $(document).ready(function () {
     easing: "linear",
     nextArrow: '<img class="slick-next" src="assets/img/am-collateral/AM-Arrow-02-Next.png" width="15px">',
     prevArrow: '<img class="slick-prev" src="assets/img/am-collateral/AM-Arrow-02-Prev.png" width="15px">',
+    pauseOnHover: false,
     slideToShow: 1,
     speed: 1500,
     // swipe: true,
@@ -438,6 +419,40 @@ $(document).ready(function () {
     vertical: true,
     verticalSwiping: true,
   });
+
+
+  // ----------------------------------------------------
+  // SWIPER CAROUSEL
+  // ----------------------------------------------------
+
+  const swiper = new Swiper('.swiper-container', {
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    direction: 'vertical',
+    effect: "fade",
+    enabled: true,
+    loop: true,
+    mousewheel: {
+      invert: false,
+      sensitivity: 3,
+    },
+    on: {
+      init: function () {
+        console.log('swiper initialized');
+      },
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: 'true',
+      dynamicBullets: true,
+    },
+    speed: 2000,
+  });
+
+  swiper.slideNext(1500, true)
+  swiper.slidePrev(1500, true)
 
   // ----------------------------------------------------
   // CALLING FUNCTIONS

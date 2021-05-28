@@ -1,6 +1,7 @@
 {
   "name": "arctic-mirage",
   "version": "1.0.0",
+  "type": "module",
   "description": "Arctic Mirage Website",
   "main": "index.js",
   "scripts": {
@@ -17,6 +18,6 @@
   },
   "homepage": "https://github.com/lauren-briggs/arctic-mirage#readme",
   "dependencies": {
-    "@splidejs/splide": "^2.4.21"
+    "swiper": "^6.6.2"
   }
 }

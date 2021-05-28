@@ -12,37 +12,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/nkk6njr.css">
     <!-- linking slick carousel css -->
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css" />
-    <script src="assets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
-    <!-- linking slick carousel js -->
-    <script type="text/javascript" src="assets/slick-1.8.1/slick/slick.js"></script>
 
-    <!-- linking API for google map -->
-    <!-- <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByDtxzno7UFFGXhOZMhIoAPVIG1FobAOs&callback=initMap">
-        </script>
-    <script>            // Initialize and add the map
-        window.onload() = function () {
-            initMap() {
-                // The location of Uluru
-                const uluru = { lat: -25.344, lng: 131.036 };
-                // The map, centered at Uluru
-                const map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 4,
-                    center: uluru,
-                });
-                // The marker, positioned at Uluru
-                const marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map,
-                });
-            }
-        }
-        document.addEventListener('ondomready', function () {
-            function initMap() {
-                //
-            }
-        });</script> -->
-    <script src="assets/js/main.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Arctic Mirage</title>
 </head>
 
@@ -66,6 +38,32 @@
         </ul>
     </nav>
     <div id="navBtn">&#10005;</div>
+
+
+    <!-- <div class="swiper-container"> -->
+    <!-- SWIPER SLIDESHOW -->
+    <!-- <div class="swiper-wrapper">
+            <img class="swiper-slide" src="assets/img/fetti/AM_Fetti_01_1500px.png" width="100%" height="100vh"
+                alt="Fetti Business Card">
+            <img class="swiper-slide" src="assets/img/fetti/AM_Fetti_02_1500px.png" width="100%" height="100vh"
+                alt="Fetti Website Mockup">
+            <img class="swiper-slide" src="assets/img/fetti/AM_Fetti_03_1500px.png" width="100%" height="100vh"
+                alt="Fetti Logo on Wine Glass">
+
+            <img class="swiper-slide" src="assets/img/fetti/AM_Fetti_04_1500px.png" width="100%" height="100vh"
+                alt="Fetti Website Mockup"> -->
+    <!-- <div><img class="swiper-slide" src="assets/img/fetti/AM_Fetti_05_1500px.png" width="100%" height="100vh"
+                    alt="Fetti Menu">
+            </div> -->
+    <!-- <img class="swiper-slide" src="assets/img/fetti/AM_Fetti_06_1500px.png" width="100%" height="100vh"
+                alt="Fetti Website Mockup">
+        </div> -->
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div> -->
 
     <!--slideshow-->
     <container class="slideshow-container">
@@ -91,23 +89,22 @@
     <section class="leftcont" id="project-img-container">
         <!-- project sections -->
         <!-- FETTI sections -->
-        <section class="projectfetti fade">
-            <!-- SLICK SLIDESHOW -->
-            <div class="slick">
-                <div><img class="resize" src="assets/img/fetti/AM_Fetti_01_1500px.png" width="100%" height="100vh"
-                        alt="Fetti Business Card"></div>
-                <div><img class="resize" src="assets/img/fetti/AM_Fetti_02_1500px.png" width="100%" height="100vh"
-                        alt="Fetti Website Mockup"></div>
-                <div> <img class="resize" src="assets/img/fetti/AM_Fetti_03_1500px.png" width="100%" height="100vh"
-                        alt="Fetti Logo on Wine Glass">
+        <section class="projectfetti fade swiper-container">
+            <!-- SWIPER SLIDESHOW -->
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide" style="background-image:url(assets/img/fetti/AM_Fetti_01_1500px.png);">
                 </div>
-                <div><img class="resize" src="assets/img/fetti/AM_Fetti_04_1500px.png" width="100%" height="100vh"
-                        alt="Fetti Website Mockup"></div>
-                <!-- <div><img src="assets/img/fetti/AM_Fetti_05_1500px.png" width="100%" height="100%" alt="Fetti Menu">
-                </div> -->
-                <div><img class="resize" src="assets/img/fetti/AM_Fetti_06_1500px.png" width="100%" height="100vh"
-                        alt="Fetti Website Mockup"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/fetti/AM_Fetti_02_1500px.png);">
+                </div>
+                <div class="swiper-slide" style="background-image:url(assets/img/fetti/AM_Fetti_03_1500px.png);">
+                </div>
+                <div class="swiper-slide" style="background-image:url(assets/img/fetti/AM_Fetti_04_1500px.png);">
+                </div>
+                <div class="swiper-slide" style="background-image:url(assets/img/fetti/AM_Fetti_06_1500px.png);">
+                </div>
             </div>
+            <div class="swiper-pagination"></div>
         </section>
         <!-- FARMER sections -->
         <section class="projectfarmer fade">
@@ -1029,7 +1026,19 @@
             <div id="gradient-bottom"></div>
         </div>
     </section>
+
+
+    <!-- JAVASCRIPT LINKS -->
+    <script src="assets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <!-- linking slick carousel js -->
+    <script type="text/javascript" src="assets/slick-1.8.1/slick/slick.js"></script>
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js" charset="utf-8"></script>
+    <!-- CONTACT FORM HANDLER -->
     <script data-cfasync="false" type="text/javascript" src="assets/js/form-submission-handler.js"></script>
+    <!-- SWIPER JS LINKS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

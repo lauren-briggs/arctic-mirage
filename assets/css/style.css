@@ -2,6 +2,7 @@
 :root{
     --amBlack: #000000;
     --amWhite: #ffffff;
+    --swiper-theme-color: #ffffff; 
 }
 ::selection{
     color: var(--amBlack);
@@ -634,3 +635,37 @@ textarea:hover{
     height: 400px;
     width: 100%;
   }
+
+  /* SWIPER */
+
+  .swiper-container {
+    background-color: var(--amWhite);
+    width: 60%;
+    height: 100vh;
+  }
+
+  .swiper-slide{
+    display: flex;
+    background-color: var(--amBlack);
+    justify-content: center;
+    align-items: center;
+    background-size: auto 100vh;
+    background-position: center;
+  }
+
+  .swiper-pagination{
+      cursor: pointer;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: var(--amBlack) !important;
+  }
+
+  /* .swiper-pagination >>> .swiper-pagination-bullet {
+    opacity: 1;
+    border: white solid 1px;
+    background-color: transparent;
+}
+.swiper-pagination >>> .swiper-pagination-bullet-active {
+    background-color: white;
+} */
