@@ -81,7 +81,6 @@ $(document).ready(function () {
     // Change AM logo back to black version
     $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
 
-
     // redefining booleans
     isRightContOpen = false;
     isLeftContOpen = false;
@@ -312,10 +311,8 @@ $(document).ready(function () {
 
     // Getting the id value of the target el
     let i = $(this).attr("id");
-
     // creating a variable that holds the class name using i value and changing display to flex
     let thisProClass = `.project${i}`;
-
     $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
 
     // Checking if other descriptions are open and closing if true
@@ -342,7 +339,6 @@ $(document).ready(function () {
 
     // TO DO: check if description/project is open and close when title is clicked
     // TO DO: scroll to description
-
 
     isDescrOpen = true;
     isLeftContOpen = true;
@@ -383,54 +379,50 @@ $(document).ready(function () {
     }
   }
 
-
-  // 
-
-
   $(window).resize(resizeWork);
   $(window).on('load', resizeWork);
 
-
   // ----------------------------------------------------
-  // SWIPER CAROUSEL
+  // SWIPER CAROUSEL FOR PROJECT IMAGES
   // ----------------------------------------------------
-
-  $(".swiper-container").each(function (index) {
-    $(this).addClass("instance-" + index);
-    let swiper = new Swiper(".instance-" + index, {
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-      direction: 'vertical',
-      effect: "fade",
-      enabled: true,
-      loop: true,
-      mousewheel: {
-        invert: false,
-        sensitivity: 3,
-      },
-      on: {
-        init: function () {
-          console.log('swiper initialized');
+  function initSwiper() {
+    $(".swiper-container").each(function (index) {
+      $(this).addClass("instance-" + index);
+      let swiper = new Swiper(".instance-" + index, {
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
         },
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: 'true',
-        dynamicBullets: true,
-      },
-      speed: 2000,
+        direction: 'vertical',
+        effect: "fade",
+        enabled: true,
+        // init: false,
+        loop: true,
+        mousewheel: {
+          invert: false,
+          sensitivity: 3,
+        },
+        on: {
+          init: function () {
+            console.log('swiper initialized');
+          },
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: 'true',
+          dynamicBullets: true,
+        },
+        speed: 2000,
+      });
+
+      swiper.slideNext(1500, true)
+      swiper.slidePrev(1500, true)
     });
-
-    swiper.slideNext(1500, true)
-    swiper.slidePrev(1500, true)
-  });
+  }
 
   // ----------------------------------------------------
-  // SWIPER CAROUSEL
+  // SWIPER CAROUSEL FOR BACKGROUND SLIDESHOW
   // ----------------------------------------------------
-
   const swiperbg = new Swiper(".swiper-container-bg", {
     autoplay: {
       delay: 2000,
@@ -460,6 +452,6 @@ $(document).ready(function () {
   aboutNav.click(showAbout);
   contactNav.click(showContact);
   workGridItem.click(showProject);
+  workGridItem.click(initSwiper);
   $(".slideshow-container").click(closeAll);
 });
-
