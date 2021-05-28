@@ -428,6 +428,29 @@ $(document).ready(function () {
   });
 
   // ----------------------------------------------------
+  // SWIPER CAROUSEL
+  // ----------------------------------------------------
+
+  const swiperbg = new Swiper(".swiper-container-bg", {
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    effect: "fade",
+    enabled: true,
+    loop: true,
+    on: {
+      init: function () {
+        console.log('background slideshow swiper initialized');
+      },
+    },
+    speed: 2000,
+  });
+
+  swiperbg.slideNext(1500, true)
+  swiperbg.slidePrev(1500, true)
+
+  // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------
   navBtn.mouseenter(showMenu);

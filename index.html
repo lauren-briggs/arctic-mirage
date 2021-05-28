@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media.css">
     <link rel="stylesheet" href="https://use.typekit.net/nkk6njr.css">
-    <!-- linking slick carousel css -->
-    <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css" />
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -20,7 +18,7 @@
 
 <body>
 
-    <!-- TAM logo -->
+    <!-- TAM LOGO -->
 
     <header>
         <div id="homelogo">
@@ -29,7 +27,7 @@
         </div>
     </header>
 
-    <!-- main menu nav -->
+    <!-- MAIN MENU NAV -->
     <nav>
         <ul>
             <li class="menu" id="workNav">Work</li>
@@ -39,26 +37,21 @@
     </nav>
     <div id="navBtn">&#10005;</div>
 
-    <!--slideshow-->
-    <container class="slideshow-container">
-        <div class="slideshow">
-            <div class="mySlides fadeslide">
-                <img id="delay1" src="assets/img/bgroundimg/AM_Fetti_01_3000px.png" width="100%"
-                    alt="Fetti Business Card">
+    <!--BACKGROUND SLIDESHOW-->
+    <section class="slideshow-container swiper-container-bg">
+        <!-- SWIPER CAROUSEL -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(assets/img/bgroundimg/AM_Fetti_01_3000px.png);"></div>
+            <div class="swiper-slide" style="background-image:url(assets/img/bgroundimg/AM_Farmer_01_3000px.png);">
             </div>
-            <div class="mySlides fadeslide">
-                <img id="delay2" src="assets/img/bgroundimg/AM_Farmer_01_3000px.png" width="100%" alt="Farmer St Logo">
+            <div class="swiper-slide" style="background-image:url(assets/img/bgroundimg/AM_Olivia_01_3000px.png);">
             </div>
-            <div class="mySlides fadeslide">
-                <img id="delay3" src="assets/img/bgroundimg/AM_Olivia_01_3000px.png" width="100%"
-                    alt="Olivia Sale Manual Gold Foil">
-            </div>
-            <div class="mySlides fadeslide">
-                <img id="delay4" src="assets/img/bgroundimg/AM_Backman_01_3000px.png" width="100%"
-                    alt="Backman & Co Business Card">
+            <div class="swiper-slide" style="background-image:url(assets/img/bgroundimg/AM_Backman_01_3000px.png);">
             </div>
         </div>
-    </container>
+        <div class="swiper-pagination"></div>
+    </section>
+
     <!--LEFT SIDE MODULE - PROJECT IMAGES -->
     <section class="leftcont" id="project-img-container">
         <!-- project sections -->
@@ -118,6 +111,18 @@
                 </div>
                 <div class="swiper-slide" style="background-image:url(assets/img/olivia/AM_Olivia_09_1500px.png);">
                 </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+        <!-- BLAIR sections -->
+        <section class="projectblair fade swiper-container">
+            <!-- SWIPER CAROUSEL -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(assets/img/blair/AM_Blair_01_1500px.png);"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/blair/AM_Blair_02_1500px.png);"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/blair/AM_Blair_03_1500px.png);"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/blair/AM_Blair_04_1500px.png);"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/blair/AM_Blair_05_1500px.png);"></div>
             </div>
             <div class="swiper-pagination"></div>
         </section>
@@ -937,8 +942,6 @@
 
     <!-- JAVASCRIPT LINKS -->
     <script src="assets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
-    <!-- linking slick carousel js -->
-    <script type="text/javascript" src="assets/slick-1.8.1/slick/slick.js"></script>
     <!-- MAIN JS -->
     <script src="assets/js/main.js" charset="utf-8"></script>
     <!-- CONTACT FORM HANDLER -->

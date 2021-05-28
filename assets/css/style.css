@@ -1,4 +1,3 @@
-/*header - main styling*/
 :root{
     --amBlack: #000000;
     --amWhite: #ffffff;
@@ -12,31 +11,11 @@
     scroll-behavior: smooth;
     cursor: url(../img/am-collateral/am21-04_logo_cursor_a.png), url(../img/am-collateral/am21-04_logo_cursor_a-rev.png), url(../img/am-collateral/am21-04_logo_cursor_a.cur);
 }
-
 body{
     font-family: degular, sans-serif;
     font-weight:lighter;
     font-style: normal;
 }
-
-
-  /* Works on Chrome, Edge, and Safari */
-  /* .work::-webkit-scrollbar {
-    width: 5px;
-    padding-right: 2px;
-  }
-  
-  .work::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
-    padding-right: 2px;
-  }
-  
-  .work::-webkit-scrollbar-thumb {
-    background-color:var(--amWhite);
-    border-radius: 10px;
-    padding-right: 2px;
-  } */
-
 #homelogo{
     position: fixed;
     top: 50px;
@@ -44,7 +23,6 @@ body{
     z-index: 100;
     cursor: pointer;
 }
-
 /*consistent styling throughout*/
 p{
     font-style: normal;
@@ -56,12 +34,10 @@ p{
     color: var(--amWhite);
     padding: 5px 0px;
 }
-
 .about .block,
 .contact .block{
     padding-left: 30px;
 }
-
 h1,
 h2,
 h3,
@@ -70,28 +46,24 @@ h4{
     color: white;
     font-kerning: auto;
 }
-
 /* h1 styling for project titles in menu */
 h1{
     font-size: 26px;
     font-weight: 300;
     line-height: 30px;
 }
-
 /* h2 styling - intro paragraphs, team names, services, clients, contact us headings */
 h2{
     font-weight:300;
     font-size: 22px;
     line-height: 1.25;
 }
-
 /* job title */
 h3{
     font-weight:300;
     font-size: 20px;
     line-height: 1.25;
 }
-
 /* number and service heading */
 h4{
     font-weight: 300;
@@ -102,14 +74,11 @@ h4{
     text-decoration-thickness: 8%;
     line-height: 19px;
 }
-
 h5{
     font-size: 15px;
     font-weight: normal;
     line-height: 19px;
 }
-
-
 /* end consistent styling section */
 
 /* MENU FUNCTIONALITY */
@@ -129,7 +98,7 @@ nav{
     color: var(--amBlack);
     z-index: 1001;
 }
-/* positioning of nav elements */
+/* POSITIONING AND STYLNIG OF NAV ELEMENTS */
 nav li{
     display: inline-flex;
     flex-direction: row;
@@ -139,7 +108,6 @@ nav li{
     padding: 20px 50px 20px 50px;
     cursor: pointer;
 }
-
 #workNav.underline,
 #aboutNav.underline,
 #contactNav.underline{
@@ -147,17 +115,14 @@ nav li{
     text-underline-offset: 3px;
     text-decoration-thickness: 15%;
 }
-
 .menu{
     visibility: hidden;
 }
-
 .menu:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 15%;
 }
-
 .menu.showme{
     visibility: visible;
 }
@@ -165,7 +130,6 @@ nav li{
 .menu.white{
     color: var(--amWhite);
 }
-
 #navBtn{
     font-family: degular, sans-serif;
     font-weight: 300;
@@ -181,20 +145,17 @@ nav li{
     text-decoration: none;
     transition: 0.5s;
 }
-
 #navBtn:hover{
     text-decoration: none;
     cursor: pointer;
 }
-
 #navBtn.showme{
     transform: rotate(0deg);
 }
 #navBtn.white{
     color: var(--amWhite);
 }
-
-/* right container */
+/* RIGHT CONTAINER */
 #rightcont{
     width: 0;
     background-color: black;
@@ -211,11 +172,11 @@ nav li{
     transform: translateX(0%);
     z-index: 1;
 }
-/* left container overflow */
+/* LEFT CONTAINER OVERFLOW */
 #project-img-container{
     overflow-y: scroll;
 }
-/* RIGHT menu display and overflow */
+/* RIGHT MENU DISPLAY AND OVERFLOW */
 .work,
 .about,
 .contact{
@@ -225,11 +186,10 @@ nav li{
     transform: translateX(100%);
     transition: ease-in-out 0.75;
 }
-/* on hover, allow scroll */
+/* ALLOW SCROLL ON HOVER */
 .work:hover{
     overflow: scroll;
 }
-
 .work.showme,
 .about.showme,
 .contact.showme{
@@ -253,7 +213,6 @@ nav li{
     z-index: 2000;
     background-image: linear-gradient(rgba(0, 0, 0, 0), var(--amBlack));
 }
-
 /* grid CONTAINER structure of WORK */
 .grid-container-workmenu{
     display: grid;
@@ -273,7 +232,7 @@ nav li{
 .work h2{
     line-height: 30px;
 }
-/* underline on hover of project headings */
+/* UNDERLINE ON HOVER OF PROJECT HEADINGS */
 .work h1:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -286,14 +245,13 @@ nav li{
     padding-left: 20px;
     transition: padding-left 0.25s;
 }
-/*toggle descriptions in work menu*/
+/*TOGGLE DESCRIPTIONS IN WORK MENU*/
 .work p{
     padding-left: 0px;
     transition: padding-left 0.25s;
     display: none;
     opacity: 0;
 }
-
 .block{
     padding-top: 15px;
 }
@@ -361,23 +319,20 @@ nav li{
     #ahna{
             flex: 1 0 20%;
             padding: 1.75rem 1rem 0rem 1.75rem;
-            /* when the screen resizes, make it so our columns don't jump in size */
             transition: flex-basis 500ms linear;
             margin-bottom: 1rem;
     }
 
-/*list of services*/
+/*LIST OF SERVICES*/
 .about li{
     list-style:none;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
 }
-
 #liheader{
     text-decoration: underline;
 }
-
 .hidden-list li{
     display: none;
     opacity: 0;
@@ -388,12 +343,10 @@ nav li{
     transform-origin: top center;
     animation-fill-mode: forwards;
 }
-
 .hover:hover .hidden-list li{
     display: block;
     transition: 0.5s;
 }
-
 /* DROP DOWN REVEAL OF LIST OF SERVICES */
        .drop-delay-1 { animation-delay: 0ms}
        .drop-delay-2 { animation-delay: 50ms; }
@@ -413,8 +366,6 @@ nav li{
 
 @keyframes drop-down {
   0% {
-    /* opacity: 0; */
-    /* transform: rotateX(-90deg); */
     transform: translateY(-50px);
   }
   50% {
@@ -422,12 +373,9 @@ nav li{
   }
   100% {
     opacity: 1;
-    /* transform: rotateX(0deg); */
     transform: translateY(0px);
   }
 }
-
-
 /* grid CONTAINER structure of CONTACT */
 .grid-container-contact{
     width: 40vw;
@@ -463,14 +411,12 @@ nav li{
     color: white;
     justify-content: space-around;
 }
-
 #address,
 #enquiries{
     max-width: 300px;
     flex: 1 0 20%;
     transition: flex-basis 500ms linear;
 }
-
 /* CONTACT US FORM */
 form{
     display: flex;
@@ -508,7 +454,6 @@ form textarea,
 #message:hover{
     background-color: rgb(254, 254, 247);
 }
-
 input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder {
     color: var(--amBlack);
@@ -517,7 +462,6 @@ input:hover,
 textarea:hover{
     color: var(--amBlack);
 }
-
 #name:focus,
 #email:focus,
 #subject:focus,
@@ -525,7 +469,7 @@ textarea:hover{
     border: 2px solid var(--amWhite);
     outline: none;
 }
-/*social links style*/
+/* STYLING OF SOCIAL LINKS */
 .contact ul{
     width: 100%;
     padding-top: 30px;
@@ -547,6 +491,7 @@ textarea:hover{
     text-decoration-thickness: 8%;
 }
 
+/* PROJECT IMAGES CONTAINER */
 #project-img-container > section{
     width: 60vw;
     min-height: 100vh;
@@ -569,12 +514,11 @@ textarea:hover{
     line-height: 0  ;
     float: top;
 }
-
 .projectfetti{
     background-color: #E0E0E1;
 }
 
-/* Background Slideshow */
+/* BACKGROUND SLIDESHOW */
 .slideshow-container{
     height: 100vh;
     width: 100%;
@@ -584,96 +528,49 @@ textarea:hover{
     object-fit: cover;
     overflow: hidden;
 }
-    .mySlides{
-        object-fit: cover;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
 
-    .fadeslide img{
-        opacity:0; 
-        animation-name: fadeInSlide; 
-        animation-duration: 20s; 
-        animation-iteration-count: infinite;
-    }
-
-    @keyframes fadeInSlide {
-        0%   { opacity: 0; }
-        20%   { opacity: 1; }
-        40%  { opacity: 1; }
-        60%  { opacity: 0; }
-        80%  {opacity: 0;}
-        100% { opacity: 0; }
-    }
-
-    #delay1 { animation-delay: 0s; }
-    #delay2 { animation-delay: 5s; }
-    #delay3 { animation-delay: 10s; }
-    #delay4 { animation-delay: 15s; }
-
-    .fade{
-        opacity: 0;
-        transition: ease-in-out;
-        animation-name: fade;
-        animation-duration: 2.5s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes fade {
-        0% {opacity: 0;}
-        50% {opacity: 50;}
-        100% {opacity: 100;}
-    }
-
+/* FADE ANIMATION */
+.fade{
+    opacity: 0;
+    transition: ease-in-out;
+    animation-name: fade;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    50% {opacity: 50;}
+    100% {opacity: 100;}
+}
 
 #map {
     height: 400px;
     width: 100%;
   }
 
-  /* SWIPER */
-
-  .swiper-container{
-    background-color: var(--amWhite);
-    width: 60%;
-    height: 100vh;
-  }
-
-  .swiper-slide{
-    display: flex;
-    background-color: var(--amBlack);
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .swiper-slide .bottom{
-      background-position: bottom !important;
-  }
-
-  .swiper-pagination{
-      cursor: pointer;
-  }
-
-  .swiper-pagination-bullet-active{
-    background-color: var(--amBlack) !important;
-  }
-
- 
-
-  /* .swiper-pagination >>> .swiper-pagination-bullet {
-    opacity: 1;
-    border: white solid 1px;
-    background-color: transparent;
+/* SWIPER */
+.swiper-container{
+background-color: var(--amWhite);
+width: 60%;
+height: 100vh;
 }
-.swiper-pagination >>> .swiper-pagination-bullet-active {
-    background-color: white;
-} */
+.swiper-slide{
+display: flex;
+background-color: var(--amBlack);
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+.swiper-slide .bottom{
+    background-position: bottom !important;
+}
+.swiper-pagination{
+    cursor: pointer;
+}
+.swiper-pagination-bullet-active{
+background-color: var(--amBlack) !important;
+}
