@@ -19,6 +19,7 @@ $(document).ready(function () {
   const contactEl = $(".contact")
   const workGridCont = $(".grid-container-workmenu");
   const workGridItem = $(".grid-item-workmenu");
+  const subscriberPopUp = $('#subscriber-container');
 
   // ----------------------------------------------------
   // BUTTONS
@@ -28,6 +29,8 @@ $(document).ready(function () {
   const aboutNav = $("#aboutNav");
   const contactNav = $("#contactNav")
   const amLogo = $("#homelogo")
+  const subscriberCloseBtn = $('#subscriber-close-btn');
+
 
   // ----------------------------------------------------
   // BOOLEANS TO DEFINE WHETHER OR NOT SECTIONS ARE OPEN
@@ -40,12 +43,23 @@ $(document).ready(function () {
   let isDescrOpen = false;
 
   // ----------------------------------------------------
+  // SUBSCRIBER POPUP
+  // ----------------------------------------------------
+  subscriberCloseBtn.on('click', function () {
+    subscriberPopUp.css("display", "none");
+  })
+
+
+  // ----------------------------------------------------
   // SHOW INITIAL MENU ON HOVER
   // ----------------------------------------------------
   function showMenu() {
     menuEl.addClass("showme");
     navBtn.addClass("showme");
   }
+
+
+
 
   // ----------------------------------------------------
   // HIDE MENU/CLOSE ALL
