@@ -456,6 +456,7 @@ $(document).ready(function () {
   swiperbg.slideNext(1500, true)
   swiperbg.slidePrev(1500, true)
 
+
   // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------

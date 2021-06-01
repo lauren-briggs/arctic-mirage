@@ -576,86 +576,6 @@ background-color: var(--amBlack) !important;
 }
 
 /* MAILCHIMP SUBSCRIBERS */
-/* #subscriber-container{
-    position: fixed;
-    z-index: 3000;
-    background-color: rgba(255, 255, 255, 0.63);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-#mc_embed_signup {
-    background-color: var(--amBlack);
-    color: var(--amWhite);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clear: left;
-    width: 40%;
-    padding: 10px 0px 20px;
-}
-#mce-EMAIL,
-#mc-embedded-subscribe{
-    width: 100% !important;
-    padding:10px !important;
-    margin: 0.5em 0em !important;
-    color: white !important;
-    background-color: black !important;
-    border: none !important;
-    border-radius: 0px !important;
-    border-bottom: 2px solid var(--amWhite) !important;
-    justify-content: space-around !important;
-    font-family: degular, sans-serif !important;
-    font-weight:lighter !important;
-    font-style: normal !important;
-    font-size: 16px !important;
-    text-transform: uppercase !important;
-}
-
-#mc-embedded-subscribe{
-    border-bottom: none !important;
-}
-
-#mc_embed_signup .button {
-    width: 100% !important;
-    height: 42px !important;
-}
-#mc-embedded-subscribe:hover{
-    border-bottom: 2px solid var(--amWhite) !important;
-    cursor: pointer !important;
-}
-::placeholder{
-    color: var(--amWhite);
-}
-
-#mce-EMAIL:hover{
-    background-color: rgb(254, 254, 247) !important;
-    color: white !important;
-    border-radius: 0px !important;
-    border-bottom: 2px solid var(--amWhite) !important;
-    text-transform: uppercase !important;
-}
-#mce-EMAIL:hover::-webkit-input-placeholder{
-    color: var(--amBlack) !important;
-}
-#mce-EMAIL:hover{
-    color: var(--amBlack) !important;
-}
-#mce-EMAIL:focus{
-    border: 2px solid var(--amWhite) !important;
-    outline: none !important;
-}
-
-#mc_embed_signup label{
-    font-family: degular, sans-serif;
-    font-weight: normal !important;
-    font-size: 20px !important;
-    padding: 1.5em;
-    padding-bottom: 1.5em !important;
-}
-
 #subscriber-close-btn{
     position: absolute;
     top: 0px;
@@ -663,7 +583,6 @@ background-color: var(--amBlack) !important;
     cursor: pointer;
     padding: 15px;
 }
-
 #subscriber-container{
     position: fixed;
     z-index: 3000;
@@ -674,23 +593,21 @@ background-color: var(--amBlack) !important;
     align-items: center;
     justify-content: center;
 }
-
-#subscriber-box{
-    text-align: left;
-    background-color: var(--amBlack);
-    color: var(--amWhite);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 550px;
-    height: auto;
-    padding: 50px 50px 40px;
-    position: relative;
+#mc-embedded-subscribe-form{
+    text-align: left !important;
+    background-color: var(--amBlack) !important;
+    color: var(--amWhite) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 550px !important;
+    height: auto !important;
+    padding: 50px 50px 40px !important;
+    position: relative !important;
 }
-
-#sub-email,
-#subscribe{
+#mce-EMAIL,
+#mc-embedded-subscribe{
     width: 100% !important;
     padding:10px !important;
     margin: 1.5em 0em !important;
@@ -707,22 +624,11 @@ background-color: var(--amBlack) !important;
     text-transform: uppercase !important;
 }
 
-#subscribe{
-    /* padding: 0em !important; */
+#mc-embedded-subscribe{
     margin: 0em !important;
-    /* border-bottom: none !important;
-    line-height: 40px; */
 }
-/* #subscribe:hover{
-    border-bottom: 2px solid var(--amWhite) !important;
-    cursor: pointer !important;
-} */
-::placeholder{
-    color: var(--amWhite);
-}
-
-#sub-email:hover,
-#subscribe:hover{
+#mce-EMAIL:hover,
+#mc-embedded-subscribe:hover{
     background-color: rgb(254, 254, 247) !important;
     color: black !important;
     border-radius: 0px !important;
@@ -744,7 +650,6 @@ background-color: var(--amBlack) !important;
     color: var(--amBlack);
     cursor: pointer;
 }
-
 #sub-label{
     font-family: degular, sans-serif;
     font-weight: normal !important;
