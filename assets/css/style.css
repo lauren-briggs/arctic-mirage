@@ -657,9 +657,9 @@ background-color: var(--amBlack) !important;
 }
 
 #subscriber-close-btn{
-    position: relative;
-    top: -202px;
-    right: -255px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     cursor: pointer;
     padding: 15px;
 }
@@ -684,8 +684,9 @@ background-color: var(--amBlack) !important;
     align-items: center;
     justify-content: flex-start;
     width: 550px;
-    height: 220px;
-    padding: 50px;
+    height: auto;
+    padding: 50px 50px 40px;
+    position: relative;
 }
 
 #sub-email,
@@ -707,23 +708,23 @@ background-color: var(--amBlack) !important;
 }
 
 #subscribe{
-    padding: 0em !important;
+    /* padding: 0em !important; */
     margin: 0em !important;
-    border-bottom: none !important;
-    width: 100% !important;
-    height: 42px !important;
+    /* border-bottom: none !important;
+    line-height: 40px; */
 }
-#subscribe:hover{
+/* #subscribe:hover{
     border-bottom: 2px solid var(--amWhite) !important;
     cursor: pointer !important;
-}
+} */
 ::placeholder{
     color: var(--amWhite);
 }
 
-#sub-email:hover{
+#sub-email:hover,
+#subscribe:hover{
     background-color: rgb(254, 254, 247) !important;
-    color: white !important;
+    color: black !important;
     border-radius: 0px !important;
     border-bottom: 2px solid var(--amWhite) !important;
     text-transform: uppercase !important;
