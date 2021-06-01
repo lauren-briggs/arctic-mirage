@@ -9,12 +9,12 @@
 }
 *{
     scroll-behavior: smooth;
-    cursor: url(../img/am-collateral/am21-04_logo_cursor_a.png), url(../img/am-collateral/am21-04_logo_cursor_a-rev.png), url(../img/am-collateral/am21-04_logo_cursor_a.cur);
 }
 body{
     font-family: degular, sans-serif;
     font-weight:lighter;
     font-style: normal;
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a.png') 15 15, auto;
 }
 #homelogo{
     position: fixed;
@@ -106,7 +106,6 @@ nav li{
     align-items:flex-end;
     list-style: none;
     padding: 20px 50px 20px 50px;
-    cursor: pointer;
 }
 #workNav.underline,
 #aboutNav.underline,
@@ -185,6 +184,7 @@ nav li{
     overflow-y: scroll;
     transform: translateX(100%);
     transition: ease-in-out 0.75;
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
 /* ALLOW SCROLL ON HOVER */
 .work:hover{
@@ -237,7 +237,6 @@ nav li{
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
-    cursor: grab;
     padding-left: 20px;
     transition: padding-left 0.25s;
 }
@@ -310,9 +309,6 @@ nav li{
         column-gap: 1em;
         row-gap: 1em;
         color: var(--amWhite);
-    }
-    .grid-item-about-sub{
-        cursor: pointer;
     }
 /* grid composition of ABOUT TEAM */
     #alex,
@@ -443,7 +439,7 @@ nav li{
 #submit:hover{
     background-color: var(--amWhite);
     color: var(--amBlack);
-    cursor: pointer;
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a.png') 15 15, auto;
 }
 ::placeholder{
     color: var(--amWhite);
@@ -453,6 +449,7 @@ nav li{
 #subject:hover,
 #message:hover{
     background-color: rgb(254, 254, 247);
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a.png') 15 15, auto;
 }
 input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder {
@@ -489,6 +486,7 @@ textarea:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
+cursor: inherit;
 }
 
 /* PROJECT IMAGES CONTAINER */
@@ -569,7 +567,7 @@ background-repeat: no-repeat;
     background-position: bottom !important;
 }
 .swiper-pagination{
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .swiper-pagination-bullet-active{
 background-color: var(--amBlack) !important;
@@ -592,6 +590,7 @@ background-color: var(--amBlack) !important;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
 #mc-embedded-subscribe-form{
     text-align: left !important;
@@ -634,6 +633,7 @@ background-color: var(--amBlack) !important;
     border-radius: 0px !important;
     border-bottom: 2px solid var(--amWhite) !important;
     text-transform: uppercase !important;
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a.png') 15 15, auto;
 }
 #sub-email:hover::-webkit-input-placeholder{
     color: var(--amBlack) !important;
@@ -654,4 +654,5 @@ background-color: var(--amBlack) !important;
     font-family: degular, sans-serif;
     font-weight: normal !important;
     font-size: 20px !important;
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
