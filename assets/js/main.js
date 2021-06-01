@@ -14,6 +14,7 @@ $(document).ready(function () {
   const workGridCont = $(".grid-container-workmenu");
   const workGridItem = $(".grid-item-workmenu");
   const subscriberPopUp = $('#subscriber-container');
+  const bgSlideshowContainer = $('.slideshow-container');
 
   // ----------------------------------------------------
   // BUTTONS
@@ -404,7 +405,7 @@ $(document).ready(function () {
         direction: 'vertical',
         effect: "fade",
         enabled: true,
-        // init: false,
+        initialSlide: 0,
         loop: true,
         mousewheel: {
           invert: false,
@@ -452,6 +453,53 @@ $(document).ready(function () {
 
 
   // ----------------------------------------------------
+  // GOOGLE MAP
+  // ----------------------------------------------------
+
+  let map;
+
+  function initMap() {
+    const amOffice = { lat: -37.932821, lng: 145.036590 }
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: amOffice,
+      zoom: 13,
+      mapId: 'ca5e31db849d916a',
+      disableDefaultUI: true,
+      zoomControl: true,
+      mapTypeControl: false,
+      scaleControl: true,
+      streetViewControl: false,
+      rotateControl: false,
+      fullscreenControl: true,
+    });
+    // The marker, positioned at AM
+    // const amMarker =
+    //   '../assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM_Rev.png';
+    // const beachMarker = new google.maps.Marker({
+    //   position: { lat: -33.89, lng: 151.274 },
+    //   map: map,
+    //   icon: amMarker,
+    // });
+    const svgMarker = {
+      path: "M36.3,101.8L18.4,146H0L60,2.6h18.6l60,143.4H120l-17.9-44.2l-5.7-14.6l-6.5-15.8 c-6.7-16.7-14.6-36.6-20.1-51.9h-1.2c-5.7,15.5-13.4,35.1-20.1,51.9l-6.5,15.8L36.3,101.8z",
+      fillColor: "white",
+      fillOpacity: 1,
+      strokeWeight: 0,
+      rotation: 0,
+      scale: 0.25,
+      anchor: new google.maps.Point(55, 60),
+    };
+    new google.maps.Marker({
+      position: map.getCenter(),
+      icon: svgMarker,
+      map: map,
+    });
+  }
+
+  initMap();
+
+
+  // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------
   navBtn.mouseenter(showMenu);
@@ -462,6 +510,6 @@ $(document).ready(function () {
   contactNav.click(showContact);
   workGridItem.click(showProject);
   workGridItem.click(initSwiper);
-  $(".slideshow-container").click(closeAll);
+  bgSlideshowContainer.click(closeAll);
   $(window).resize(swapLogo);
 });
