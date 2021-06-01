@@ -603,7 +603,7 @@ background-color: var(--amBlack) !important;
     justify-content: flex-start !important;
     width: 550px !important;
     height: auto !important;
-    padding: 50px 50px 40px !important;
+    padding: 50px 50px 50px !important;
     position: relative !important;
 }
 #mce-EMAIL,

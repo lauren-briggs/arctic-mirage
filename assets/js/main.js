@@ -3,12 +3,6 @@ $(document).ready(function () {
   //js will only run once HTML doc has loaded to speed up response time
 
   // ----------------------------------------------------
-  // IMPORT SWIPER NPM
-  // ----------------------------------------------------
-  // core version + navigation, pagination modules:
-  // import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-
-  // ----------------------------------------------------
   // ELEMENTS
   // ----------------------------------------------------
   const menuEl = $(".menu");
@@ -49,7 +43,6 @@ $(document).ready(function () {
     subscriberPopUp.css("display", "none");
   })
 
-
   // ----------------------------------------------------
   // SHOW INITIAL MENU ON HOVER
   // ----------------------------------------------------
@@ -57,9 +50,6 @@ $(document).ready(function () {
     menuEl.addClass("showme");
     navBtn.addClass("showme");
   }
-
-
-
 
   // ----------------------------------------------------
   // HIDE MENU/CLOSE ALL
@@ -135,11 +125,7 @@ $(document).ready(function () {
   // SHOW WORK FUNCTIONALITY AND CONDITIONS
   // ----------------------------------------------------
   function showWork() {
-    // window.scroll({
-    //   top: 0,
-    //   left: 0,
-    //   behavior: 'smooth'
-    // });
+    workEl.animate({ scrollTop: 0 }, "fast");
     if (isRightContOpen === false) {
       handleMenu();
       workActive();
@@ -184,6 +170,7 @@ $(document).ready(function () {
   // SHOW ABOUT FUNCTIONALITY AND CONDITIONS
   // ----------------------------------------------------
   function showAbout() {
+    aboutEl.animate({ scrollTop: 0 }, "fast");
     if (isRightContOpen === false) {
       handleMenu();
       aboutActive();
@@ -248,6 +235,7 @@ $(document).ready(function () {
   // SHOW CONTACT FUNCTIONALITY AND CONDITIONS
   // ----------------------------------------------------
   function showContact() {
+    contactEl.animate({ scrollTop: 0 }, "fast");
     if (isRightContOpen === false) {
       handleMenu();
       contactActive();
@@ -311,7 +299,6 @@ $(document).ready(function () {
     }
   };
 
-  $(window).resize(swapLogo);
   // ----------------------------------------------------
   // SHOW PROJECT IMAGES AND DESCRIPTION ON CLICK
   // ----------------------------------------------------
@@ -352,10 +339,17 @@ $(document).ready(function () {
     });
 
     // TO DO: check if description/project is open and close when title is clicked
+
     // TO DO: scroll to description
+    // let position = $(this).position();
+    // console.log(position);
+
+    // workEl.animate({ scrollTop: position.top - 50 }, "slow");
 
     isDescrOpen = true;
     isLeftContOpen = true;
+
+
 
     resizeWork();
   }
@@ -469,4 +463,5 @@ $(document).ready(function () {
   workGridItem.click(showProject);
   workGridItem.click(initSwiper);
   $(".slideshow-container").click(closeAll);
+  $(window).resize(swapLogo);
 });
