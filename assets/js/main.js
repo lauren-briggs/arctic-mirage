@@ -119,8 +119,6 @@ $(document).ready(function () {
     menuEl.addClass("showme white");
     navBtn.addClass("white");
 
-    swapLogo();
-
     isRightContOpen = false;
     isWorkElOpen = false;
     isAboutElOpen = false;
@@ -169,6 +167,8 @@ $(document).ready(function () {
       isRightContOpen = false;
       isWorkElOpen = false;
     }
+
+    swapLogo();
   }
 
   // ----------------------------------------------------
@@ -230,6 +230,8 @@ $(document).ready(function () {
       isRightContOpen = false;
       isAboutElOpen = false;
     }
+
+    swapLogo();
     window.scroll({
       top: 0,
       left: 0,
@@ -295,6 +297,8 @@ $(document).ready(function () {
       isRightContOpen = false;
       isContactElOpen = false;
     }
+
+    swapLogo();
     window.scroll({
       top: 0,
       left: 0,
@@ -504,30 +508,11 @@ $(document).ready(function () {
 
   initMap();
 
-  // function handleMenuTrigger() {
-  //   if (!isMenuOpen) {
-  //     showMenu();
-  //   } else {
-  //     closeAll()
-  //   }
+  // if ($(window).width() < 700) {
+  //   menuEl.addClass("showme");
+  // } else {
+  //   menuEl.removeClass("showme");
   // }
-
-
-  // function handleMenuTrigger() {
-  //   if (isMobile) {
-  //     navBtn.click(showMenu);
-  //   } else {
-  //     navBtn.mouseenter(showMenu);
-  //   }
-  // }
-
-  // handleMenuTrigger();
-
-  if ($(window).width() < 700) {
-    menuEl.addClass("showme");
-  } else {
-    menuEl.removeClass("showme");
-  }
   // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------
