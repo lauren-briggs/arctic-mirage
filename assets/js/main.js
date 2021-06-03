@@ -36,13 +36,22 @@ $(document).ready(function () {
   let isAboutElOpen = false;
   let isContactElOpen = false;
   let isDescrOpen = false;
+  let isMenuOpen = false;
 
   // ----------------------------------------------------
-  // SUBSCRIBER POPUP
+  // CLOSE SUBSCRIBER POPUP
   // ----------------------------------------------------
+  // Close on click of x button
   subscriberCloseBtn.on('click', function () {
     subscriberPopUp.css("display", "none");
   })
+
+  // Close on esc key
+  window.onkeyup = function (event) {
+    if (event.keyCode == 27) {
+      subscriberPopUp.css("display", "none");
+    }
+  }
 
   // ----------------------------------------------------
   // SHOW INITIAL MENU ON HOVER
@@ -50,6 +59,8 @@ $(document).ready(function () {
   function showMenu() {
     menuEl.addClass("showme");
     navBtn.addClass("showme");
+    isMenuOpen = true;
+    console.log(`Is menu open: ${isMenuOpen}`);
   }
 
   // ----------------------------------------------------
@@ -90,6 +101,8 @@ $(document).ready(function () {
     isRightContOpen = false;
     isLeftContOpen = false;
     isDescrOpen = false;
+    isMenuOpen = false;
+    console.log(`Is menu open: ${isMenuOpen}`);
 
     // removing underlines
     workNav.removeClass("underline");
@@ -491,12 +504,25 @@ $(document).ready(function () {
 
   initMap();
 
+  function handleMenuTrigger() {
+    if ()
+  }
+
+
+  // function handleMenuTrigger() {
+  //   if (isMobile) {
+  //     navBtn.click(showMenu);
+  //   } else {
+  //     navBtn.mouseenter(showMenu);
+  //   }
+  // }
+
+  // handleMenuTrigger();
 
   // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------
-  navBtn.mouseenter(showMenu);
-  navBtn.click(closeAll);
+  navBtn.click(handleMenuTrigger);
   amLogo.click(closeAll);
   workNav.click(showWork);
   aboutNav.click(showAbout);

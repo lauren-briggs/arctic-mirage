@@ -21,5 +21,6 @@
     "@mailchimp/mailchimp_marketing": "^3.0.43",
     "dotenv": "^10.0.0",
     "swiper": "^6.6.2"
-  }
+  },
+  "devDependencies": {}
 }
