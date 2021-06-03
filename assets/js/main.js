@@ -524,18 +524,15 @@ $(document).ready(function () {
   // handleMenuTrigger();
 
   if ($(window).width() < 700) {
-    if (!isMenuOpen) {
-      navBtn.click(showMenu);
-    } else {
-      navBtn.click(closeAll);
-    }
+    menuEl.addClass("showme");
   } else {
-    navBtn.mouseenter(showMenu);
-    navBtn.click(closeAll);
+    menuEl.removeClass("showme");
   }
   // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------
+  navBtn.mouseenter(showMenu);
+  navBtn.click(closeAll);
   amLogo.click(closeAll);
   workNav.click(showWork);
   aboutNav.click(showAbout);

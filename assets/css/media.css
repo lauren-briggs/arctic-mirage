@@ -210,6 +210,13 @@
     }
 }
 @media screen and (max-width: 768px ) {
+    #homelogo{
+        width: 100px;
+    }
+    nav{
+        font-size: 22px;
+        top: 230px;
+    }
     #address,
     #enquiries{
         grid-column: 1 /span 2;
@@ -298,8 +305,8 @@
 }
 @media screen and (max-width: 480px ) {
     nav{
-        font-size: 16px;
-        top: 205px;
+        font-size: 20px;
+        top: 220px;
     }
     h1{
         font-size: 20px;
