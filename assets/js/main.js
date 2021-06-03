@@ -504,9 +504,13 @@ $(document).ready(function () {
 
   initMap();
 
-  function handleMenuTrigger() {
-    if ()
-  }
+  // function handleMenuTrigger() {
+  //   if (!isMenuOpen) {
+  //     showMenu();
+  //   } else {
+  //     closeAll()
+  //   }
+  // }
 
 
   // function handleMenuTrigger() {
@@ -519,10 +523,19 @@ $(document).ready(function () {
 
   // handleMenuTrigger();
 
+  if ($(window).width() < 700) {
+    if (!isMenuOpen) {
+      navBtn.click(showMenu);
+    } else {
+      navBtn.click(closeAll);
+    }
+  } else {
+    navBtn.mouseenter(showMenu);
+    navBtn.click(closeAll);
+  }
   // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------
-  navBtn.click(handleMenuTrigger);
   amLogo.click(closeAll);
   workNav.click(showWork);
   aboutNav.click(showAbout);
