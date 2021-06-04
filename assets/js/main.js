@@ -508,6 +508,12 @@ $(document).ready(function () {
 
   initMap();
 
+
+  // $('#print-hover').mouseenter(function () {
+  //   $('#print').slideDown("slow", function () { });
+  // });
+
+
   // if ($(window).width() < 700) {
   //   menuEl.addClass("showme");
   // } else {

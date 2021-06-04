@@ -239,16 +239,20 @@ nav li{
     padding-top: 15px;
 }
 /* grid CONTAINER structure of ABOUT */
-#about-intro{
+#about-intro,
+#about-team,
+#about-services,
+#about-client{
     width: 100%;
     padding: 3em 10em 4em 4em;
 }
+/* TEAM ETC */
 .grid-container-about{
-    width: 40vw;
+    width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
-    padding: 3em 10em 3em 4em;
+    padding: 0em;
     column-gap: 2em;
     row-gap: 3em;
 }
@@ -325,7 +329,7 @@ nav li{
 }
 .hover:hover .hidden-list li{
     display: block;
-    transition: 0.5s;
+    transition: all 0.5s;
 }
 /* DROP DOWN REVEAL OF LIST OF SERVICES */
        .drop-delay-1 { animation-delay: 0ms}
@@ -357,30 +361,43 @@ nav li{
   }
 }
 /* grid CONTAINER structure of CONTACT */
-.grid-container-contact{
-    width: 40vw;
+/* .grid-container-contact{ */
+    /* width: 40vw;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
     padding:3em 11em 3em 4em;
     column-gap: 2em;
     row-gap: 2.5em;
-    align-content: space-between;
-}
+    align-content: space-between; */
+/* } */
 /* grid ITEMS composition of CONTACT */
-#contact-intro{
-    grid-column: 1 / span 2;
+#contact-intro,
+#contact-contact-us,
+#contact-visit-us{
+    width: 100%;
+    padding: 3em 10em 4em 4em;
 }
-#contact-form{
-    grid-column-start: 1;
-    grid-column-end: span 2;
+.contact li{
+    list-style:none;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
 }
+
 #contact-socials{
-    grid-column-start: 1;
-    grid-column-end: span 2;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+}
+#contact-socials li{
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+#copyright-am:hover{
+text-decoration: none;
 }
 /* grid CONTAINER structure of SOCIALS in CONTACT */
 .grid-container-socials{
@@ -451,16 +468,17 @@ textarea:hover{
     outline: none;
 }
 /* STYLING OF SOCIAL LINKS */
-.contact ul{
+/* .contact ul{
     width: 100%;
     padding-top: 30px;
-}
-.contact li{
-    display: inline-flex;
+} */
+/* .contact li{
+    width: 100%;
+    text-align:left;
     flex-wrap: wrap;
     justify-content: space-around;
     color: var(--amWhite);
-}
+} */
 .contact a:link,
 .contact a:visited{
     color: var(--amWhite);
@@ -525,11 +543,20 @@ cursor: inherit;
     50% {opacity: 50;}
     100% {opacity: 100;}
 }
+#mappp-wrapper{
+    position: fixed;
+    bottom: 0px;
+    height: 650px;
+    width: 100%;
+}
 
 #map {
-    height: 400px;
+    height: 650px;
     width: 100%;
   }
+#contact-enq-wrapper{
+    height: 100vh;
+}
 
 /* SWIPER */
 .swiper-container{
@@ -639,3 +666,39 @@ background-color: var(--amBlack) !important;
     font-size: 20px !important;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
+
+.about-li-inline,
+.contact-li-inline{
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.right-arrow{
+    padding-left: 1em;
+}
+
+.back-arrow{
+    padding-right: 1em;
+}
+
+.about-li-hover:hover,
+.contact-li-hover:hover{
+    padding-left: 20px;
+    transition: padding-left 0.25s;
+}
+
+.about-li-hover:hover > h3,
+.contact-li-hover:hover > h3{
+    text-decoration: underline;    
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
+}
+
+.about-back-hover:hover > h3,
+.contact-back-hover:hover > h3{
+    text-decoration: underline;    
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
+}
+
+
