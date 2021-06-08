@@ -331,15 +331,7 @@ nav li{
         column-gap: 2em;
         row-gap: 1em;
     }
-/* grid CONTAINER structure of SERVICES IN ABOUT */
-    /* #grid-container-services{
-        display: grid;
-        grid-template-columns: 45px auto;
-        grid-template-rows: 40px auto;
-        column-gap: 1em;
-        row-gap: 1em;
-        color: var(--amWhite);
-    } */
+
 /* grid composition of ABOUT TEAM */
     #alex,
     #ahna{
@@ -364,7 +356,7 @@ nav li{
     display: none;
     color: var(--amWhite);
     padding-top: 1em;
-    padding-left: 2.6em;
+    padding-left: 2.7em;
 }
 
 /* grid ITEMS composition of CONTACT */

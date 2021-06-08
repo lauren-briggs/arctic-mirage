@@ -15,8 +15,9 @@ $(document).ready(function () {
   const workGridItem = $(".grid-item-workmenu");
   const subscriberPopUp = $('#subscriber-container');
   const bgSlideshowContainer = $('.slideshow-container');
-  const aboutIntro = $('#about-intro');
-  const contactIntro = $('#contact-intro');
+  const backBtn = $('.back-inline')
+  const aboutLiBtns = $('.about-li-inline')
+  const contactLiBtns = $('.contact-li-inline')
 
   // ----------------------------------------------------
   // BUTTONS
@@ -529,15 +530,6 @@ $(document).ready(function () {
   });
 
 
-  // if ($(window).width() < 700) {
-  //   menuEl.addClass("showme");
-  // } else {
-  //   menuEl.removeClass("showme");
-  // }
-
-
-
-
   // ----------------------------------------------------
   // ABOUT AND CONTACT SUB MENU LINKS
   // ----------------------------------------------------
@@ -545,49 +537,42 @@ $(document).ready(function () {
   function handleSubMenu() {
     // Getting the id value of the target el
     let i = $(this).attr("id");
-    console.log(i)
-
     let id = i.split('-', 1)
-    console.log(id);
-
     let parentId = $(this).parents().eq(2)[0].id;
-    console.log(parentId)
 
     $(`#${parentId}`).css('display', 'none');
 
     let sectionName = parentId.split('-', 1);
-    console.log(sectionName)
-
     let idToRender = `${sectionName}-${id}`;
-    console.log(idToRender);
 
     $(`#${idToRender}`).addClass('showme');
 
     if (idToRender === 'contact-visitus') {
       $('#mappp-wrapper').addClass('showme');
     }
-
   }
 
   function handleBackBtn() {
     let i = $(this).parents().eq(1)[0].id;
-    console.log(i)
     $(`#${i}`).removeClass('showme');
 
     let sectionName = i.split('-', 1)
-    console.log(sectionName)
-
     let idToRender = `${sectionName}-intro`;
-
 
     if (i === 'contact-visitus') {
       $('#mappp-wrapper').removeClass('showme');
     }
 
-
     $(`#${idToRender}`).css('display', 'block');
-
   }
+
+
+
+  // if ($(window).width() < 700) {
+  //   menuEl.addClass("showme");
+  // } else {
+  //   menuEl.removeClass("showme");
+  // }
 
 
   // ----------------------------------------------------
@@ -603,7 +588,7 @@ $(document).ready(function () {
   workGridItem.click(initSwiper);
   bgSlideshowContainer.click(closeAll);
   $(window).resize(swapLogo);
-  $('.back-inline').click(handleBackBtn);
-  $('.about-li-inline').click(handleSubMenu);
-  $('.contact-li-inline').click(handleSubMenu);
+  backBtn.click(handleBackBtn);
+  aboutLiBtns.click(handleSubMenu);
+  contactLiBtns.click(handleSubMenu);
 });
