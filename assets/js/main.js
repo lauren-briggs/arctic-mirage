@@ -346,23 +346,13 @@ $(document).ready(function () {
       isDescrOpen = false;
     }
 
-    // Showing project description and adding drop down in animation
-    let children = $(`.${i}descr`);
-    children.css({
-      "display": "block",
-      "transition": "all 0.5s ease-in",
-      "animation-name": "drop-down",
-      "animation-duration": "750ms",
-      "animation-iteration-count": "1",
-      "transform-origin": "top center",
-      "animation-fill-mode": "forwards"
-    });
+    console.log('function triggered')
+    console.log($(this))
+    let descr = $(this)[0].lastElementChild.children[0].className;
+    console.log(descr)
+    $(`.${descr}`).slideDown(600);
 
     // TO DO: check if description/project is open and close when title is clicked
-
-    // TO DO: scroll to description
-    // let position = $(this).position();
-    // console.log(position);
 
     isDescrOpen = true;
     isLeftContOpen = true;
@@ -508,18 +498,9 @@ $(document).ready(function () {
 
   initMap();
 
-
-
   // ----------------------------------------------------
-  // SLIDE DOWN
+  // SLIDE DOWN LIST OF SERVICES
   // ----------------------------------------------------
-  $('#slide-up').click(function () {
-    $('#slide-me').slideUp();;
-  })
-  $('#slide-down').click(function () {
-    $('#slide-me').slideDown();
-  })
-
   $('.slide-down-hover').mouseenter(function () {
     console.log('function triggered')
     console.log($(this))
