@@ -334,7 +334,7 @@ nav li{
 .hidden-list li{
     display: none;
     opacity: 0;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in-out;
     animation-name: drop-down; 
     animation-duration: 750ms; 
     animation-iteration-count: 1;
@@ -343,7 +343,7 @@ nav li{
 }
 .hover:hover .hidden-list li{
     display: block;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
 }
 /* DROP DOWN REVEAL OF LIST OF SERVICES */
        .drop-delay-1 { animation-delay: 0ms}
