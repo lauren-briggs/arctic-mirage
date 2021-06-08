@@ -94,94 +94,20 @@
         width: 100%;
     }
     .grid-container-workmenu,
-    .grid-container-about,
     #about-intro,
-    .grid-container-contact{
+    #about-team,
+    #about-services,
+    #about-clients,
+    #contact-intro,
+    #contact-contactus,
+    #contact-visitus{
         padding-left: 11em;
     }
-    /* ABOUT SECTION RESIZING */
-    .grid-container-about{
-        width: 100%;
-    }
-    .grid-container-about{
-        grid-template-columns: 50% 50%;
-    }
-    .grid-container-about{
-        row-gap: 1.5em;
-    }
-    .grid-item-about{
-        grid-column-start: 1;
-        grid-column-end: span 1;
-    }
-    #alex-text{
-        grid-row: 3;
-    }
-    #ahna-img{
-        grid-column: 2;
-        grid-row: 2;
-    }
-    #ahna-text{
-        grid-column: 2;
-        grid-row: 3;
-    }
-    #minka-img{
-        grid-row: 4;
-    }
-    #minka-text{
-        grid-row: 5;
-    }
-    #lauren-img{
-        grid-column: 2;
-        grid-row: 4;
-    }
-    #lauren-text{
-        grid-column: 2;
-        grid-row: 5;
-    }
-    #about-services{
-        grid-column-start: 1 / span 2;
-        grid-row: 6;
-    }
-    #about-client-text{
-        grid-row: 11;
-    }
-    #about-client-img{
-        grid-row: 12;
-    }
-    #grid-container-services{
-        grid-template-rows: auto auto;
-        grid-column: span 1;
-    }
+
     #grid-container-clients{
         grid-template-columns: auto auto auto auto;
-    }
-    /* CONTACT SECTION RESIZING */
-    .grid-container-contact{
-        width: 100%;
-        padding-bottom: 4em;
-        row-gap: 1.25em;
-        height: auto;
-    }
-    #address{
-        grid-column: 1 / span 1;
-    }
-    #enquiries{
-        grid-column: 2 / span 2;
-    }
-    #contact-socials{
-        grid-row: 6;
-        grid-column: 1 / span 2;
-        justify-content: space-between;
-    }
-    .grid-container-socials{
-        grid-template-columns: auto auto auto auto;
-    }
-    #amCopyright{
-        grid-column-start: 4;
-        grid-column-end: span 1;
-        grid-row: 1;
-        justify-self: center;
-    }
+    } 
+
     /* RESIZING LEFT CONT TO APPEAR FROM BOTTOM */
     .leftcont{
         height: 50vh;
@@ -210,100 +136,26 @@
     }
 }
 @media screen and (max-width: 768px ) {
-    h1{
-        font-size: 30px;
-        line-height: 34px;
-    }
-    h2{
-        font-size: 26px;
-        line-height: 34px;
-    }
-    p{
-        font-size: 22px;
-    }
     #homelogo{
         width: 100px;
     }
-    nav{
-        font-size: 22px;
-        top: 230px;
-    }
-    #address,
-    #enquiries{
-        grid-column: 1 /span 2;
-    }
-    .grid-container-socials{
-        grid-template-columns: auto auto auto;
-        row-gap: 0.75em;
-    }
-    #amCopyright{
-        grid-column-start: 1;
-        grid-column-end: span 3;
-        grid-row: 2;
-        justify-self: flex-start;
-    }
-    #grid-container-services{
-        grid-column: span 2;
-        grid-template-rows: auto;
-    }
-    /* ABOUT SECTION RESIZING */
-    .grid-item-about, 
-    .team{
-        grid-column: 1 / span 2;
-    }
-
-    #alex-text{
-        grid-row: 3;
-    }
-    #ahna-img{
-        grid-column: 1 / span 2;
-        grid-row: 4;
-    }
-    #ahna-text{
-        grid-column: 1 / span 2;
-        grid-row: 5;
-    }
-    #minka-img{
-        grid-row: 6;
-    }
-    #minka-text{
-        grid-row: 7;
-    }
-    #lauren-img{
-        grid-column: 1 / span 2;
-        grid-row: 8;
-    }
-    #lauren-text{
-        grid-column: 1 / span 2;
-        grid-row: 9;
-    }
-    #about-services{
-        grid-row: 10;
-        margin-top: 2em;
-    }
-    #about-client{
-        grid-row: 19;
-        padding-top: 2em;
-    }
-    #about-client-text{
-        grid-row: 20;
-    }
-    #about-client-img{
-        grid-row: 21;
-    }
-    #grid-container-services{
-        grid-template-rows: auto;
-    }
-
     #grid-container-clients{
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto;
     }
 }
 @media screen and (max-width: 600px ) {
     .grid-container-workmenu,
     #about-intro,
-    .grid-container-contact{
+    #about-team,
+    #about-services,
+    #about-clients,
+    #contact-intro,
+    #contact-contactus,
+    #contact-visitus{
         padding: 8em 8em 4em 3em;
+    }
+    #mappp-wrapper{
+        height: 55vh;
     }
     .grid-container-about{
         padding: 3em 8em 4em 3em;
@@ -315,19 +167,23 @@
     }
 }
 @media screen and (max-width: 480px ) {
-    nav{
+    /* nav{
         font-size: 20px;
         top: 220px;
-    }
+    } */
     h1{
         font-size: 20px;
         line-height: 22px;
     }
     h2{
         font-size: 18px;
+        line-height: 22px;
+    }
+    .work h2{
+        line-height: 22px;
     }
     h4{
-        font-size: 14px;
+        font-size: 15px;
     }
     p{
         font-size: 14px;
