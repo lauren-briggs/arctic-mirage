@@ -675,12 +675,12 @@ background-color: var(--amBlack) !important;
 .about-li-inline,
 .contact-li-inline{
     display: inline-block;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 .back-inline{
     display: inline-block;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 .right-arrow{
@@ -691,14 +691,19 @@ background-color: var(--amBlack) !important;
     padding-right: 1em;
 }
 
+.about-li-hover,
+.contact-li-hover{
+    width:fit-content;
+}
+
 .about-li-hover:hover,
 .contact-li-hover:hover{
     padding-left: 20px;
     transition: padding-left 0.25s;
 }
 
-.about-li-hover:hover > h3,
-.contact-li-hover:hover > h3{
+.about-li-hover:hover > span > h3,
+.contact-li-hover:hover > span > h3{
     text-decoration: underline;    
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
