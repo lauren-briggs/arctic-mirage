@@ -211,7 +211,7 @@ nav li{
 }
 .work h1{
     padding-left: 0px;
-    transition: padding-left 0.25s;
+    transition: padding-left 0.35s;
 }
 .work h2{
     line-height: 30px;
@@ -222,11 +222,11 @@ nav li{
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
     padding-left: 20px;
-    transition: padding-left 0.25s;
+    transition: padding-left 0.35s;
 }
 .work h1:hover{
     padding-left: 20px;
-    transition: padding-left 0.25s;
+    transition: padding-left 0.35s;
 }
 /*TOGGLE DESCRIPTIONS IN WORK MENU*/
 .work p{
@@ -694,12 +694,13 @@ background-color: var(--amBlack) !important;
 .about-li-hover,
 .contact-li-hover{
     width:fit-content;
+    transition: padding-left 0.35s;
 }
 
 .about-li-hover:hover,
 .contact-li-hover:hover{
     padding-left: 20px;
-    transition: padding-left 0.25s;
+    transition: padding-left 0.35s;
 }
 
 .about-li-hover:hover > span > h3,
