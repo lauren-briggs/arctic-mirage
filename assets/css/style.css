@@ -497,6 +497,9 @@ cursor: inherit;
 }
 
 /* PROJECT IMAGES CONTAINER */
+.left-cont{
+    background-color: white;
+}
 #project-img-container > section{
     width: 60vw;
     min-height: 100vh;
@@ -551,7 +554,7 @@ cursor: inherit;
 #mappp-wrapper{
     position: fixed;
     bottom: 0px;
-    height: 60vh;
+    height: 70vh;
     width: 100%;
 }
 

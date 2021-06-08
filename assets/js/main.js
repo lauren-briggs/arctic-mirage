@@ -364,8 +364,6 @@ $(document).ready(function () {
     // let position = $(this).position();
     // console.log(position);
 
-    // workEl.animate({ scrollTop: position.top - 50 }, "slow");
-
     isDescrOpen = true;
     isLeftContOpen = true;
 
