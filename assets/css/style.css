@@ -78,6 +78,7 @@ h5{
     font-size: 15px;
     font-weight: normal;
     line-height: 19px;
+    color: var(--amWhite);
 }
 /* end consistent styling section */
 
@@ -261,8 +262,8 @@ nav li{
 }
 
 
-/* TEAM AND SERVICES */
-.grid-container-about{
+/* TEAM*/
+.grid-container-about-team{
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -272,7 +273,7 @@ nav li{
     row-gap: 3em;
 }
 /* grid ITEMS composition of ABOUT */
-    .grid-container-about img{
+    .grid-container-about-team img{
         grid-column: 1 / span 2;
     }
     #team-heading{
@@ -296,6 +297,32 @@ nav li{
         grid-column-end: span 2;
         grid-row: 6;
     }
+
+    /* SERVICES */
+.grid-container-about-services{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    padding: 0em;
+    row-gap: 2em;
+}
+.slide-down-hover{
+    display: inline-flex;
+}
+
+.slide-down-hover h4{
+    text-decoration: none;
+}
+
+.slide-down-hover:hover h4{
+    text-decoration: underline;
+}
+
+.slide-down-hover h5{
+    padding-right: 1.5em;
+}
+
 /* grid CONTAINER structure of CLIENTS IN ABOUT */
     #grid-container-clients{
         display: grid;
@@ -305,14 +332,14 @@ nav li{
         row-gap: 1em;
     }
 /* grid CONTAINER structure of SERVICES IN ABOUT */
-    #grid-container-services{
+    /* #grid-container-services{
         display: grid;
         grid-template-columns: 45px auto;
         grid-template-rows: 40px auto;
         column-gap: 1em;
         row-gap: 1em;
         color: var(--amWhite);
-    }
+    } */
 /* grid composition of ABOUT TEAM */
     #alex,
     #ahna{
@@ -335,51 +362,10 @@ nav li{
 
 .hidden-list{
     display: none;
+    color: var(--amWhite);
+    padding-top: 1em;
+    padding-left: 2.6em;
 }
-
-/* .hidden-list li{
-    display: none;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-    animation-name: drop-down; 
-    animation-duration: 750ms; 
-    animation-iteration-count: 1;
-    transform-origin: top center;
-    animation-fill-mode: forwards;
-} */
-/* .hover:hover .hidden-list li{
-    display: block;
-    transition: all 0.5s ease-in-out;
-} */
-/* DROP DOWN REVEAL OF LIST OF SERVICES */
-       /* .drop-delay-1 { animation-delay: 0ms}
-       .drop-delay-2 { animation-delay: 50ms; }
-       .drop-delay-3 { animation-delay: 100ms; }
-       .drop-delay-4 { animation-delay: 150ms; }
-       .drop-delay-5 { animation-delay: 200ms; }
-       .drop-delay-6 { animation-delay: 250ms; }
-       .drop-delay-7 { animation-delay: 300ms; }
-       .drop-delay-8 { animation-delay: 350ms; }
-       .drop-delay-9 { animation-delay: 400ms; }
-       .drop-delay-10 { animation-delay: 450ms; }
-       .drop-delay-11 { animation-delay: 500ms; }
-       .drop-delay-12 { animation-delay: 550ms; }
-       .drop-delay-13 { animation-delay: 600ms; }
-       .drop-delay-14 { animation-delay: 650ms; }
-       .drop-delay-15 { animation-delay: 700ms; }
-
-@keyframes drop-down {
-  0% {
-    transform: translateY(-50px);
-  }
-  50% {
-      transform:translateY(-10)
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-} */
 
 /* grid ITEMS composition of CONTACT */
 #contact-intro,

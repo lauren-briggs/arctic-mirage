@@ -336,28 +336,40 @@ $(document).ready(function () {
     let thisProClass = `.project${i}`;
     $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
 
+    // if ($(`#${i}`).hasClass('active-project')) {
+    //   $(this).children("p").each(function () {
+    //     $(this).slideUp(500);
+    //   })
+    //   $(`#${i}`).removeClass('active-project');
+    //   console.log(true)
+    //   console.log($(`#${i}`)[0].classList)
+    // }
+
+    let openDescr = () => {
+      console.log('function triggered')
+      console.log($(this))
+      let descr = $(this)[0].lastElementChild.children[0].className;
+      console.log(descr)
+      $(`.${descr}`).slideDown(1000);
+      // $(`.${descr}`).addClass('active-project');
+      // console.log($(`.${descr}`)[0].classList)
+    }
+
     // Checking if other descriptions are open and closing if true
     if (isDescrOpen === true) {
       workGridItem.children("div").each(function () {
         $(this).children("p").each(function () {
-          $(this).css("display", "none");
+          $(this).slideUp(500);
         })
       });
       isDescrOpen = false;
+      openDescr();
+    } else {
+      openDescr();
     }
-
-    console.log('function triggered')
-    console.log($(this))
-    let descr = $(this)[0].lastElementChild.children[0].className;
-    console.log(descr)
-    $(`.${descr}`).slideDown(600);
-
-    // TO DO: check if description/project is open and close when title is clicked
 
     isDescrOpen = true;
     isLeftContOpen = true;
-
-
 
     resizeWork();
   }
@@ -501,19 +513,19 @@ $(document).ready(function () {
   // ----------------------------------------------------
   // SLIDE DOWN LIST OF SERVICES
   // ----------------------------------------------------
-  $('.slide-down-hover').mouseenter(function () {
+  $('.slide-down-hover').click(function () {
     console.log('function triggered')
     console.log($(this))
-    let ul = $(this).siblings()[2].id;
+    let ul = $(this).siblings()[0].id;
     console.log(ul)
-    $(`#${ul}`).slideDown(600);
+    $(`#${ul}`).slideDown(1000);
   });
   $('.slide-down-hover').mouseleave(function () {
     console.log('function triggered')
     console.log($(this))
-    let ul = $(this).siblings()[2].id;
+    let ul = $(this).siblings()[0].id;
     console.log(ul)
-    $(`#${ul}`).slideUp(600);
+    $(`#${ul}`).delay(400).slideUp(1000);
   });
 
 
