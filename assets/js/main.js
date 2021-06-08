@@ -566,6 +566,12 @@ $(document).ready(function () {
 
     let idToRender = `${sectionName}-intro`;
 
+
+    if (i === 'contact-visitus') {
+      $('#mappp-wrapper').removeClass('showme');
+    }
+
+
     $(`#${idToRender}`).css('display', 'block');
 
   }
