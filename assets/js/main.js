@@ -574,12 +574,20 @@ $(document).ready(function () {
   //   menuEl.removeClass("showme");
   // }
 
+  navBtn.click(function () {
+    if (!isMenuOpen) {
+      showMenu();
+    } else {
+      closeAll();
+    }
+  })
+
 
   // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------
-  navBtn.mouseenter(showMenu);
-  navBtn.click(closeAll);
+  // navBtn.mouseenter(showMenu);
+  // navBtn.click(closeAll);
   amLogo.click(closeAll);
   workNav.click(showWork);
   aboutNav.click(showAbout);
