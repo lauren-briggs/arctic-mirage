@@ -509,9 +509,31 @@ $(document).ready(function () {
   initMap();
 
 
-  // $('#print-hover').mouseenter(function () {
-  //   $('#print').slideDown("slow", function () { });
-  // });
+
+  // ----------------------------------------------------
+  // SLIDE DOWN
+  // ----------------------------------------------------
+  $('#slide-up').click(function () {
+    $('#slide-me').slideUp();;
+  })
+  $('#slide-down').click(function () {
+    $('#slide-me').slideDown();
+  })
+
+  $('.slide-down-hover').mouseenter(function () {
+    console.log('function triggered')
+    console.log($(this))
+    let ul = $(this).siblings()[2].id;
+    console.log(ul)
+    $(`#${ul}`).slideDown(600);
+  });
+  $('.slide-down-hover').mouseleave(function () {
+    console.log('function triggered')
+    console.log($(this))
+    let ul = $(this).siblings()[2].id;
+    console.log(ul)
+    $(`#${ul}`).slideUp(600);
+  });
 
 
   // if ($(window).width() < 700) {

@@ -331,7 +331,12 @@ nav li{
 #liheader{
     text-decoration: underline;
 }
-.hidden-list li{
+
+.hidden-list{
+    display: none;
+}
+
+/* .hidden-list li{
     display: none;
     opacity: 0;
     transition: all 0.5s ease-in-out;
@@ -340,13 +345,13 @@ nav li{
     animation-iteration-count: 1;
     transform-origin: top center;
     animation-fill-mode: forwards;
-}
-.hover:hover .hidden-list li{
+} */
+/* .hover:hover .hidden-list li{
     display: block;
     transition: all 0.5s ease-in-out;
-}
+} */
 /* DROP DOWN REVEAL OF LIST OF SERVICES */
-       .drop-delay-1 { animation-delay: 0ms}
+       /* .drop-delay-1 { animation-delay: 0ms}
        .drop-delay-2 { animation-delay: 50ms; }
        .drop-delay-3 { animation-delay: 100ms; }
        .drop-delay-4 { animation-delay: 150ms; }
@@ -373,7 +378,7 @@ nav li{
     opacity: 1;
     transform: translateY(0px);
   }
-}
+} */
 
 /* grid ITEMS composition of CONTACT */
 #contact-intro,
