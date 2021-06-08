@@ -397,7 +397,7 @@ nav li{
 #contact-socials{
     position: fixed;
     bottom: 40px;
-    width: 100%;
+    width: 80%;
 }
 #contact-socials li{
     display: inline-flex;
