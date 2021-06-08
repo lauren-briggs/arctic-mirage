@@ -202,7 +202,7 @@ nav li{
     display: grid;
     grid-template-columns: 10% 90%;
     grid-template-rows: auto;
-    padding: 3em 10em 4em 3em;
+    padding: 3em 10em 2em 3em;
     column-gap: 2em;
     row-gap: 3em;
 }
@@ -224,7 +224,7 @@ nav li{
     padding-left: 20px;
     transition: padding-left 0.25s;
 }
-.work h1:hover + .block{
+.work h1:hover{
     padding-left: 20px;
     transition: padding-left 0.25s;
 }
@@ -242,11 +242,25 @@ nav li{
 #about-intro,
 #about-team,
 #about-services,
-#about-client{
+#about-clients{
     width: 100%;
     padding: 3em 10em 4em 4em;
 }
-/* TEAM ETC */
+
+#about-team,
+#about-services,
+#about-clients{
+    display: none;
+}
+
+#about-team.showme,
+#about-services.showme,
+#about-clients.showme{
+    display: block;
+}
+
+
+/* TEAM AND SERVICES */
 .grid-container-about{
     width: 100%;
     display: grid;
@@ -360,24 +374,27 @@ nav li{
     transform: translateY(0px);
   }
 }
-/* grid CONTAINER structure of CONTACT */
-/* .grid-container-contact{ */
-    /* width: 40vw;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    padding:3em 11em 3em 4em;
-    column-gap: 2em;
-    row-gap: 2.5em;
-    align-content: space-between; */
-/* } */
+
 /* grid ITEMS composition of CONTACT */
 #contact-intro,
-#contact-contact-us,
-#contact-visit-us{
+#contact-contactus,
+#contact-visitus{
     width: 100%;
     padding: 3em 10em 4em 4em;
 }
+
+#contact-contactus,
+#contact-visitus,
+#mappp-wrapper{
+    display: none;
+}
+
+#contact-contactus.showme,
+#contact-visitus.showme,
+#mappp-wrapper.showme{
+    display: block;
+}
+
 .contact li{
     list-style:none;
     font-size: 16px;
@@ -467,18 +484,6 @@ textarea:hover{
     border: 2px solid var(--amWhite);
     outline: none;
 }
-/* STYLING OF SOCIAL LINKS */
-/* .contact ul{
-    width: 100%;
-    padding-top: 30px;
-} */
-/* .contact li{
-    width: 100%;
-    text-align:left;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    color: var(--amWhite);
-} */
 .contact a:link,
 .contact a:visited{
     color: var(--amWhite);
@@ -546,12 +551,12 @@ cursor: inherit;
 #mappp-wrapper{
     position: fixed;
     bottom: 0px;
-    height: 650px;
+    height: 60vh;
     width: 100%;
 }
 
 #map {
-    height: 650px;
+    height: 100%;
     width: 100%;
   }
 #contact-enq-wrapper{
@@ -669,6 +674,11 @@ background-color: var(--amBlack) !important;
 
 .about-li-inline,
 .contact-li-inline{
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.back-inline{
     display: inline-block;
     line-height: 1.5;
 }
