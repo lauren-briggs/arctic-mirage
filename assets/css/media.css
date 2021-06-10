@@ -23,8 +23,8 @@
 
 @media all and (max-width: 1350px ) {
     p{
-        font-size: 16px;
-        line-height: 19px;
+        /* font-size: 16px; */
+        /* line-height: 19px; */
     }
     .grid-container-workmenu{
         row-gap: 2.5em;
@@ -110,7 +110,7 @@
         font-family: degular, sans-serif !important;
         font-weight:lighter !important;
         font-style: normal !important;
-        font-size: 16px !important;
+        font-size: 110% !important;
         text-transform: uppercase !important;
         text-align: center;
     }
@@ -125,15 +125,15 @@
     #sub-label{
         font-family: degular, sans-serif;
         font-weight: normal !important;
-        font-size: 20px !important;
+        font-size: 120% !important;
     }
 }
 @media all and (max-width: 1024px ) {
     h1{
-        font-size: 24px;
+        /* font-size: 160%; */
     }
     h2{
-        font-size: 24px;
+        /* font-size: 24px; */
     }
     /* Making RIGHT cont full width */
     #rightcont.showme{
@@ -242,21 +242,21 @@
 }
 @media all and (max-width: 480px ) {
     h1{
-        font-size: 20px;
-        line-height: 22px;
+        /* font-size: 20px; */
+        /* line-height: 22px; */
     }
     h2{
-        font-size: 18px;
-        line-height: 22px;
+        /* font-size: 18px; */
+        /* line-height: 22px; */
     }
     .work h2{
-        line-height: 22px;
+        /* line-height: 22px; */
     }
     h4{
-        font-size: 15px;
+        /* font-size: 15px; */
     }
     p{
-        font-size: 14px;
-        line-height: 17px;
+        /* font-size: 14px; */
+        /* line-height: 17px; */
     }
 }
