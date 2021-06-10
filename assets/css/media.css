@@ -133,6 +133,9 @@
     #minka-text{
         grid-row: 4;
     }
+    #mappp-wrapper{
+        margin-left: -11em;
+    }
 }
 @media screen and (max-width: 768px ) {
     #homelogo{
