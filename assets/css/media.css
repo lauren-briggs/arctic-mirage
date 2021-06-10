@@ -73,6 +73,60 @@
     #contact-socials{
         grid-row: 6;
     }
+    #subscriber-container{
+        position: fixed;
+        z-index: 3000;
+        background-color: rgba(255, 255, 255, 0.63);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #mc-embedded-subscribe-form{
+        text-align: left !important;
+        background-color: var(--amBlack) !important;
+        color: var(--amWhite) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        width: 550px !important;
+        height: auto !important;
+        padding: 50px 50px 50px !important;
+        position: relative !important;
+    }
+    #mce-EMAIL,
+    #mc-embedded-subscribe{
+        width: 100% !important;
+        padding:10px !important;
+        margin: 1.5em 0em !important;
+        color: white !important;
+        background-color: black !important;
+        border: none !important;
+        border-radius: 0px !important;
+        border-bottom: 2px solid var(--amWhite) !important;
+        justify-content: center !important;
+        font-family: degular, sans-serif !important;
+        font-weight:lighter !important;
+        font-style: normal !important;
+        font-size: 16px !important;
+        text-transform: uppercase !important;
+        text-align: center;
+    }
+    
+    #mc-embedded-subscribe{
+        margin: 0em !important;
+    }
+    #sub-email:focus{
+        border: 2px solid var(--amWhite) !important;
+        outline: none !important;
+    }
+    #sub-label{
+        font-family: degular, sans-serif;
+        font-weight: normal !important;
+        font-size: 20px !important;
+    }
 }
 @media screen and (max-width: 1024px ) {
 
