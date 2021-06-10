@@ -184,7 +184,7 @@ nav li{
     height: 100vh;
     overflow-y: scroll;
     transform: translateX(100%);
-    transition: ease-in-out 0.75;
+    transition: ease 0.75;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
 /* ALLOW SCROLL ON HOVER */
@@ -196,7 +196,7 @@ nav li{
 .contact.showme{
     display: block;
     transform: translateX(0%);
-    transition: ease-in-out 0.75;
+    transition: ease 0.75;
 }
 /* grid CONTAINER structure of WORK */
 .grid-container-workmenu{
@@ -368,14 +368,12 @@ nav li{
 }
 
 #contact-contactus,
-#contact-visitus,
-#mappp-wrapper{
+#contact-visitus{
     display: none;
 }
 
 #contact-contactus.showme,
-#contact-visitus.showme,
-#mappp-wrapper.showme{
+#contact-visitus.showme{
     display: block;
 }
 
@@ -524,7 +522,7 @@ cursor: inherit;
 /* FADE ANIMATION */
 .fade{
     opacity: 0;
-    transition: ease-in-out;
+    transition: ease;
     animation-name: fade;
     animation-duration: 2.5s;
     animation-iteration-count: 1;
@@ -538,8 +536,9 @@ cursor: inherit;
 #mappp-wrapper{
     position: fixed;
     bottom: 0px;
-    height: 70vh;
-    width: 100%;
+    width: 100vw;
+    height: 60vh;
+    margin-left: -11em;
 }
 
 #map {

@@ -1,7 +1,5 @@
 // THE /\RCTIC /\/\IRAGE
 $(document).ready(function () {
-  //js will only run once HTML doc has loaded to speed up response time
-
   // ----------------------------------------------------
   // ELEMENTS
   // ----------------------------------------------------
@@ -18,7 +16,6 @@ $(document).ready(function () {
   const backBtn = $('.back-inline')
   const aboutLiBtns = $('.about-li-inline')
   const contactLiBtns = $('.contact-li-inline')
-
   // ----------------------------------------------------
   // BUTTONS
   // ----------------------------------------------------
@@ -28,8 +25,6 @@ $(document).ready(function () {
   const contactNav = $("#contactNav")
   const amLogo = $("#homelogo")
   const subscriberCloseBtn = $('#subscriber-close-btn');
-
-
   // ----------------------------------------------------
   // BOOLEANS TO DEFINE WHETHER OR NOT SECTIONS ARE OPEN
   // ----------------------------------------------------
@@ -48,7 +43,6 @@ $(document).ready(function () {
   subscriberCloseBtn.on('click', function () {
     subscriberPopUp.css("display", "none");
   })
-
   // Close on esc key
   window.onkeyup = function (event) {
     if (event.keyCode == 27) {
@@ -63,7 +57,6 @@ $(document).ready(function () {
     menuEl.addClass("showme");
     navBtn.addClass("showme");
     isMenuOpen = true;
-    console.log(`Is menu open: ${isMenuOpen}`);
   }
 
   // ----------------------------------------------------
@@ -105,7 +98,6 @@ $(document).ready(function () {
     isLeftContOpen = false;
     isDescrOpen = false;
     isMenuOpen = false;
-    console.log(`Is menu open: ${isMenuOpen}`);
 
     // removing underlines
     workNav.removeClass("underline");
@@ -128,7 +120,8 @@ $(document).ready(function () {
     isContactElOpen = false;
   }
   // ----------------------------------------------------
-  // WORK WORK WORK
+  // WORK WORK WORK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // ----------------------------------------------------
   // WHEN WORK IS OPEN ADD UNDERLINE AND SHOW DIV
   // ----------------------------------------------------
   function workActive() {
@@ -170,12 +163,12 @@ $(document).ready(function () {
       isRightContOpen = false;
       isWorkElOpen = false;
     }
-
     swapLogo();
   }
 
   // ----------------------------------------------------
-  // ABOUT ABOUT ABOUT
+  // ABOUT ABOUT ABOUT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // ----------------------------------------------------
   // WHEN ABOUT IS OPEN ADD UNDERLINE AND SHOW DIV
   // ----------------------------------------------------
   function aboutActive() {
@@ -241,8 +234,10 @@ $(document).ready(function () {
       behavior: 'smooth'
     });
   }
+
   // ----------------------------------------------------
-  // CONTACT CONTACT CONTACT
+  // CONTACT CONTACT CONTACT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // ----------------------------------------------------
   // WHEN CONTACT IS OPEN ADD UNDERLINE AND SHOW DIV
   // ----------------------------------------------------
   function contactActive() {
@@ -337,23 +332,9 @@ $(document).ready(function () {
     let thisProClass = `.project${i}`;
     $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
 
-    // if ($(`#${i}`).hasClass('active-project')) {
-    //   $(this).children("p").each(function () {
-    //     $(this).slideUp(500);
-    //   })
-    //   $(`#${i}`).removeClass('active-project');
-    //   console.log(true)
-    //   console.log($(`#${i}`)[0].classList)
-    // }
-
     let openDescr = () => {
-      console.log('function triggered')
-      console.log($(this))
       let descr = $(this)[0].lastElementChild.children[0].className;
-      console.log(descr)
       $(`.${descr}`).slideDown(1000);
-      // $(`.${descr}`).addClass('active-project');
-      // console.log($(`.${descr}`)[0].classList)
     }
 
     // Checking if other descriptions are open and closing if true
@@ -472,13 +453,10 @@ $(document).ready(function () {
   swiperbg.slideNext(1500, true)
   swiperbg.slidePrev(1500, true)
 
-
   // ----------------------------------------------------
   // GOOGLE MAP
   // ----------------------------------------------------
-
   let map;
-
   function initMap() {
     const amOffice = { lat: -37.932821, lng: 145.036590 }
     map = new google.maps.Map(document.getElementById("map"), {
@@ -508,32 +486,24 @@ $(document).ready(function () {
       map: map,
     });
   }
-
-  initMap();
+  $('#visitus-btn').click(initMap)
+  // initMap();
 
   // ----------------------------------------------------
   // SLIDE DOWN LIST OF SERVICES
   // ----------------------------------------------------
   $('.slide-down-hover').click(function () {
-    console.log('function triggered')
-    console.log($(this))
     let ul = $(this).siblings()[0].id;
-    console.log(ul)
     $(`#${ul}`).slideDown(1000);
   });
   $('.slide-down-hover').mouseleave(function () {
-    console.log('function triggered')
-    console.log($(this))
     let ul = $(this).siblings()[0].id;
-    console.log(ul)
     $(`#${ul}`).delay(400).slideUp(1000);
   });
-
 
   // ----------------------------------------------------
   // ABOUT AND CONTACT SUB MENU LINKS
   // ----------------------------------------------------
-
   function handleSubMenu() {
     // Getting the id value of the target el
     let i = $(this).attr("id");
@@ -547,9 +517,9 @@ $(document).ready(function () {
 
     $(`#${idToRender}`).addClass('showme');
 
-    if (idToRender === 'contact-visitus') {
-      $('#mappp-wrapper').addClass('showme');
-    }
+    // if (idToRender === 'contact-visitus') {
+    //   $('#mappp-wrapper').addClass('showme');
+    // }
   }
 
   function handleBackBtn() {
@@ -559,20 +529,11 @@ $(document).ready(function () {
     let sectionName = i.split('-', 1)
     let idToRender = `${sectionName}-intro`;
 
-    if (i === 'contact-visitus') {
-      $('#mappp-wrapper').removeClass('showme');
-    }
-
+    // if (i === 'contact-visitus') {
+    //   $('#mappp-wrapper').removeClass('showme');
+    // }
     $(`#${idToRender}`).css('display', 'block');
   }
-
-
-
-  // if ($(window).width() < 700) {
-  //   menuEl.addClass("showme");
-  // } else {
-  //   menuEl.removeClass("showme");
-  // }
 
   navBtn.click(function () {
     if (!isMenuOpen) {
@@ -581,7 +542,6 @@ $(document).ready(function () {
       closeAll();
     }
   })
-
 
   // ----------------------------------------------------
   // CALLING FUNCTIONS
@@ -595,8 +555,8 @@ $(document).ready(function () {
   workGridItem.click(showProject);
   workGridItem.click(initSwiper);
   bgSlideshowContainer.click(closeAll);
-  $(window).resize(swapLogo);
   backBtn.click(handleBackBtn);
   aboutLiBtns.click(handleSubMenu);
   contactLiBtns.click(handleSubMenu);
+  $(window).resize(swapLogo);
 });

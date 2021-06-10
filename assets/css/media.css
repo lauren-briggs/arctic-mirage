@@ -46,10 +46,6 @@
     #minka-text{
         grid-row: 7;
     }
-    #about-services{
-        grid-row: 10;
-        margin-top: 2em;
-    }
     #about-client{
         grid-row: 19;
         padding-top: 2em;
@@ -155,7 +151,7 @@
         padding: 8em 8em 4em 3em;
     }
     #mappp-wrapper{
-        height: 55vh;
+        margin-left: 3em;
     }
     .grid-container-about{
         padding: 3em 8em 4em 3em;
