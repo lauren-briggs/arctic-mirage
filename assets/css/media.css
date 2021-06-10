@@ -33,18 +33,15 @@
     .grid-container-about{
         row-gap: 1.5em;
     }
-    .grid-item-about{
+    .grid-container-about-team{
+        grid-template-columns: 100%;
         grid-column-start: 1;
-        grid-column-end: span 2;
     }
     #alex-text{
-        grid-row: 3;
-    }
-    #minka-img{
-        grid-row: 6;
+        grid-row: 2;
     }
     #minka-text{
-        grid-row: 7;
+        grid-row:6;
     }
     #about-client{
         grid-row: 19;
@@ -130,6 +127,12 @@
         transform: translateY(-100%);
         transition: 0.75s;
     }
+    .grid-container-about-team{
+        grid-template-columns: 50% 50%;
+    }
+    #minka-text{
+        grid-row: 4;
+    }
 }
 @media screen and (max-width: 768px ) {
     #homelogo{
@@ -137,6 +140,11 @@
     }
     #grid-container-clients{
         grid-template-columns: auto auto;
+    }.grid-container-about-team{
+        grid-template-columns: 100%;
+    }
+    #minka-text{
+        grid-row: 6;
     }
 }
 @media screen and (max-width: 600px ) {
@@ -151,7 +159,7 @@
         padding: 8em 8em 4em 3em;
     }
     #mappp-wrapper{
-        margin-left: 3em;
+        margin-left: -3em;
     }
     .grid-container-about{
         padding: 3em 8em 4em 3em;

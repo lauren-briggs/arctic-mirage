@@ -517,9 +517,6 @@ $(document).ready(function () {
 
     $(`#${idToRender}`).addClass('showme');
 
-    // if (idToRender === 'contact-visitus') {
-    //   $('#mappp-wrapper').addClass('showme');
-    // }
   }
 
   function handleBackBtn() {
@@ -529,9 +526,6 @@ $(document).ready(function () {
     let sectionName = i.split('-', 1)
     let idToRender = `${sectionName}-intro`;
 
-    // if (i === 'contact-visitus') {
-    //   $('#mappp-wrapper').removeClass('showme');
-    // }
     $(`#${idToRender}`).css('display', 'block');
   }
 
