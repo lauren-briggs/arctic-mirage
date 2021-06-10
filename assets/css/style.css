@@ -27,7 +27,7 @@ body{
 p{
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 100%;
     font-kerning:4px;
     letter-spacing:auto;
     line-height: 19px;
@@ -48,36 +48,36 @@ h4{
 }
 /* h1 styling for project titles in menu */
 h1{
-    font-size: 26px;
+    font-size: 150%;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 120%;
 }
 /* h2 styling - intro paragraphs, team names, services, clients, contact us headings */
 h2{
     font-weight:300;
-    font-size: 22px;
-    line-height: 1.25;
+    font-size: 140%;
+    line-height: 120%;
 }
 /* job title */
 h3{
     font-weight:300;
-    font-size: 20px;
-    line-height: 1.25;
+    font-size: 130%;
+    line-height: 120%;
 }
 /* number and service heading */
 h4{
     font-weight: 300;
-    font-size: 16px;
+    font-size: 100%;
     text-decoration: underline;
     text-transform:uppercase;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
-    line-height: 19px;
+    line-height: 120%;
 }
 h5{
-    font-size: 15px;
+    font-size: 100%;
     font-weight: normal;
-    line-height: 19px;
+    line-height: 120%;
     color: var(--amWhite);
 }
 /* end consistent styling section */
@@ -89,7 +89,7 @@ nav{
     font-family: degular, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
+    font-size: 115%;
     position: fixed;
     right: -190px;
     top: 215px;
@@ -134,7 +134,7 @@ nav li{
     font-family: degular, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 20px;
+    font-size: 115%;
     position: fixed;
     right: 40px;
     bottom: 40px;
@@ -215,7 +215,7 @@ nav li{
     transition: padding-left 0.35s;
 }
 .work h2{
-    line-height: 30px;
+    line-height: 130%;
 }
 /* UNDERLINE ON HOVER OF PROJECT HEADINGS */
 .work h1:hover{
@@ -344,8 +344,6 @@ nav li{
 /*LIST OF SERVICES*/
 .about li{
     list-style:none;
-    font-size: 16px;
-    line-height: 22px;
     font-weight: 400;
 }
 #liheader{
@@ -377,10 +375,9 @@ nav li{
     display: block;
 }
 
+.about li,
 .contact li{
     list-style:none;
-    font-size: 16px;
-    line-height: 22px;
     font-weight: 400;
 }
 
@@ -428,7 +425,7 @@ text-decoration: none;
     font-family: degular, sans-serif;
     font-weight:lighter;
     font-style: normal;
-    font-size: 16px;
+    font-size: 110%;
     text-transform: uppercase;
 }
 #submit:hover{
@@ -452,7 +449,7 @@ textarea:hover::-webkit-input-placeholder {
 }
 input:hover,
 textarea:hover{
-    color: var(--amBlack);
+    color: var(--amBlack) !important;
 }
 #name:focus,
 #email:focus,
@@ -614,7 +611,7 @@ background-color: var(--amBlack) !important;
     font-family: degular, sans-serif !important;
     font-weight:lighter !important;
     font-style: normal !important;
-    font-size: 16px !important;
+    font-size: 110% !important;
     text-transform: uppercase !important;
     text-align: center;
 }
@@ -631,7 +628,7 @@ background-color: var(--amBlack) !important;
     text-transform: uppercase !important;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a.png') 15 15, auto;
 }
-#sub-email:hover::-webkit-input-placeholder{
+#sub-email::-webkit-input-placeholder:hover{
     color: var(--amBlack) !important;
 }
 #sub-email:hover{
@@ -649,14 +646,14 @@ background-color: var(--amBlack) !important;
 #sub-label{
     font-family: degular, sans-serif;
     font-weight: normal !important;
-    font-size: 20px !important;
+    font-size: 120% !important;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
 
 .about-li-inline,
 .contact-li-inline{
     display: inline-block;
-    line-height: 1.75;
+    line-height: 150%;
 }
 
 .back-inline{

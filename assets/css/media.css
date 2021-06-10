@@ -204,7 +204,7 @@
     }
 }
 
-@media all and (max-width: 768px ) and (orientation: portrait) {
+/* @media all and (max-width: 768px ) and (orientation: portrait) {
     #homelogo{
         width: 100px;
     }
@@ -216,7 +216,7 @@
     #minka-text{
         grid-row: 6;
     }
-}
+} */
 @media all and (max-width: 600px ) {
     .grid-container-workmenu,
     #about-intro,
