@@ -486,7 +486,9 @@ $(document).ready(function () {
       map: map,
     });
   }
-  $('#visitus-btn').click(initMap)
+
+  contactNav.click(initMap);
+  // $('#visitus-btn').click(initMap)
   // initMap();
 
   // ----------------------------------------------------

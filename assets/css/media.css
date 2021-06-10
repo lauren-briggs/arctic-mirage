@@ -226,31 +226,35 @@
     #contact-intro,
     #contact-contactus,
     #contact-visitus{
-        padding: 8em 8em 4em 3em;
+        padding: 8em 7em 4em 3em;
     }
     #mappp-wrapper{
         margin-left: -3em;
+        height: 55vh;
     }
     .grid-container-about{
         padding: 3em 8em 4em 3em;
     }
 
     #mc-embedded-subscribe-form{
-        width: 75% !important;
+        width: 100% !important;
         margin: auto;
+    }
+    .grid-container-workmenu{
+        row-gap: 2em;
     }
 }
 @media all and (max-width: 480px ) {
     h1{
-        /* font-size: 20px; */
-        /* line-height: 22px; */
+        font-size: 160%;
+        line-height: 100%;
     }
     h2{
-        /* font-size: 18px; */
-        /* line-height: 22px; */
+        font-size: 150%;
+        line-height: 100%;
     }
     .work h2{
-        /* line-height: 22px; */
+        line-height: 100%;
     }
     h4{
         /* font-size: 15px; */

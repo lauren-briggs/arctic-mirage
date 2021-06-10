@@ -42,7 +42,6 @@ h1,
 h2,
 h3,
 h4{
-    letter-spacing: 1px;
     color: white;
     font-kerning: auto;
 }
@@ -67,7 +66,7 @@ h3{
 /* number and service heading */
 h4{
     font-weight: 300;
-    font-size: 100%;
+    font-size: 110%;
     text-decoration: underline;
     text-transform:uppercase;
     text-underline-offset: 3px;
@@ -75,7 +74,7 @@ h4{
     line-height: 120%;
 }
 h5{
-    font-size: 100%;
+    font-size: 110%;
     font-weight: normal;
     line-height: 120%;
     color: var(--amWhite);
@@ -345,6 +344,8 @@ nav li{
 .about li{
     list-style:none;
     font-weight: 400;
+    font-size: 105%;
+    line-height: 120%;
 }
 #liheader{
     text-decoration: underline;
@@ -354,7 +355,7 @@ nav li{
     display: none;
     color: var(--amWhite);
     padding-top: 1em;
-    padding-left: 2.7em;
+    padding-left: 3.25em;
 }
 
 /* grid ITEMS composition of CONTACT */
@@ -648,6 +649,7 @@ background-color: var(--amBlack) !important;
     font-family: degular, sans-serif;
     font-weight: normal !important;
     font-size: 120% !important;
+    letter-spacing: 0.25px;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
 
