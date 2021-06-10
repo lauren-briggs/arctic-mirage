@@ -208,12 +208,6 @@
     #homelogo{
         width: 100px;
     }
-    nav {
-        font-size: 24px;
-    }
-    #nav-btn{
-        font-size: 24px;
-    }
     #grid-container-clients{
         grid-template-columns: auto auto;
     }.grid-container-about-team{
@@ -247,10 +241,6 @@
     }
 }
 @media all and (max-width: 480px ) {
-    /* nav{
-        font-size: 20px;
-        top: 220px;
-    } */
     h1{
         font-size: 20px;
         line-height: 22px;
