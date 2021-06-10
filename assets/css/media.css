@@ -1,4 +1,4 @@
-@media screen and (max-width: 1500px ) {
+@media all and (max-width: 1500px ) {
     #grid-container-services{
         grid-column: span 2;
         grid-template-rows: auto;
@@ -21,7 +21,7 @@
     }
 }
 
-@media screen and (max-width: 1350px ) {
+@media all and (max-width: 1350px ) {
     p{
         font-size: 16px;
         line-height: 19px;
@@ -128,8 +128,7 @@
         font-size: 20px !important;
     }
 }
-@media screen and (max-width: 1024px ) {
-
+@media all and (max-width: 1024px ) {
     h1{
         font-size: 24px;
     }
@@ -191,7 +190,7 @@
         margin-left: -11em;
     }
 }
-@media screen and (max-width: 768px ) {
+@media all and (max-width: 768px ) {
     #homelogo{
         width: 100px;
     }
@@ -204,7 +203,27 @@
         grid-row: 6;
     }
 }
-@media screen and (max-width: 600px ) {
+
+@media all and (max-width: 768px ) and (orientation: portrait) {
+    #homelogo{
+        width: 100px;
+    }
+    nav {
+        font-size: 24px;
+    }
+    #nav-btn{
+        font-size: 24px;
+    }
+    #grid-container-clients{
+        grid-template-columns: auto auto;
+    }.grid-container-about-team{
+        grid-template-columns: 100%;
+    }
+    #minka-text{
+        grid-row: 6;
+    }
+}
+@media all and (max-width: 600px ) {
     .grid-container-workmenu,
     #about-intro,
     #about-team,
@@ -227,7 +246,7 @@
         margin: auto;
     }
 }
-@media screen and (max-width: 480px ) {
+@media all and (max-width: 480px ) {
     /* nav{
         font-size: 20px;
         top: 220px;
