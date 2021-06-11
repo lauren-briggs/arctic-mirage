@@ -226,7 +226,7 @@
     #contact-intro,
     #contact-contactus,
     #contact-visitus{
-        padding: 8em 7em 4em 3em;
+        padding: 8em 6em 4em 2.15em;
     }
     #mappp-wrapper{
         margin-left: -3em;
@@ -259,8 +259,19 @@
     h4{
         /* font-size: 15px; */
     }
-    p{
-        /* font-size: 14px; */
-        /* line-height: 17px; */
+    #homelogo{
+        top: 35px !important;
+        left: 35px !important;
+    }
+    nav{
+        right: -160px !important;
+        top: 175px !important;
+    }
+    nav li{
+        padding: 10px 30px 10px 40px !important;
+    }
+    #navBtn{
+        right: 30px !important;
+        bottom: 30px !important;
     }
 }
