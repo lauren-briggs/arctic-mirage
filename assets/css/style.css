@@ -698,4 +698,6 @@ background-color: var(--amBlack) !important;
     text-decoration-thickness: 8%;
 }
 
-
+#honeypot{
+    display: none;
+}

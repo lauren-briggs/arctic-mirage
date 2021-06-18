@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lauren-briggs/arctic-mirage#readme",
   "dependencies": {
+    "@google-cloud/recaptcha-enterprise": "^2.1.2",
     "@mailchimp/mailchimp_marketing": "^3.0.43",
     "dotenv": "^10.0.0",
     "swiper": "^6.6.2"
