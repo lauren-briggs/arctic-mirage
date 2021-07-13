@@ -441,7 +441,7 @@ $(document).ready(function () {
     effect: "fade",
     enabled: true,
     loop: true,
-    initialSlide: -1,
+    initialSlide: 0,
     on: {
       init: function () {
         console.log('background slideshow swiper initialized');
