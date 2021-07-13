@@ -3,7 +3,7 @@ $(document).ready(function () {
   // ----------------------------------------------------
   // ELEMENTS
   // ----------------------------------------------------
-  const menuEl = $(".menu");
+  const menuEl = $("nav");
   const rightCont = $("#rightcont");
   const leftCont = $(".leftcont");
   const workEl = $(".work")
@@ -91,7 +91,7 @@ $(document).ready(function () {
     }
 
     // Change AM logo back to black version
-    $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
+    // $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
 
     // redefining booleans
     isRightContOpen = false;
@@ -133,7 +133,7 @@ $(document).ready(function () {
   // SHOW WORK FUNCTIONALITY AND CONDITIONS
   // ----------------------------------------------------
   function showWork() {
-    workEl.animate({ scrollTop: 0 }, "fast");
+    // workEl.animate({ scrollTop: 0 }, "fast");
     if (isRightContOpen === false) {
       handleMenu();
       workActive();
@@ -307,90 +307,90 @@ $(document).ready(function () {
   // ----------------------------------------------------
   // Changing AM logo to white version when screen is less than 1024px
   // ----------------------------------------------------
-  function swapLogo() {
-    if ($(window).width() <= 1024 && isRightContOpen === true) {
-      $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM_Rev.png");
-    } else if ($(window).width() > 1024 || isRightContOpen === false) {
-      $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
-    }
-  };
+  // function swapLogo() {
+  //   if ($(window).width() <= 1024 && isRightContOpen === true) {
+  //     $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM_Rev.png");
+  //   } else if ($(window).width() > 1024 || isRightContOpen === false) {
+  //     $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
+  //   }
+  // };
 
   // ----------------------------------------------------
   // SHOW PROJECT IMAGES AND DESCRIPTION ON CLICK
   // ----------------------------------------------------
-  function showProject() {
-    // Checking if left side/other project images are open and closing them if true
-    if (isLeftContOpen === true) {
-      leftCont.children().each(function () {
-        $(this).css("display", "none")
-      });
-    }
+  // function showProject() {
+  //   // Checking if left side/other project images are open and closing them if true
+  //   if (isLeftContOpen === true) {
+  //     leftCont.children().each(function () {
+  //       $(this).css("display", "none")
+  //     });
+  //   }
 
-    // Getting the id value of the target el
-    let i = $(this).attr("id");
-    // creating a variable that holds the class name using i value and changing display to flex
-    let thisProClass = `.project${i}`;
-    $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
+  //   // Getting the id value of the target el
+  //   let i = $(this).attr("id");
+  //   // creating a variable that holds the class name using i value and changing display to flex
+  //   let thisProClass = `.project${i}`;
+  //   $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
 
-    let openDescr = () => {
-      let descr = $(this)[0].lastElementChild.children[0].className;
-      $(`.${descr}`).slideDown(1000);
-    }
+  //   let openDescr = () => {
+  //     let descr = $(this)[0].lastElementChild.children[0].className;
+  //     $(`.${descr}`).slideDown(1000);
+  //   }
 
-    // Checking if other descriptions are open and closing if true
-    if (isDescrOpen === true) {
-      workGridItem.children("div").each(function () {
-        $(this).children("p").each(function () {
-          $(this).slideUp(500);
-        })
-      });
-      isDescrOpen = false;
-      openDescr();
-    } else {
-      openDescr();
-    }
+  //   // Checking if other descriptions are open and closing if true
+  //   if (isDescrOpen === true) {
+  //     workGridItem.children("div").each(function () {
+  //       $(this).children("p").each(function () {
+  //         $(this).slideUp(500);
+  //       })
+  //     });
+  //     isDescrOpen = false;
+  //     openDescr();
+  //   } else {
+  //     openDescr();
+  //   }
 
-    isDescrOpen = true;
-    isLeftContOpen = true;
+  //   isDescrOpen = true;
+  //   isLeftContOpen = true;
 
-    resizeWork();
-  }
+  //   resizeWork();
+  // }
 
   // ----------------------------------------------------
   // RESIZE WORK
   // ----------------------------------------------------
-  function resizeWork() {
-    // if window is smaller than 1024px
-    if ($(window).width() < 1024) {
-      // if window is less than 600px and the left container isn't open
-      if ($(window).width() < 600 && isLeftContOpen === false) {
-        // add padding to workmenu so it sits below AM logo
-        workGridCont.css("padding-top", "8em");
-      } else {
-        workGridCont.css("padding-top", "3em");
-      }
-      // find all elements in the left container with class 'resize' and change the min-height to 50vh
-      leftCont.find(".resize").css("min-height", "50vh");
-      // if the left container is not open
-      if (isLeftContOpen === false) {
-        // changr the height of the right container/work descriptions/menu to 100vh and reset the margin to 0
-        $(".work.showme").css({ "height": "100vh", "margin-top": "0vh" });
-        // if the left container and right container are both open
-      } else if (isLeftContOpen === true && isRightContOpen === true) {
-        // reduce the height of the right cont work menu to 50vh and add a top margin 
-        $(".work.showme").css({ "height": "50vh", "margin-top": "50vh" });
-        // add top padding to work menu
-        workGridCont.css("padding-top", "3em");
-      }
-    } else {
-      // reset height to 100vh and remove margins
-      leftCont.find(".resize").css("min-height", "100vh");
-      $(".work.showme").css({ "height": "100vh", "margin-top": "0vh" });
-    }
-  }
+  // function resizeWork() {
+  //   // if window is smaller than 1024px
+  //   if ($(window).width() < 1024) {
+  //     // if window is less than 600px and the left container isn't open
+  //     if ($(window).width() < 600 && isLeftContOpen === false) {
+  //       // add padding to workmenu so it sits below AM logo
+  //       workGridCont.css("padding-top", "8em");
+  //     } else {
+  //       workGridCont.css("padding-top", "3em");
+  //     }
+  //     // find all elements in the left container with class 'resize' and change the min-height to 50vh
+  //     leftCont.find(".resize").css("min-height", "50vh");
+  //     // if the left container is not open
+  //     if (isLeftContOpen === false) {
+  //       // changr the height of the right container/work descriptions/menu to 100vh and reset the margin to 0
+  //       $(".work.showme").css({ "height": "100vh", "margin-top": "0vh" });
+  //       // if the left container and right container are both open
+  //     } else if (isLeftContOpen === true && isRightContOpen === true) {
+  //       // reduce the height of the right cont work menu to 50vh and add a top margin 
+  //       $(".work.showme").css({ "height": "50vh", "margin-top": "50vh" });
+  //       // add top padding to work menu
+  //       workGridCont.css("padding-top", "3em");
+  //     }
+  //   } else {
+  //     // reset height to 100vh and remove margins
+  //     leftCont.find(".resize").css("min-height", "100vh");
+  //     $(".work.showme").css({ "height": "100vh", "margin-top": "0vh" });
+  //   }
+  // }
 
-  $(window).resize(resizeWork);
-  $(window).on('load', resizeWork);
+  // $(window).resize(resizeWork);
+  // $(window).on('load', resizeWork);
 
   // ----------------------------------------------------
   // SWIPER CAROUSEL FOR PROJECT IMAGES
@@ -538,6 +538,8 @@ $(document).ready(function () {
       closeAll();
     }
   })
+
+
 
   // ----------------------------------------------------
   // CALLING FUNCTIONS

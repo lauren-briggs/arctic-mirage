@@ -12,14 +12,15 @@
 }
 body{
     font-family: degular, sans-serif;
+    background-color: black;
     font-weight:lighter;
     font-style: normal;
-    cursor: url('../img/am-collateral/am21-04_logo_cursor_a.png') 15 15, auto;
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
 #homelogo{
     position: fixed;
-    top: 50px;
-    left: 50px;
+    top: 40px;
+    left: 40px;
     z-index: 100;
     cursor: pointer;
 }
@@ -85,48 +86,80 @@ h5{
 
 /* styling of ALL nav elements */
 nav{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--amBlack);
     font-family: degular, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 115%;
     position: fixed;
-    right: -190px;
-    top: 215px;
-    text-transform: uppercase;
-    transform: rotate(90deg);
+    /* left: 40px;
+    bottom: 40px; */
+    /* text-transform: uppercase; */
+    /* transform: rotate(90deg); */
     text-decoration: none;
-    color: var(--amBlack);
-    z-index: 1001;
+    color: var(--amWhite);
+    z-index: 2;
+    font-style: normal;
+    list-style: none;
 }
 /* POSITIONING AND STYLNIG OF NAV ELEMENTS */
-nav li{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items:flex-end;
-    list-style: none;
-    padding: 20px 50px 20px 50px;
+#menu-ul{
+    width: fit-content;
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    font-size: 300%;
+    font-weight: 400;
 }
+.menu-li{
+    /* display: inline-flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* align-items:flex-end; */
+    padding: 20px 50px 0px 0px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--amWhite);
+}
+
+nav a:hover{
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
+    color: var(--amWhite);
+}
+
+#menu-text{
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    padding: 40px;
+}
+
 #workNav.underline,
 #aboutNav.underline,
 #contactNav.underline{
     text-decoration: underline;
     text-underline-offset: 3px;
-    text-decoration-thickness: 15%;
+    text-decoration-thickness: 8%;
 }
-.menu{
+nav{
     visibility: hidden;
 }
-.menu:hover{
+.menu-li:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
-    text-decoration-thickness: 15%;
+    text-decoration-thickness: 8%;
 }
-.menu.showme{
+nav.showme{
     visibility: visible;
 }
 
-.menu.white{
+.menu-li.white{
     color: var(--amWhite);
 }
 #navBtn{
@@ -143,6 +176,7 @@ nav li{
     transform: rotate(45deg);
     text-decoration: none;
     transition: 0.5s;
+    color: var(--amWhite);
 }
 #navBtn:hover{
     text-decoration: none;
@@ -157,6 +191,7 @@ nav li{
 /* RIGHT CONTAINER */
 #rightcont{
     width: 0;
+    height: 100%;
     background-color: black;
     position:fixed;
     top: 0;
@@ -164,12 +199,13 @@ nav li{
     overflow-y: hidden;
     transform: translateX(100%);
     transition: 0.75s;
+    padding: 40px;
 }
 #rightcont.showme{
     width: 40%;
     display: block;
     transform: translateX(0%);
-    z-index: 1;
+    z-index: 100;
 }
 /* LEFT CONTAINER OVERFLOW */
 #project-img-container{
@@ -198,7 +234,7 @@ nav li{
     transition: ease 0.75;
 }
 /* grid CONTAINER structure of WORK */
-.grid-container-workmenu{
+/* .grid-container-workmenu{
     display: grid;
     grid-template-columns: 10% 90%;
     grid-template-rows: auto;
@@ -208,7 +244,28 @@ nav li{
 }
 .grid-item-workmenu{
     vertical-align: baseline;
+} */
+
+#back{
+    padding-bottom: 20px;
 }
+
+.work-ul-num,
+.work-ul-name{
+    color: var(--amWhite);
+    padding-right: 30px;
+}
+
+#work-1 li{
+    padding-bottom: 10px;
+    font-size: 130%;
+}
+
+#work-1{
+    display: flex;
+    flex-direction: row;
+}
+
 .work h1{
     padding-left: 0px;
     transition: padding-left 0.35s;
