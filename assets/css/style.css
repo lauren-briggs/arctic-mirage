@@ -28,7 +28,7 @@ body{
 p{
     font-style: normal;
     font-weight: 300;
-    font-size: 105%;
+    font-size: 100%;
     font-kerning:4px;
     letter-spacing:auto;
     line-height: 115%;
@@ -48,20 +48,18 @@ h4{
 }
 /* h1 styling for project titles in menu */
 h1{
-    font-size: 180%;
-    font-weight: 300;
-    line-height: 120%;
+    font-size: 300%;
+    font-weight: 400;
 }
 /* h2 styling - intro paragraphs, team names, services, clients, contact us headings */
 h2{
+    font-size: 130%;
     font-weight:300;
-    font-size: 150%;
-    line-height: 120%;
 }
 /* job title */
 h3{
     font-weight:300;
-    font-size: 130%;
+    font-size: 115%;
     line-height: 120%;
 }
 /* number and service heading */
@@ -107,8 +105,6 @@ nav{
     position: fixed;
     bottom: 40px;
     left: 40px;
-    font-size: 300%;
-    font-weight: 400;
 }
 .menu-li{
     /* display: inline-flex; */
@@ -118,12 +114,12 @@ nav{
     padding: 20px 50px 0px 0px;
 }
 
-nav a{
+a{
     text-decoration: none;
     color: var(--amWhite);
 }
 
-nav a:hover{
+a:hover{
     text-decoration: underline;
 
     text-underline-offset: 3px;
@@ -257,8 +253,20 @@ nav.showme{
 }
 
 #work-1 li{
-    padding-bottom: 10px;
-    font-size: 130%;
+    padding-bottom: 20px;
+}
+
+/* UNDERLINE ON HOVER OF PROJECT HEADINGS */
+.work-ul-name li{
+    padding-left: 0px;
+    transition: padding-left 0.5s;
+}
+.work-ul-name li:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
+    padding-left: 15px;
+    transition: padding-left 0.5s;
 }
 
 #work-1{
@@ -274,7 +282,7 @@ nav.showme{
     line-height: 150%;
 }
 /* UNDERLINE ON HOVER OF PROJECT HEADINGS */
-.work h1:hover{
+/* .work h1:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
@@ -284,7 +292,7 @@ nav.showme{
 .work h1:hover{
     padding-left: 20px;
     transition: padding-left 0.35s;
-}
+} */
 /*TOGGLE DESCRIPTIONS IN WORK MENU*/
 .work p{
     padding-left: 0px;
@@ -296,13 +304,19 @@ nav.showme{
 .block{
     padding-top: 15px;
 }
+
+/* ABOUT */
+#about-1{
+display: none;
+}
+
 /* grid CONTAINER structure of ABOUT */
 #about-intro,
 #about-team,
 #about-services,
 #about-clients{
-    width: 100%;
-    padding: 3em 10em 4em 4em;
+    /* width: 100%; */
+    /* padding: 3em 10em 4em 4em; */
 }
 
 #about-team,
@@ -317,24 +331,7 @@ nav.showme{
     display: block;
 }
 
-
-/* TEAM*/
-.grid-container-about-team{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    padding: 0em;
-    column-gap: 2em;
-    row-gap: 3em;
-}
 /* grid ITEMS composition of ABOUT */
-    .grid-container-about-team img{
-        grid-column: 1 / span 2;
-    }
-    #team-heading{
-        grid-column: 1 / span 2;
-    }
     #about-client-text{
         grid-column-start: 1;
         grid-column-end: span 2;
@@ -349,12 +346,12 @@ nav.showme{
         grid-row: 12;
     }
     #about-services{
-        grid-column-start: 1;
+        /* grid-column-start: 1;
         grid-column-end: span 2;
-        grid-row: 6;
+        grid-row: 6; */
     }
 
-    /* SERVICES */
+/* SERVICES */
 .grid-container-about-services{
     width: 100%;
     display: grid;
@@ -401,7 +398,7 @@ nav.showme{
 .about li{
     list-style:none;
     font-weight: 400;
-    font-size: 105%;
+    /* font-size: 105%; */
     line-height: 120%;
 }
 #liheader{
@@ -416,14 +413,14 @@ nav.showme{
 }
 
 /* grid ITEMS composition of CONTACT */
-#contact-intro,
+/* #contact-intro,
 #contact-contactus,
 #contact-visitus{
     width: 100%;
     padding: 3em 10em 4em 4em;
-}
+} */
 
-#contact-contactus,
+#contact-contact,
 #contact-visitus{
     display: none;
 }
@@ -450,19 +447,19 @@ nav.showme{
 text-decoration: none;
 }
 /* grid CONTAINER structure of SOCIALS in CONTACT */
-.grid-container-socials{
+/* .grid-container-socials{
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
     column-gap: 2em;
     color: white;
     justify-content: space-around;
-}
-#address,
+} */
+
 #enquiries{
-    max-width: 300px;
+    /* max-width: 300px;
     flex: 1 0 20%;
-    transition: flex-basis 500ms linear;
+    transition: flex-basis 500ms linear; */
 }
 /* CONTACT US FORM */
 #contact-form-card{
@@ -484,7 +481,7 @@ text-decoration: none;
     font-family: degular, sans-serif;
     font-weight:lighter;
     font-style: normal;
-    font-size: 110%;
+    font-size: 100%;
     text-transform: uppercase;
 }
 #submit:hover{
@@ -589,16 +586,16 @@ cursor: inherit;
     bottom: 0px;
     width: 100%;
     height: 60vh;
-    margin-left: -4em;
+    /* margin-left: -4em; */
 }
 
 #map {
     height: 100%;
     width: 100%;
   }
-#contact-enq-wrapper{
+/* #contact-enq-wrapper{
     height: 100vh;
-}
+} */
 
 /* SWIPER */
 .swiper-container{
@@ -625,7 +622,7 @@ background-color: var(--amBlack) !important;
 }
 
 /* MAILCHIMP SUBSCRIBERS */
-#subscriber-close-btn{
+/* #subscriber-close-btn{
     position: absolute;
     top: 0px;
     right: 0px;
@@ -655,8 +652,8 @@ background-color: var(--amBlack) !important;
     height: auto !important;
     padding: 50px 50px 50px !important;
     position: relative !important;
-}
-#mce-EMAIL,
+} */
+/* #mce-EMAIL,
 #mc-embedded-subscribe{
     width: 100% !important;
     padding:10px !important;
@@ -673,9 +670,9 @@ background-color: var(--amBlack) !important;
     font-size: 110% !important;
     text-transform: uppercase !important;
     text-align: center;
-}
+} */
 
-#mc-embedded-subscribe{
+/* #mc-embedded-subscribe{
     margin: 0em !important;
 }
 #mce-EMAIL:hover,
@@ -708,7 +705,7 @@ background-color: var(--amBlack) !important;
     font-size: 120% !important;
     letter-spacing: 0.25px;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
-}
+} */
 
 .about-li-inline,
 .contact-li-inline{
@@ -721,13 +718,13 @@ background-color: var(--amBlack) !important;
     line-height: 1.75;
 }
 
-.right-arrow{
+/* .right-arrow{
     padding-left: 1em;
 }
 
 .back-arrow{
     padding-right: 1em;
-}
+} */
 
 .about-li-hover,
 .contact-li-hover{
