@@ -4,18 +4,25 @@ $(document).ready(function () {
   // ELEMENTS
   // ----------------------------------------------------
   const menuEl = $("nav");
+  const menuTextEl = $("#menu-text");
   const rightCont = $("#rightcont");
   const leftCont = $(".leftcont");
-  const workEl = $(".work")
-  const aboutEl = $(".about")
-  const contactEl = $(".contact")
-  const workGridCont = $(".grid-container-workmenu");
-  const workGridItem = $(".grid-item-workmenu");
+  const projectMenuEl = $("#project-menu")
+  const aboutEl = $("#about-1")
+  const contactEl = $("#contact-1")
+  // const workGridCont = $(".grid-container-workmenu");
+  // const workGridItem = $(".grid-item-workmenu");
   const subscriberPopUp = $('#subscriber-container');
   const bgSlideshowContainer = $('.slideshow-container');
-  const backBtn = $('.back-inline')
-  const aboutLiBtns = $('.about-li-inline')
-  const contactLiBtns = $('.contact-li-inline')
+  const backBtn = $('.back-inline');
+  // const aboutLiBtns = $('.about-li-inline');
+  // const contactLiBtns = $('.contact-li-inline');
+  const servicesEl = $("#services-container");
+  const clientsEl = $("#clients-container");
+  const contactUsEl = $("#contact-contact");
+  const visitUsEl = $("#contact-visitus");
+  // const visitUsWrapper = $("#contact-visit-wrapper");
+
   // ----------------------------------------------------
   // BUTTONS
   // ----------------------------------------------------
@@ -25,16 +32,27 @@ $(document).ready(function () {
   const contactNav = $("#contactNav")
   const amLogo = $("#homelogo")
   const subscriberCloseBtn = $('#subscriber-close-btn');
+  const servicesBtn = $("#services-btn");
+  const clientsBtn = $("#clients-btn");
+  const contactUsBtn = $("#contact-us-btn");
+  const visitUsBtn = $("#visit-btn");
+
   // ----------------------------------------------------
   // BOOLEANS TO DEFINE WHETHER OR NOT SECTIONS ARE OPEN
   // ----------------------------------------------------
   let isRightContOpen = false;
   let isLeftContOpen = false;
-  let isWorkElOpen = false;
+  // let isMenuTextOpen = false;
+  let isProjectMenuElOpen = false;
   let isAboutElOpen = false;
   let isContactElOpen = false;
-  let isDescrOpen = false;
+  // let isDescrOpen = false;
   let isMenuOpen = false;
+  let isServicesElOpen = false;
+  let isClientsElOpen = false;
+  let isContactUsElOpen = false;
+  let isVisitUsElOpen = false;
+
 
   // ----------------------------------------------------
   // CLOSE SUBSCRIBER POPUP
@@ -64,13 +82,13 @@ $(document).ready(function () {
   // ----------------------------------------------------
   function closeAll() {
     // checking if right container is open and closing if true
-    if (isRightContOpen === true) {
-      rightCont.removeClass("showme");
-    }
+    // if (isRightContOpen === true) {
+    rightCont.removeClass("showme");
+    // }
     // closing menu, navBtn, work, about and contact and removing white text class
     menuEl.removeClass("showme white");
     navBtn.removeClass("showme white");
-    workEl.removeClass("showme");
+    projectMenuEl.removeClass("showme");
     aboutEl.removeClass("showme");
     contactEl.removeClass("showme");
 
@@ -81,14 +99,14 @@ $(document).ready(function () {
       });
     }
     // Checking if other descriptions are open and closing if true
-    if (isDescrOpen === true) {
-      workGridItem.children("div").each(function () {
-        $(this).children("p").each(function () {
-          $(this).css("display", "none");
-        })
-      });
-      isDescrOpen = false;
-    }
+    // if (isDescrOpen === true) {
+    //   workGridItem.children("div").each(function () {
+    //     $(this).children("p").each(function () {
+    //       $(this).css("display", "none");
+    //     })
+    //   });
+    //   isDescrOpen = false;
+    // }
 
     // Change AM logo back to black version
     // $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
@@ -110,12 +128,18 @@ $(document).ready(function () {
   // ----------------------------------------------------
   function handleMenu() {
     menuEl.removeClass("showme");
+    projectMenuEl.removeClass("showme");
+    aboutEl.removeClass("showme");
+    contactEl.removeClass("showme");
     rightCont.addClass("showme");
-    menuEl.addClass("showme white");
-    navBtn.addClass("white");
+    menuEl.addClass("showme");
+    workNav.removeClass("underline");
+    aboutNav.removeClass("underline");
+    contactNav.removeClass("underline");
+    // navBtn.addClass("white");
 
     isRightContOpen = false;
-    isWorkElOpen = false;
+    isProjectMenuElOpen = false;
     isAboutElOpen = false;
     isContactElOpen = false;
   }
@@ -126,7 +150,7 @@ $(document).ready(function () {
   // ----------------------------------------------------
   function workActive() {
     workNav.addClass("underline");
-    workEl.addClass("showme");
+    projectMenuEl.addClass("showme");
   }
 
   // ----------------------------------------------------
@@ -139,7 +163,7 @@ $(document).ready(function () {
       workActive();
 
       isRightContOpen = true;
-      isWorkElOpen = true;
+      isProjectMenuElOpen = true;
     } else if (isAboutElOpen === true || isContactElOpen === true) {
       // closing About and Contact sections and removing their underline
       aboutEl.removeClass("showme");
@@ -152,18 +176,20 @@ $(document).ready(function () {
       // handle basic menu function and show Work
       handleMenu();
       workActive();
-      resizeWork();
+      // resizeWork();
 
       // redefine values as true
       isRightContOpen = true;
-      isWorkElOpen = true;
+      isProjectMenuElOpen = true;
 
-    } else if (isRightContOpen === true && isWorkElOpen === true) {
-      closeAll();
-      isRightContOpen = false;
-      isWorkElOpen = false;
     }
-    swapLogo();
+    menuTextEl.addClass('hide');
+    // else if (isRightContOpen === true && isProjectMenuElOpen === true) {
+    //   closeAll();
+    //   isRightContOpen = false;
+    //   isProjectMenuElOpen = false;
+    // }
+    // swapLogo();
   }
 
   // ----------------------------------------------------
@@ -187,11 +213,11 @@ $(document).ready(function () {
 
       isRightContOpen = true;
       isAboutElOpen = true;
-    } else if (isWorkElOpen === true || isContactElOpen === true) {
+    } else if (isProjectMenuElOpen === true || isContactElOpen === true) {
       // closing About and Contact sections and removing their underline
-      workEl.removeClass("showme");
+      projectMenuEl.removeClass("showme");
       workNav.removeClass("underline");
-      isWorkElOpen = false;
+      isProjectMenuElOpen = false;
       contactEl.removeClass("showme");
       contactNav.removeClass("underline");
       isContactElOpen = false;
@@ -203,14 +229,14 @@ $(document).ready(function () {
         });
       }
       // Checking if project descriptions are open and closing if true
-      if (isDescrOpen === true) {
-        workGridItem.children("div").each(function () {
-          $(this).children("p").each(function () {
-            $(this).css("display", "none");
-          })
-        });
-      }
-      isDescrOpen = false;
+      // if (isDescrOpen === true) {
+      //   workGridItem.children("div").each(function () {
+      //     $(this).children("p").each(function () {
+      //       $(this).css("display", "none");
+      //     })
+      //   });
+      // }
+      // isDescrOpen = false;
       isLeftContOpen = false;
 
       // handle basic menu function and show Work
@@ -221,18 +247,20 @@ $(document).ready(function () {
       isRightContOpen = true;
       isAboutElOpen = true;
 
-    } else if (isRightContOpen === true && isAboutElOpen === true) {
-      closeAll();
-      isRightContOpen = false;
-      isAboutElOpen = false;
     }
+    menuTextEl.addClass('hide');
+    // else if (isRightContOpen === true && isAboutElOpen === true) {
+    //   closeAll();
+    //   isRightContOpen = false;
+    //   isAboutElOpen = false;
+    // }
 
-    swapLogo();
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
+    // swapLogo();
+    // window.scroll({
+    //   top: 0,
+    //   left: 0,
+    //   behavior: 'smooth'
+    // });
   }
 
   // ----------------------------------------------------
@@ -256,11 +284,11 @@ $(document).ready(function () {
 
       isRightContOpen = true;
       isContactElOpen = true;
-    } else if (isWorkElOpen === true || isAboutElOpen === true) {
+    } else if (isProjectMenuElOpen === true || isAboutElOpen === true) {
       // closing About and Contact sections and removing their underline
-      workEl.removeClass("showme");
+      projectMenuEl.removeClass("showme");
       workNav.removeClass("underline");
-      isWorkElOpen = false;
+      isProjectMenuElOpen = false;
       aboutEl.removeClass("showme");
       aboutNav.removeClass("underline");
       isAboutElOpen = false;
@@ -272,14 +300,14 @@ $(document).ready(function () {
         });
       }
       // Checking if project descriptions are open and closing if true
-      if (isDescrOpen === true) {
-        workGridItem.children("div").each(function () {
-          $(this).children("p").each(function () {
-            $(this).css("display", "none");
-          })
-        });
-      }
-      isDescrOpen = false;
+      // if (isDescrOpen === true) {
+      //   workGridItem.children("div").each(function () {
+      //     $(this).children("p").each(function () {
+      //       $(this).css("display", "none");
+      //     })
+      //   });
+      // }
+      // isDescrOpen = false;
       isLeftContOpen = false;
 
       // handle basic menu function and show Work
@@ -290,13 +318,15 @@ $(document).ready(function () {
       isRightContOpen = true;
       isContactElOpen = true;
 
-    } else if (isRightContOpen === true && isContactElOpen === true) {
-      closeAll();
-      isRightContOpen = false;
-      isContactElOpen = false;
     }
+    menuTextEl.addClass('hide');
+    // else if (isRightContOpen === true && isContactElOpen === true) {
+    //   closeAll();
+    //   isRightContOpen = false;
+    //   isContactElOpen = false;
+    // }
 
-    swapLogo();
+    // swapLogo();
     window.scroll({
       top: 0,
       left: 0,
@@ -506,29 +536,136 @@ $(document).ready(function () {
   // ----------------------------------------------------
   // ABOUT AND CONTACT SUB MENU LINKS
   // ----------------------------------------------------
-  function handleSubMenu() {
-    // Getting the id value of the target el
-    let i = $(this).attr("id");
-    let id = i.split('-', 1)
-    let parentId = $(this).parents().eq(2)[0].id;
+  // function handleSubMenu() {
+  //   // Getting the id value of the target el
+  //   console.log($(this))
+  //   let i = $(this).attr("id");
+  //   console.log(i);
+  //   let id = i.split('-', 1)
+  //   console.log(`submenu id:${id}`)
+  //   console.log($(this).parents())
+  //   let parentId = $(this).parents(3).eq(2)[0].id;
+  //   console.log(`submenu pardentId:${parentId}`)
 
-    $(`#${parentId}`).css('display', 'none');
+  //   aboutEl.removeClass('showme');
+  //   contactEl.removeClass('showme');
 
-    let sectionName = parentId.split('-', 1);
-    let idToRender = `${sectionName}-${id}`;
+  //   isAboutElOpen = false;
+  //   isContactElOpen = false;
 
-    $(`#${idToRender}`).addClass('showme');
+  //   $(`#${parentId}`).css('display', 'none');
 
-  }
+  //   let sectionName = parentId.split('-', 1);
+  //   console.log(`submenu sectionName:${sectionName}`)
+  //   let idToRender = `${sectionName}-${id}`;
+
+  //   if (id === "services") {
+  //     servicesEl.css('display', 'block')
+  //   }
+  // }
+
+  servicesBtn.click(function () {
+    aboutEl.removeClass("showme");
+    isAboutElOpen = false;
+    servicesEl.addClass("showme");
+    isServicesElOpen = true;
+  })
+
+  clientsBtn.click(function () {
+    aboutEl.removeClass("showme");
+    isAboutElOpen = false;
+    clientsEl.addClass("showme");
+    isClientsElOpen = true;
+  })
+
+  contactUsBtn.click(function () {
+    contactEl.removeClass("showme");
+    isContactElOpen = false;
+    contactUsEl.addClass("showme");
+    isContactUsElOpen = true;
+  })
+
+  visitUsBtn.click(function () {
+    contactEl.removeClass("showme");
+    isContactElOpen = false;
+    visitUsEl.addClass("showme");
+    isVisitUsElOpen = true;
+    // visitUsWrapper.addClass("showme");
+  })
+
 
   function handleBackBtn() {
-    let i = $(this).parents().eq(1)[0].id;
-    $(`#${i}`).removeClass('showme');
+    // console.log($(this).siblings());
+    // let i = $(this).parents().eq(1)[0].id;
+    // $(`#${i}`).removeClass('showme');
+    // console.log(`i: ${i}`);
 
-    let sectionName = i.split('-', 1)
-    let idToRender = `${sectionName}-intro`;
+    // let sectionName = i.split('-', 1)
+    // console.log(`sectionName: ${sectionName}`);
+    // let idToRender = `${sectionName}-intro`;
+    // console.log(`idToRender: ${idToRender}`);
 
-    $(`#${idToRender}`).css('display', 'block');
+    // $(`#${idToRender}`).css('display', 'block');
+    // if (sectionName = 'rightcont') {
+    //   workNav.removeClass('underline');
+    //   aboutNav.removeClass('underline');
+    //   contactNav.removeClass('underline');
+    // }
+
+    if (isProjectMenuElOpen === true) {
+      projectMenuEl.removeClass("showme");
+      isProjectMenuElOpen = false;
+      rightCont.removeClass('showme');
+      isRightContOpen = false;
+      menuTextEl.removeClass('hide');
+      workNav.removeClass('underline');
+      aboutNav.removeClass('underline');
+      contactNav.removeClass('underline');
+    }
+    if (isAboutElOpen === true) {
+      aboutEl.removeClass("showme");
+      isAboutElOpen = false;
+      rightCont.removeClass('showme');
+      isRightContOpen = false;
+      menuTextEl.removeClass('hide');
+      workNav.removeClass('underline');
+      aboutNav.removeClass('underline');
+      contactNav.removeClass('underline');
+    }
+    if (isContactElOpen === true) {
+      contactEl.removeClass("showme");
+      isContactElOpen = false;
+      rightCont.removeClass('showme');
+      isRightContOpen = false;
+      menuTextEl.removeClass('hide');
+      workNav.removeClass('underline');
+      aboutNav.removeClass('underline');
+      contactNav.removeClass('underline');
+    }
+    if (isServicesElOpen === true) {
+      servicesEl.removeClass("showme");
+      isServicesElOpen = false;
+      aboutEl.addClass("showme");
+      isAboutElOpen = true;
+    }
+    if (isClientsElOpen === true) {
+      clientsEl.removeClass("showme");
+      isClientsElOpen = false;
+      aboutEl.addClass("showme");
+      isAboutElOpen = true;
+    }
+    if (isContactUsElOpen === true) {
+      contactUsEl.removeClass("showme");
+      isContactUsElOpen = false;
+      contactEl.addClass("showme");
+      isContactElOpen = true;
+    }
+    if (isVisitUsElOpen === true) {
+      visitUsEl.removeClass("showme");
+      isVisitUsElOpen = false;
+      contactEl.addClass("showme");
+      isContactElOpen = true;
+    }
   }
 
   navBtn.click(function () {
@@ -539,7 +676,7 @@ $(document).ready(function () {
     }
   })
 
-
+  // navBtn.toggle(showMenu);
 
   // ----------------------------------------------------
   // CALLING FUNCTIONS
@@ -550,11 +687,11 @@ $(document).ready(function () {
   workNav.click(showWork);
   aboutNav.click(showAbout);
   contactNav.click(showContact);
-  workGridItem.click(showProject);
-  workGridItem.click(initSwiper);
+  // workGridItem.click(showProject);
+  // workGridItem.click(initSwiper);
   bgSlideshowContainer.click(closeAll);
   backBtn.click(handleBackBtn);
-  aboutLiBtns.click(handleSubMenu);
-  contactLiBtns.click(handleSubMenu);
-  $(window).resize(swapLogo);
+  // servicesBtn.click(handleSubMenu);
+  // contactLiBtns.click(handleSubMenu);
+  // $(window).resize(swapLogo);
 });

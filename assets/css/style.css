@@ -22,7 +22,7 @@ body{
     top: 40px;
     left: 40px;
     z-index: 100;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 /*consistent styling throughout*/
 p{
@@ -43,7 +43,7 @@ h1,
 h2,
 h3,
 h4{
-    color: white;
+    color: var(--amWhite);
     font-kerning: auto;
 }
 /* h1 styling for project titles in menu */
@@ -121,7 +121,6 @@ a{
 
 a:hover{
     text-decoration: underline;
-
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
     color: var(--amWhite);
@@ -134,6 +133,18 @@ a:hover{
     right: 0px;
     top: 0px;
     padding: 40px;
+    opacity: 1;
+    transition: 0.75s;
+}
+
+#menu-text.hide{
+    display: none;
+    opacity: 0;
+    transition: 0.75s;
+}
+
+#menu-text a{
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
 
 #workNav.underline,
@@ -145,6 +156,8 @@ a:hover{
 }
 nav{
     visibility: hidden;
+    opacity: 0;
+    transition: 0.75s;
 }
 .menu-li:hover{
     text-decoration: underline;
@@ -153,11 +166,13 @@ nav{
 }
 nav.showme{
     visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
 }
 
-.menu-li.white{
+/* .menu-li.white{
     color: var(--amWhite);
-}
+} */
 #navBtn{
     font-family: degular, sans-serif;
     font-weight: 300;
@@ -176,31 +191,30 @@ nav.showme{
 }
 #navBtn:hover{
     text-decoration: none;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 #navBtn.showme{
     transform: rotate(0deg);
 }
-#navBtn.white{
+/* #navBtn.white{
     color: var(--amWhite);
-}
+} */
 /* RIGHT CONTAINER */
 #rightcont{
     width: 0;
     height: 100%;
-    background-color: black;
+    /* background-color: black; */
     position:fixed;
     top: 0;
     right: 0;
     overflow-y: hidden;
-    transform: translateX(100%);
-    transition: 0.75s;
+    opacity: 0;
     padding: 40px;
 }
 #rightcont.showme{
     width: 40%;
     display: block;
-    transform: translateX(0%);
+    opacity: 1;
     z-index: 100;
 }
 /* LEFT CONTAINER OVERFLOW */
@@ -208,26 +222,59 @@ nav.showme{
     overflow-y: scroll;
 }
 /* RIGHT MENU DISPLAY AND OVERFLOW */
-.work,
-.about,
-.contact{
+#project-menu,
+#about-1,
+#contact-1{
     display: none;
     height: 100vh;
     overflow-y: scroll;
-    transform: translateX(100%);
-    transition: ease 0.75;
+    opacity: 0;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
+}   
+
+#project-menu.showme{
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
 }
+
+#about-1.showme,
+#contact-1.showme{
+    display: block;
+    /* transform: translateX(0%); */
+    opacity: 1;
+    /* transition: ease 0.75; */
+}
+
 /* ALLOW SCROLL ON HOVER */
-.work:hover{
+#project-menu:hover{
     overflow: scroll;
 }
-.work.showme,
-.about.showme,
-.contact.showme{
-    display: block;
-    transform: translateX(0%);
-    transition: ease 0.75;
+
+.grid-container-workmenu{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    padding: 0em;
+    row-gap: 2em;
+}
+
+.work-2{
+    display: none;
+}
+
+.work-2 h2{
+    padding-right: 1.5em;
+}
+
+.project-title{
+    display: inline-flex;
+}
+
+.project-descr{
+    padding-top: 1em;
+    padding-left: 3.7em;
 }
 /* grid CONTAINER structure of WORK */
 /* .grid-container-workmenu{
@@ -252,7 +299,7 @@ nav.showme{
     padding-right: 30px;
 }
 
-#work-1 li{
+#project-menu li{
     padding-bottom: 20px;
 }
 
@@ -269,11 +316,6 @@ nav.showme{
     transition: padding-left 0.5s;
 }
 
-#work-1{
-    display: flex;
-    flex-direction: row;
-}
-
 .work h1{
     padding-left: 0px;
     transition: padding-left 0.35s;
@@ -281,74 +323,33 @@ nav.showme{
 .work h2{
     line-height: 150%;
 }
-/* UNDERLINE ON HOVER OF PROJECT HEADINGS */
-/* .work h1:hover{
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 8%;
-    padding-left: 20px;
-    transition: padding-left 0.35s;
-}
-.work h1:hover{
-    padding-left: 20px;
-    transition: padding-left 0.35s;
-} */
+
 /*TOGGLE DESCRIPTIONS IN WORK MENU*/
-.work p{
-    padding-left: 0px;
-    transition: padding-left 0.25s;
-    display: none;
-    opacity: 1;
-}
 
-.block{
-    padding-top: 15px;
-}
-
-/* ABOUT */
-#about-1{
-display: none;
-}
-
-/* grid CONTAINER structure of ABOUT */
-#about-intro,
-#about-team,
-#about-services,
-#about-clients{
-    /* width: 100%; */
-    /* padding: 3em 10em 4em 4em; */
-}
-
-#about-team,
-#about-services,
-#about-clients{
+/* HIDE */
+#about-1,
+#contact-1,
+#services-container,
+#clients-container,
+#contact-contact,
+#contact-visitus{
     display: none;
 }
 
-#about-team.showme,
-#about-services.showme,
-#about-clients.showme{
+#about-1.showme,
+#contact-1.showme,
+#contact-contact.showme,
+#contact-visitus.showme,
+#services-container.showme,
+#clients-container.showme{
     display: block;
 }
 
 /* grid ITEMS composition of ABOUT */
-    #about-client-text{
-        grid-column-start: 1;
-        grid-column-end: span 2;
-        grid-row: 11;
-    }
-    #client-heading{
-        padding-bottom: 1em;
-    }
     #about-client-img{
         grid-column-start: 1;
         grid-column-end: span 2;
         grid-row: 12;
-    }
-    #about-services{
-        /* grid-column-start: 1;
-        grid-column-end: span 2;
-        grid-row: 6; */
     }
 
 /* SERVICES */
@@ -385,20 +386,10 @@ display: none;
         row-gap: 1em;
     }
 
-/* grid composition of ABOUT TEAM */
-    #alex,
-    #ahna{
-            flex: 1 0 20%;
-            padding: 1.75rem 1rem 0rem 1.75rem;
-            transition: flex-basis 500ms linear;
-            margin-bottom: 1rem;
-    }
-
 /*LIST OF SERVICES*/
 .about li{
     list-style:none;
     font-weight: 400;
-    /* font-size: 105%; */
     line-height: 120%;
 }
 #liheader{
@@ -411,23 +402,8 @@ display: none;
     padding-top: 1em;
     padding-left: 3.25em;
 }
-
-/* grid ITEMS composition of CONTACT */
-/* #contact-intro,
-#contact-contactus,
-#contact-visitus{
-    width: 100%;
-    padding: 3em 10em 4em 4em;
-} */
-
-#contact-contact,
-#contact-visitus{
-    display: none;
-}
-
-#contact-contactus.showme,
-#contact-visitus.showme{
-    display: block;
+.hidden-list li{
+    line-height: 1.3;
 }
 
 .about li,
@@ -446,21 +422,7 @@ display: none;
 #copyright-am:hover{
 text-decoration: none;
 }
-/* grid CONTAINER structure of SOCIALS in CONTACT */
-/* .grid-container-socials{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto;
-    column-gap: 2em;
-    color: white;
-    justify-content: space-around;
-} */
 
-#enquiries{
-    /* max-width: 300px;
-    flex: 1 0 20%;
-    transition: flex-basis 500ms linear; */
-}
 /* CONTACT US FORM */
 #contact-form-card{
     display: flex;
@@ -473,8 +435,8 @@ text-decoration: none;
     width: 100%;
     padding:10px;
     margin: 0.5em 0em;
-    color: white;
-    background-color: black;
+    color: var(--amWhite);
+    background-color: var(--amBlack);
     border: none;
     border-bottom: 2px solid var(--amWhite);
     justify-content: space-around;
@@ -523,17 +485,17 @@ textarea:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
-cursor: inherit;
+/* cursor: inherit; */
 }
 
 /* PROJECT IMAGES CONTAINER */
 .left-cont{
-    background-color: white;
+    background-color: var(--amWhite);
 }
 #project-img-container > section{
     width: 60vw;
     min-height: 100vh;
-    background-color: white;
+    background-color: var(--amWhite);
     position:absolute;
     top: 0px;
     left: 0px;
@@ -552,9 +514,9 @@ cursor: inherit;
     line-height: 0  ;
     float: top;
 }
-.projectfetti{
+/* .projectfetti{
     background-color: #E0E0E1;
-}
+} */
 
 /* BACKGROUND SLIDESHOW */
 .slideshow-container{
@@ -716,6 +678,12 @@ background-color: var(--amBlack) !important;
 .back-inline{
     display: inline-block;
     line-height: 1.75;
+}
+
+.back-inline:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
 }
 
 /* .right-arrow{
