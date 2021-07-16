@@ -93,8 +93,11 @@
     #menu-text{
         top: 0px;
         left: 0;
-        padding-top: 120px;
+        padding-top: 100px;
         width: 100%;
+    }
+    #rightcont.showme{
+        padding-top: 100px;
     }
     h1{
         font-size: 170%;
