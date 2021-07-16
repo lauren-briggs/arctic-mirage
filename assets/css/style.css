@@ -105,6 +105,15 @@ nav{
     position: fixed;
     bottom: 40px;
     left: 40px;
+    display: block;
+    opacity: 1;
+    transition: 0.75s;
+}
+
+#menu-ul.hide{
+    display: none;
+    opacity: 0;
+    transition: 0.75s;
 }
 .menu-li{
     /* display: inline-flex; */
@@ -678,6 +687,12 @@ background-color: var(--amBlack) !important;
 .back-inline{
     display: inline-block;
     line-height: 1.75;
+}
+
+#back-wrapper:hover .back-inline{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
 }
 
 .back-inline:hover{

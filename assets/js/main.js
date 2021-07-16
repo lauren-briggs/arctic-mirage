@@ -4,17 +4,20 @@ $(document).ready(function () {
   // ELEMENTS
   // ----------------------------------------------------
   const menuEl = $("nav");
+  const menuUl = $("#menu-ul");
   const menuTextEl = $("#menu-text");
   const rightCont = $("#rightcont");
   const leftCont = $(".leftcont");
   const projectMenuEl = $("#project-menu")
+  const projectMenuItems = $("#project-menu li")
+  console.log(projectMenuItems);
+  const projectCont = $("#project-container");
   const aboutEl = $("#about-1")
   const contactEl = $("#contact-1")
   // const workGridCont = $(".grid-container-workmenu");
   // const workGridItem = $(".grid-item-workmenu");
   const subscriberPopUp = $('#subscriber-container');
   const bgSlideshowContainer = $('.slideshow-container');
-  const backBtn = $('.back-inline');
   // const aboutLiBtns = $('.about-li-inline');
   // const contactLiBtns = $('.contact-li-inline');
   const servicesEl = $("#services-container");
@@ -36,6 +39,7 @@ $(document).ready(function () {
   const clientsBtn = $("#clients-btn");
   const contactUsBtn = $("#contact-us-btn");
   const visitUsBtn = $("#visit-btn");
+  const backBtn = $('#back-wrapper');
 
   // ----------------------------------------------------
   // BOOLEANS TO DEFINE WHETHER OR NOT SECTIONS ARE OPEN
@@ -46,13 +50,12 @@ $(document).ready(function () {
   let isProjectMenuElOpen = false;
   let isAboutElOpen = false;
   let isContactElOpen = false;
-  // let isDescrOpen = false;
+  let isDescrOpen = false;
   let isMenuOpen = false;
   let isServicesElOpen = false;
   let isClientsElOpen = false;
   let isContactUsElOpen = false;
   let isVisitUsElOpen = false;
-
 
   // ----------------------------------------------------
   // CLOSE SUBSCRIBER POPUP
@@ -348,43 +351,57 @@ $(document).ready(function () {
   // ----------------------------------------------------
   // SHOW PROJECT IMAGES AND DESCRIPTION ON CLICK
   // ----------------------------------------------------
-  // function showProject() {
-  //   // Checking if left side/other project images are open and closing them if true
-  //   if (isLeftContOpen === true) {
-  //     leftCont.children().each(function () {
-  //       $(this).css("display", "none")
-  //     });
-  //   }
+  function showProject() {
+    // Checking if left side/other project images are open and closing them if true
+    if (isLeftContOpen === true) {
+      leftCont.children().each(function () {
+        $(this).css("display", "none")
+      });
+    }
 
-  //   // Getting the id value of the target el
-  //   let i = $(this).attr("id");
-  //   // creating a variable that holds the class name using i value and changing display to flex
-  //   let thisProClass = `.project${i}`;
-  //   $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
+    menuUl.addClass('hide');
+    // isMenuUlOpen = false;
 
-  //   let openDescr = () => {
-  //     let descr = $(this)[0].lastElementChild.children[0].className;
-  //     $(`.${descr}`).slideDown(1000);
-  //   }
+    // Getting the id value of the target el
+    let i = $(this).attr("class");
+    let projectName = i.split('-', 1);
+    console.log(projectName);
+    // creating a variable that holds the class name using i value and changing display to flex
+    let thisProClass = `.project${projectName}`;
+    $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
 
-  //   // Checking if other descriptions are open and closing if true
-  //   if (isDescrOpen === true) {
-  //     workGridItem.children("div").each(function () {
-  //       $(this).children("p").each(function () {
-  //         $(this).slideUp(500);
-  //       })
-  //     });
-  //     isDescrOpen = false;
-  //     openDescr();
-  //   } else {
-  //     openDescr();
-  //   }
 
-  //   isDescrOpen = true;
-  //   isLeftContOpen = true;
+    // Opening description
+    projectMenuEl.removeClass('showme');
+    isProjectMenuElOpen = false;
 
-  //   resizeWork();
-  // }
+    let descrToOpen = `${projectName}-container`;
+    $(`#${descrToOpen}`).css('display', 'block');
+    isDescrOpen = true;
+
+    // let openDescr = () => {
+    //   let descr = $(this)[0].lastElementChild.children[0].className;
+    //   $(`.${descr}`).slideDown(1000);
+    // }
+
+    // Checking if other descriptions are open and closing if true
+    // if (isDescrOpen === true) {
+    //   workGridItem.children("div").each(function () {
+    //     $(this).children("p").each(function () {
+    //       $(this).slideUp(500);
+    //     })
+    //   });
+    //   isDescrOpen = false;
+    //   openDescr();
+    // } else {
+    //   openDescr();
+    // }
+
+    // isDescrOpen = true;
+    isLeftContOpen = true;
+
+    // resizeWork();
+  }
 
   // ----------------------------------------------------
   // RESIZE WORK
@@ -666,6 +683,21 @@ $(document).ready(function () {
       contactEl.addClass("showme");
       isContactElOpen = true;
     }
+    if (isLeftContOpen === true && isDescrOpen === true) {
+      console.log(leftCont)
+      console.log(projectCont);
+      leftCont.children().each(function () {
+        $(this).css("display", "none")
+      });
+      isLeftContOpen = false;
+      menuUl.removeClass('hide');
+      projectCont.children().each(function () {
+        $(this).css("display", "none")
+      });
+      projectMenuEl.addClass('showme');
+      isProjectMenuElOpen = true;
+    }
+
   }
 
   navBtn.click(function () {
@@ -687,8 +719,8 @@ $(document).ready(function () {
   workNav.click(showWork);
   aboutNav.click(showAbout);
   contactNav.click(showContact);
-  // workGridItem.click(showProject);
-  // workGridItem.click(initSwiper);
+  projectMenuItems.click(showProject);
+  projectMenuItems.click(initSwiper);
   bgSlideshowContainer.click(closeAll);
   backBtn.click(handleBackBtn);
   // servicesBtn.click(handleSubMenu);
