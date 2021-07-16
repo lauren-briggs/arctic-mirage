@@ -1,11 +1,10 @@
-// THE /\RCTIC /\/\IRAGE
+//\\//\\//\\ THE /\RCTIC /\/\IRAGE //\\//\\//\\
 $(document).ready(function () {
   // ----------------------------------------------------
   // ELEMENTS
   // ----------------------------------------------------
   const menuEl = $("#menu-container");
   const menuUl = $("#menu-ul");
-  // const nav = $("nav");
   const menuTextEl = $("#menu-text");
   const rightCont = $("#rightcont");
   const leftCont = $(".leftcont");
@@ -326,7 +325,6 @@ $(document).ready(function () {
 
     $("#back").removeClass('reposition');
     projectCont.removeClass('reposition');
-    console.log(isLeftContOpen);
     if (isLeftContOpen === false) {
       projectCont.removeClass('reposition');
     } else if (isLeftContOpen === true && $(window).width() < 1024) {
