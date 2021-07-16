@@ -93,17 +93,24 @@
     #menu-text{
         top: 0px;
         left: 0;
-        padding-top: 100px;
+        padding-top: 110px;
         width: 100%;
     }
     #rightcont.showme{
-        padding-top: 100px;
+        padding-top: 110px;
+        padding-bottom: 0px;
     }
     h1{
         font-size: 170%;
     }
     h2{
-        font-size: 120%;
+        font-size: 115%;
+    }
+    h3{
+        font-size: 110%;
+    }
+    p{
+        font-size: 95%;
     }
     #project-menu li{
         padding-bottom: 15px;
