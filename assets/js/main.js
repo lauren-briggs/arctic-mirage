@@ -149,6 +149,7 @@ $(document).ready(function () {
     contactUsEl.removeClass("showme");
     visitUsEl.removeClass("showme");
     subscribeEl.removeClass("showme");
+    menuTextEl.addClass('hide');
 
     isAboutElOpen = false;
     isContactElOpen = false;
@@ -166,9 +167,6 @@ $(document).ready(function () {
     // redefine values as true
     isRightContOpen = true;
     isProjectMenuElOpen = true;
-
-    // }
-    menuTextEl.addClass('hide');
   }
 
   // ----------------------------------------------------
