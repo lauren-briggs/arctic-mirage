@@ -14,17 +14,12 @@ $(document).ready(function () {
   const projectCont = $("#project-container");
   const aboutEl = $("#about-1")
   const contactEl = $("#contact-1")
-  // const workGridCont = $(".grid-container-workmenu");
-  // const workGridItem = $(".grid-item-workmenu");
   const subscriberPopUp = $('#subscriber-container');
   const bgSlideshowContainer = $('.slideshow-container');
-  // const aboutLiBtns = $('.about-li-inline');
-  // const contactLiBtns = $('.contact-li-inline');
   const servicesEl = $("#services-container");
   const clientsEl = $("#clients-container");
   const contactUsEl = $("#contact-contact");
   const visitUsEl = $("#contact-visitus");
-  // const visitUsWrapper = $("#contact-visit-wrapper");
 
   // ----------------------------------------------------
   // BUTTONS
@@ -46,7 +41,6 @@ $(document).ready(function () {
   // ----------------------------------------------------
   let isRightContOpen = false;
   let isLeftContOpen = false;
-  // let isMenuTextOpen = false;
   let isProjectMenuElOpen = false;
   let isAboutElOpen = false;
   let isContactElOpen = false;
@@ -84,11 +78,7 @@ $(document).ready(function () {
   // HIDE MENU/CLOSE ALL
   // ----------------------------------------------------
   function closeAll() {
-    // checking if right container is open and closing if true
-    // if (isRightContOpen === true) {
     rightCont.removeClass("showme");
-    // }
-    // closing menu, navBtn, work, about and contact and removing white text class
     menuEl.removeClass("showme white");
     navBtn.removeClass("showme white");
     projectMenuEl.removeClass("showme");
@@ -101,18 +91,6 @@ $(document).ready(function () {
         $(this).css("display", "none")
       });
     }
-    // Checking if other descriptions are open and closing if true
-    // if (isDescrOpen === true) {
-    //   workGridItem.children("div").each(function () {
-    //     $(this).children("p").each(function () {
-    //       $(this).css("display", "none");
-    //     })
-    //   });
-    //   isDescrOpen = false;
-    // }
-
-    // Change AM logo back to black version
-    // $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
 
     // redefining booleans
     isRightContOpen = false;
@@ -139,7 +117,6 @@ $(document).ready(function () {
     workNav.removeClass("underline");
     aboutNav.removeClass("underline");
     contactNav.removeClass("underline");
-    // navBtn.addClass("white");
 
     isRightContOpen = false;
     isProjectMenuElOpen = false;
@@ -187,12 +164,6 @@ $(document).ready(function () {
 
     }
     menuTextEl.addClass('hide');
-    // else if (isRightContOpen === true && isProjectMenuElOpen === true) {
-    //   closeAll();
-    //   isRightContOpen = false;
-    //   isProjectMenuElOpen = false;
-    // }
-    // swapLogo();
   }
 
   // ----------------------------------------------------
@@ -231,15 +202,6 @@ $(document).ready(function () {
           $(this).css("display", "none")
         });
       }
-      // Checking if project descriptions are open and closing if true
-      // if (isDescrOpen === true) {
-      //   workGridItem.children("div").each(function () {
-      //     $(this).children("p").each(function () {
-      //       $(this).css("display", "none");
-      //     })
-      //   });
-      // }
-      // isDescrOpen = false;
       isLeftContOpen = false;
 
       // handle basic menu function and show Work
@@ -252,18 +214,6 @@ $(document).ready(function () {
 
     }
     menuTextEl.addClass('hide');
-    // else if (isRightContOpen === true && isAboutElOpen === true) {
-    //   closeAll();
-    //   isRightContOpen = false;
-    //   isAboutElOpen = false;
-    // }
-
-    // swapLogo();
-    // window.scroll({
-    //   top: 0,
-    //   left: 0,
-    //   behavior: 'smooth'
-    // });
   }
 
   // ----------------------------------------------------
@@ -302,15 +252,6 @@ $(document).ready(function () {
           $(this).css("display", "none")
         });
       }
-      // Checking if project descriptions are open and closing if true
-      // if (isDescrOpen === true) {
-      //   workGridItem.children("div").each(function () {
-      //     $(this).children("p").each(function () {
-      //       $(this).css("display", "none");
-      //     })
-      //   });
-      // }
-      // isDescrOpen = false;
       isLeftContOpen = false;
 
       // handle basic menu function and show Work
@@ -323,30 +264,12 @@ $(document).ready(function () {
 
     }
     menuTextEl.addClass('hide');
-    // else if (isRightContOpen === true && isContactElOpen === true) {
-    //   closeAll();
-    //   isRightContOpen = false;
-    //   isContactElOpen = false;
-    // }
-
-    // swapLogo();
     window.scroll({
       top: 0,
       left: 0,
       behavior: 'smooth'
     });
   }
-
-  // ----------------------------------------------------
-  // Changing AM logo to white version when screen is less than 1024px
-  // ----------------------------------------------------
-  // function swapLogo() {
-  //   if ($(window).width() <= 1024 && isRightContOpen === true) {
-  //     $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM_Rev.png");
-  //   } else if ($(window).width() > 1024 || isRightContOpen === false) {
-  //     $("#replace-logo").attr("src", "assets/img/am-collateral/AM20-29_TAM Internal Marketing_Logo_Fin_AM.png");
-  //   }
-  // };
 
   // ----------------------------------------------------
   // SHOW PROJECT IMAGES AND DESCRIPTION ON CLICK
@@ -360,7 +283,6 @@ $(document).ready(function () {
     }
 
     menuUl.addClass('hide');
-    // isMenuUlOpen = false;
 
     // Getting the id value of the target el
     let i = $(this).attr("class");
@@ -379,25 +301,6 @@ $(document).ready(function () {
     $(`#${descrToOpen}`).css('display', 'block');
     isDescrOpen = true;
 
-    // let openDescr = () => {
-    //   let descr = $(this)[0].lastElementChild.children[0].className;
-    //   $(`.${descr}`).slideDown(1000);
-    // }
-
-    // Checking if other descriptions are open and closing if true
-    // if (isDescrOpen === true) {
-    //   workGridItem.children("div").each(function () {
-    //     $(this).children("p").each(function () {
-    //       $(this).slideUp(500);
-    //     })
-    //   });
-    //   isDescrOpen = false;
-    //   openDescr();
-    // } else {
-    //   openDescr();
-    // }
-
-    // isDescrOpen = true;
     isLeftContOpen = true;
 
     // resizeWork();
@@ -553,33 +456,6 @@ $(document).ready(function () {
   // ----------------------------------------------------
   // ABOUT AND CONTACT SUB MENU LINKS
   // ----------------------------------------------------
-  // function handleSubMenu() {
-  //   // Getting the id value of the target el
-  //   console.log($(this))
-  //   let i = $(this).attr("id");
-  //   console.log(i);
-  //   let id = i.split('-', 1)
-  //   console.log(`submenu id:${id}`)
-  //   console.log($(this).parents())
-  //   let parentId = $(this).parents(3).eq(2)[0].id;
-  //   console.log(`submenu pardentId:${parentId}`)
-
-  //   aboutEl.removeClass('showme');
-  //   contactEl.removeClass('showme');
-
-  //   isAboutElOpen = false;
-  //   isContactElOpen = false;
-
-  //   $(`#${parentId}`).css('display', 'none');
-
-  //   let sectionName = parentId.split('-', 1);
-  //   console.log(`submenu sectionName:${sectionName}`)
-  //   let idToRender = `${sectionName}-${id}`;
-
-  //   if (id === "services") {
-  //     servicesEl.css('display', 'block')
-  //   }
-  // }
 
   servicesBtn.click(function () {
     aboutEl.removeClass("showme");
@@ -607,28 +483,10 @@ $(document).ready(function () {
     isContactElOpen = false;
     visitUsEl.addClass("showme");
     isVisitUsElOpen = true;
-    // visitUsWrapper.addClass("showme");
   })
 
 
   function handleBackBtn() {
-    // console.log($(this).siblings());
-    // let i = $(this).parents().eq(1)[0].id;
-    // $(`#${i}`).removeClass('showme');
-    // console.log(`i: ${i}`);
-
-    // let sectionName = i.split('-', 1)
-    // console.log(`sectionName: ${sectionName}`);
-    // let idToRender = `${sectionName}-intro`;
-    // console.log(`idToRender: ${idToRender}`);
-
-    // $(`#${idToRender}`).css('display', 'block');
-    // if (sectionName = 'rightcont') {
-    //   workNav.removeClass('underline');
-    //   aboutNav.removeClass('underline');
-    //   contactNav.removeClass('underline');
-    // }
-
     if (isProjectMenuElOpen === true) {
       projectMenuEl.removeClass("showme");
       isProjectMenuElOpen = false;
@@ -697,7 +555,6 @@ $(document).ready(function () {
       projectMenuEl.addClass('showme');
       isProjectMenuElOpen = true;
     }
-
   }
 
   navBtn.click(function () {
@@ -708,13 +565,9 @@ $(document).ready(function () {
     }
   })
 
-  // navBtn.toggle(showMenu);
-
   // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------
-  // navBtn.mouseenter(showMenu);
-  // navBtn.click(closeAll);
   amLogo.click(closeAll);
   workNav.click(showWork);
   aboutNav.click(showAbout);
@@ -723,7 +576,4 @@ $(document).ready(function () {
   projectMenuItems.click(initSwiper);
   bgSlideshowContainer.click(closeAll);
   backBtn.click(handleBackBtn);
-  // servicesBtn.click(handleSubMenu);
-  // contactLiBtns.click(handleSubMenu);
-  // $(window).resize(swapLogo);
 });
