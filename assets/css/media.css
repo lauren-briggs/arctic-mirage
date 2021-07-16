@@ -17,13 +17,13 @@
     }
     .swiper-container{
         width: 100%;
-        height: 50px;
+        height: 50%;
       }
       .swiper-wrapper{
-          height: 50px;
+          height: 50%;
       }
       .swiper-slide{
-          height: 50px;
+          height: 50%;
           justify-content: flex-start;
           align-items: center;
       }
@@ -38,7 +38,7 @@
         width: 50%;
     }
     #project-container{
-        height: 50%;
+        height: 60%;
         width: 100%;
         position:fixed;
         bottom: 0;
