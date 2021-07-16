@@ -219,6 +219,7 @@ a:hover{
 }
 /* LEFT CONTAINER OVERFLOW */
 #project-img-container{
+    z-index: 99;
     overflow-y: scroll;
 }
 
@@ -653,7 +654,7 @@ background-color: var(--amBlack) !important;
     position: fixed;
     top: 40%;
     left: 0;
-    padding-top: 35px;
+    padding-top: 45px;
     padding-left: 40px;
     z-index: 99;
 }
