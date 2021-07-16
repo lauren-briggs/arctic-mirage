@@ -28,7 +28,6 @@ $(document).ready(function () {
   const aboutNav = $("#aboutNav");
   const contactNav = $("#contactNav")
   const amLogo = $("#homelogo")
-  // const subscriberCloseBtn = $('#subscriber-close-btn');
   const servicesBtn = $("#services-btn");
   const clientsBtn = $("#clients-btn");
   const contactUsBtn = $("#contact-us-btn");
@@ -52,19 +51,6 @@ $(document).ready(function () {
   let isVisitUsElOpen = false;
   let isSubscribeElOpen = false;
 
-  // ----------------------------------------------------
-  // CLOSE SUBSCRIBER POPUP
-  // ----------------------------------------------------
-  // Close on click of x button
-  // subscriberCloseBtn.on('click', function () {
-  //   subscriberPopUp.css("display", "none");
-  // })
-  // Close on esc key
-  // window.onkeyup = function (event) {
-  //   if (event.keyCode == 27) {
-  //     subscriberPopUp.css("display", "none");
-  //   }
-  // }
 
   // ----------------------------------------------------
   // SHOW INITIAL MENU ON HOVER
@@ -92,8 +78,6 @@ $(document).ready(function () {
     visitUsEl.removeClass("showme");
     subscribeEl.removeClass("showme");
     menuTextEl.addClass('hide');
-
-
 
     // checking if left container is open and closing if true
     if (isLeftContOpen === true) {
@@ -158,25 +142,26 @@ $(document).ready(function () {
     // Closing all other els
     aboutEl.removeClass("showme");
     aboutNav.removeClass("underline");
-    isAboutElOpen = false;
     contactEl.removeClass("showme");
     contactNav.removeClass("underline");
-    isContactElOpen = false;
     servicesEl.removeClass("showme");
-    isServicesElOpen = false;
     clientsEl.removeClass("showme");
-    isClientsElOpen = false;
     contactUsEl.removeClass("showme");
-    isContactUsElOpen = false;
     visitUsEl.removeClass("showme");
-    isVisitUsElOpen = false;
     subscribeEl.removeClass("showme");
+
+    isAboutElOpen = false;
+    isContactElOpen = false;
+    isServicesElOpen = false;
+    isClientsElOpen = false;
+    isContactUsElOpen = false;
+    isVisitUsElOpen = false;
     isSubscribeElOpen = false;
 
     // handle basic menu function and show Work
     handleMenu();
     workActive();
-    // resizeWork();
+    resizeWork();
 
     // redefine values as true
     isRightContOpen = true;
@@ -332,45 +317,22 @@ $(document).ready(function () {
 
     isLeftContOpen = true;
 
-
-    // resizeWork();
+    resizeWork();
   }
 
   // ----------------------------------------------------
-  // RESIZE WORK
+  // REPOSITION WORK
   // ----------------------------------------------------
-  // function resizeWork() {
-  //   // if window is smaller than 1024px
-  //   if ($(window).width() < 1024) {
-  //     // if window is less than 600px and the left container isn't open
-  //     if ($(window).width() < 600 && isLeftContOpen === false) {
-  //       // add padding to workmenu so it sits below AM logo
-  //       workGridCont.css("padding-top", "8em");
-  //     } else {
-  //       workGridCont.css("padding-top", "3em");
-  //     }
-  //     // find all elements in the left container with class 'resize' and change the min-height to 50vh
-  //     leftCont.find(".resize").css("min-height", "50vh");
-  //     // if the left container is not open
-  //     if (isLeftContOpen === false) {
-  //       // changr the height of the right container/work descriptions/menu to 100vh and reset the margin to 0
-  //       $(".work.showme").css({ "height": "100vh", "margin-top": "0vh" });
-  //       // if the left container and right container are both open
-  //     } else if (isLeftContOpen === true && isRightContOpen === true) {
-  //       // reduce the height of the right cont work menu to 50vh and add a top margin 
-  //       $(".work.showme").css({ "height": "50vh", "margin-top": "50vh" });
-  //       // add top padding to work menu
-  //       workGridCont.css("padding-top", "3em");
-  //     }
-  //   } else {
-  //     // reset height to 100vh and remove margins
-  //     leftCont.find(".resize").css("min-height", "100vh");
-  //     $(".work.showme").css({ "height": "100vh", "margin-top": "0vh" });
-  //   }
-  // }
 
-  // $(window).resize(resizeWork);
-  // $(window).on('load', resizeWork);
+  $(window).resize(function () {
+    if ($(window).width() < 1024) {
+      $("#back").addClass('reposition');
+      projectCont.addClass('reposition');
+    } else {
+      $("#back").removeClass('reposition');
+      projectCont.removeClass('reposition');
+    }
+  })
 
   // ----------------------------------------------------
   // SWIPER CAROUSEL FOR PROJECT IMAGES
