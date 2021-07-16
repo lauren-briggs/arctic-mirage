@@ -8,7 +8,7 @@
         width: 50%;
     }
 
-    /* RESIZING LEFT CONT TO APPEAR FROM BOTTOM */
+    /* RESIZING LEFT CONT TO APPEAR FROM TOP */
     .leftcont{
         height: 50vh;
         position: relative;
@@ -89,15 +89,20 @@
     }
 }
 @media all and (max-width: 480px ) {
-
+    .grid-container-about-services{
+        row-gap: 1em;
+    }
+    .leftcont{
+        height: 40vh;
+    }
     #menu-text{
         top: 0px;
         left: 0;
-        padding-top: 110px;
+        padding-top: 90px;
         width: 100%;
     }
     #rightcont.showme{
-        padding-top: 110px;
+        padding-top: 90px;
         padding-bottom: 0px;
     }
     h1{
@@ -115,7 +120,7 @@
     #project-menu li{
         padding-bottom: 15px;
     }
-    /* #mc-embedded-subscribe{
+    #mc-embedded-subscribe{
         width: 100% !important;
         padding:10px !important;
         margin: 1.5em 0em !important;
@@ -128,10 +133,10 @@
         font-family: degular, sans-serif !important;
         font-weight:lighter !important;
         font-style: normal !important;
-        font-size: 110% !important;
+        font-size: 90% !important;
         text-transform: uppercase !important;
         text-align: center;
-    } */
+    }
     #contact-form-card > input,
     #contact-form-card textarea,
     :placeholder-shown{
@@ -146,7 +151,7 @@
         font-family: degular, sans-serif;
         font-weight:lighter;
         font-style: normal;
-        font-size: 110%;
+        font-size: 90%;
         text-transform: uppercase;
     }
 }
