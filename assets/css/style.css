@@ -196,7 +196,7 @@ nav.showme{
 
 /* RIGHT CONTAINER */
 #rightcont{
-    width: 0;
+    /* width: 0; */
     height: 100%;
     position:fixed;
     top: 0;
@@ -214,6 +214,13 @@ nav.showme{
 /* LEFT CONTAINER OVERFLOW */
 #project-img-container{
     overflow-y: scroll;
+}
+
+#project-container{
+    display: none;
+}
+#project-container.showme{
+    display: block;
 }
 /* RIGHT MENU DISPLAY AND OVERFLOW */
 
@@ -261,6 +268,7 @@ nav.showme{
     display: flex;
     flex-direction: row;
     opacity: 1;
+    z-index: 99;
 }
 
 .work-2{
@@ -639,6 +647,18 @@ background-color: var(--amBlack) !important;
 .contact-li-inline{
     display: inline-block;
     line-height: 150%;
+}
+
+#back.reposition{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    padding: 40px;
+    z-index: 99;
+}
+
+#project-container.reposition{
+    padding-top: 100px;
 }
 
 .back-inline{

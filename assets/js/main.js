@@ -35,6 +35,7 @@ $(document).ready(function () {
   const contactUsBtn = $("#contact-us-btn");
   const visitUsBtn = $("#visit-btn");
   const backBtn = $('#back-wrapper');
+  const backBtn1024 = $("#back-1024");
 
   // ----------------------------------------------------
   // BOOLEANS TO DEFINE WHETHER OR NOT SECTIONS ARE OPEN
@@ -281,6 +282,7 @@ $(document).ready(function () {
     }
 
     menuUl.addClass('hide');
+    projectCont.addClass('showme');
 
     // Getting the id value of the target el
     let i = $(this).attr("class");
@@ -290,6 +292,12 @@ $(document).ready(function () {
     let thisProClass = `.project${projectName}`;
     $(`${thisProClass}`).css({ "display": "flex", "transform": "translateX(0%)" });
 
+    if ($(window).width() < 1024) {
+      // backBtn1024.addClass('showme');
+      // backBtn.addClass('hide');
+      $("#back").addClass('reposition');
+      projectCont.addClass('reposition');
+    }
 
     // Opening description
     projectMenuEl.removeClass('showme');
@@ -300,6 +308,7 @@ $(document).ready(function () {
     isDescrOpen = true;
 
     isLeftContOpen = true;
+
 
     // resizeWork();
   }
@@ -540,8 +549,6 @@ $(document).ready(function () {
       isContactElOpen = true;
     }
     if (isLeftContOpen === true && isDescrOpen === true) {
-      console.log(leftCont)
-      console.log(projectCont);
       leftCont.children().each(function () {
         $(this).css("display", "none")
       });
@@ -552,6 +559,9 @@ $(document).ready(function () {
       });
       projectMenuEl.addClass('showme');
       isProjectMenuElOpen = true;
+      $("#back").removeClass('reposition');
+      projectCont.removeClass('reposition');
+      projectCont.removeClass('showme');
     }
   }
 

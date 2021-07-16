@@ -185,14 +185,18 @@
         transform: translateY(-100%);
         transition: 0.75s;
     }
-    .grid-container-about-team{
-        grid-template-columns: 50% 50%;
-    }
-    #minka-text{
-        grid-row: 4;
-    }
     #mappp-wrapper{
         width: 50%;
+    }
+    #project-container{
+        height: 50%;
+        width: 100%;
+        position:fixed;
+        bottom: 0;
+        left: 0;
+        overflow-y: hidden;
+        padding: 40px;
+        
     }
 }
 @media all and (max-width: 768px ) {
