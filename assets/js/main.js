@@ -10,16 +10,15 @@ $(document).ready(function () {
   const leftCont = $(".leftcont");
   const projectMenuEl = $("#project-menu")
   const projectMenuItems = $("#project-menu li")
-  console.log(projectMenuItems);
   const projectCont = $("#project-container");
   const aboutEl = $("#about-1")
   const contactEl = $("#contact-1")
-  const subscriberPopUp = $('#subscriber-container');
   const bgSlideshowContainer = $('.slideshow-container');
   const servicesEl = $("#services-container");
   const clientsEl = $("#clients-container");
   const contactUsEl = $("#contact-contact");
   const visitUsEl = $("#contact-visitus");
+  const subscribeEl = $('#subscriber-container');
 
   // ----------------------------------------------------
   // BUTTONS
@@ -29,13 +28,13 @@ $(document).ready(function () {
   const aboutNav = $("#aboutNav");
   const contactNav = $("#contactNav")
   const amLogo = $("#homelogo")
-  const subscriberCloseBtn = $('#subscriber-close-btn');
+  // const subscriberCloseBtn = $('#subscriber-close-btn');
   const servicesBtn = $("#services-btn");
   const clientsBtn = $("#clients-btn");
   const contactUsBtn = $("#contact-us-btn");
   const visitUsBtn = $("#visit-btn");
   const backBtn = $('#back-wrapper');
-  const backBtn1024 = $("#back-1024");
+  const subscribeElBtn = $('#subscribe-btn');
 
   // ----------------------------------------------------
   // BOOLEANS TO DEFINE WHETHER OR NOT SECTIONS ARE OPEN
@@ -51,20 +50,21 @@ $(document).ready(function () {
   let isClientsElOpen = false;
   let isContactUsElOpen = false;
   let isVisitUsElOpen = false;
+  let isSubscribeElOpen = false;
 
   // ----------------------------------------------------
   // CLOSE SUBSCRIBER POPUP
   // ----------------------------------------------------
   // Close on click of x button
-  subscriberCloseBtn.on('click', function () {
-    subscriberPopUp.css("display", "none");
-  })
+  // subscriberCloseBtn.on('click', function () {
+  //   subscriberPopUp.css("display", "none");
+  // })
   // Close on esc key
-  window.onkeyup = function (event) {
-    if (event.keyCode == 27) {
-      subscriberPopUp.css("display", "none");
-    }
-  }
+  // window.onkeyup = function (event) {
+  //   if (event.keyCode == 27) {
+  //     subscriberPopUp.css("display", "none");
+  //   }
+  // }
 
   // ----------------------------------------------------
   // SHOW INITIAL MENU ON HOVER
@@ -72,6 +72,7 @@ $(document).ready(function () {
   function showMenu() {
     menuEl.addClass("showme");
     navBtn.addClass("showme");
+    menuTextEl.removeClass("hide");
     isMenuOpen = true;
   }
 
@@ -85,6 +86,14 @@ $(document).ready(function () {
     projectMenuEl.removeClass("showme");
     aboutEl.removeClass("showme");
     contactEl.removeClass("showme");
+    servicesEl.removeClass("showme");
+    clientsEl.removeClass("showme");
+    contactUsEl.removeClass("showme");
+    visitUsEl.removeClass("showme");
+    subscribeEl.removeClass("showme");
+    menuTextEl.addClass('hide');
+
+
 
     // checking if left container is open and closing if true
     if (isLeftContOpen === true) {
@@ -98,6 +107,14 @@ $(document).ready(function () {
     isLeftContOpen = false;
     isDescrOpen = false;
     isMenuOpen = false;
+    isProjectMenuElOpen = false;
+    isAboutElOpen = false;
+    isContactElOpen = false;
+    isServicesElOpen = false;
+    isClientsElOpen = false;
+    isContactUsElOpen = false;
+    isVisitUsElOpen = false;
+    isSubscribeElOpen = false;
 
     // removing underlines
     workNav.removeClass("underline");
@@ -153,6 +170,8 @@ $(document).ready(function () {
     isContactUsElOpen = false;
     visitUsEl.removeClass("showme");
     isVisitUsElOpen = false;
+    subscribeEl.removeClass("showme");
+    isSubscribeElOpen = false;
 
     // handle basic menu function and show Work
     handleMenu();
@@ -196,6 +215,8 @@ $(document).ready(function () {
     isContactUsElOpen = false;
     visitUsEl.removeClass("showme");
     isVisitUsElOpen = false;
+    subscribeEl.removeClass("showme");
+    isSubscribeElOpen = false;
 
     // Checking if project photos are open and closing if true
     if (isLeftContOpen === true) {
@@ -244,6 +265,8 @@ $(document).ready(function () {
     isContactUsElOpen = false;
     visitUsEl.removeClass("showme");
     isVisitUsElOpen = false;
+    subscribeEl.removeClass("showme");
+    isSubscribeElOpen = false;
 
     // Checking if project photos are open and closing if true
     if (isLeftContOpen === true) {
@@ -492,6 +515,13 @@ $(document).ready(function () {
     isVisitUsElOpen = true;
   })
 
+  subscribeElBtn.click(function () {
+    contactEl.removeClass("showme");
+    isContactElOpen = false;
+    subscribeEl.addClass("showme");
+    isSubscribeElOpen = true;
+  })
+
 
   function handleBackBtn() {
     if (isProjectMenuElOpen === true) {
@@ -548,6 +578,13 @@ $(document).ready(function () {
       contactEl.addClass("showme");
       isContactElOpen = true;
     }
+    if (isSubscribeElOpen === true) {
+      subscribeEl.removeClass("showme");
+      isSubscribeElOpen = false;
+      contactEl.addClass("showme");
+      isContactElOpen = true;
+    }
+
     if (isLeftContOpen === true && isDescrOpen === true) {
       leftCont.children().each(function () {
         $(this).css("display", "none")
