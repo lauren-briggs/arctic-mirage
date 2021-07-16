@@ -12,22 +12,22 @@
 }
 body{
     font-family: degular, sans-serif;
+    background-color: black;
     font-weight:lighter;
     font-style: normal;
-    cursor: url('../img/am-collateral/am21-04_logo_cursor_a.png') 15 15, auto;
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
 #homelogo{
     position: fixed;
-    top: 50px;
-    left: 50px;
+    top: 40px;
+    left: 40px;
     z-index: 100;
-    cursor: pointer;
 }
 /*consistent styling throughout*/
 p{
     font-style: normal;
     font-weight: 300;
-    font-size: 105%;
+    font-size: 100%;
     font-kerning:4px;
     letter-spacing:auto;
     line-height: 115%;
@@ -42,25 +42,23 @@ h1,
 h2,
 h3,
 h4{
-    color: white;
+    color: var(--amWhite);
     font-kerning: auto;
 }
 /* h1 styling for project titles in menu */
 h1{
-    font-size: 180%;
-    font-weight: 300;
-    line-height: 120%;
+    font-size: 300%;
+    font-weight: 400;
 }
 /* h2 styling - intro paragraphs, team names, services, clients, contact us headings */
 h2{
+    font-size: 130%;
     font-weight:300;
-    font-size: 150%;
-    line-height: 120%;
 }
 /* job title */
 h3{
     font-weight:300;
-    font-size: 130%;
+    font-size: 115%;
     line-height: 120%;
 }
 /* number and service heading */
@@ -85,50 +83,94 @@ h5{
 
 /* styling of ALL nav elements */
 nav{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--amBlack);
     font-family: degular, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 115%;
     position: fixed;
-    right: -190px;
-    top: 215px;
-    text-transform: uppercase;
-    transform: rotate(90deg);
     text-decoration: none;
-    color: var(--amBlack);
-    z-index: 1001;
+    color: var(--amWhite);
+    z-index: 2;
+    font-style: normal;
+    list-style: none;
 }
 /* POSITIONING AND STYLNIG OF NAV ELEMENTS */
-nav li{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items:flex-end;
-    list-style: none;
-    padding: 20px 50px 20px 50px;
+#menu-ul{
+    width: fit-content;
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    display: block;
+    opacity: 1;
+    transition: 0.75s;
 }
+
+#menu-ul.hide{
+    display: none;
+    opacity: 0;
+    transition: 0.75s;
+}
+.menu-li{
+    padding: 20px 50px 0px 0px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--amWhite);
+}
+
+a:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
+    color: var(--amWhite);
+}
+
+#menu-text{
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    padding: 40px;
+    opacity: 1;
+    transition: 0.75s;
+    height: fit-content;
+}
+
+#menu-text.hide{
+    display: none;
+    opacity: 0;
+    transition: 0.75s;
+}
+
+#menu-text a{
+    cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
+}
+
 #workNav.underline,
 #aboutNav.underline,
 #contactNav.underline{
     text-decoration: underline;
     text-underline-offset: 3px;
-    text-decoration-thickness: 15%;
+    text-decoration-thickness: 8%;
 }
-.menu{
+nav{
     visibility: hidden;
+    opacity: 0;
+    transition: 0.75s;
 }
-.menu:hover{
+.menu-li:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
-    text-decoration-thickness: 15%;
+    text-decoration-thickness: 8%;
 }
-.menu.showme{
+nav.showme{
     visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
 }
 
-.menu.white{
-    color: var(--amWhite);
-}
 #navBtn{
     font-family: degular, sans-serif;
     font-weight: 300;
@@ -143,72 +185,140 @@ nav li{
     transform: rotate(45deg);
     text-decoration: none;
     transition: 0.5s;
+    color: var(--amWhite);
 }
 #navBtn:hover{
     text-decoration: none;
-    cursor: pointer;
 }
 #navBtn.showme{
     transform: rotate(0deg);
 }
-#navBtn.white{
-    color: var(--amWhite);
-}
+/* #navBtn.white{
+
 /* RIGHT CONTAINER */
 #rightcont{
-    width: 0;
-    background-color: black;
+    /* width: 0; */
+    height: 100%;
     position:fixed;
     top: 0;
     right: 0;
     overflow-y: hidden;
-    transform: translateX(100%);
-    transition: 0.75s;
+    opacity: 0;
+    padding: 40px;
 }
 #rightcont.showme{
     width: 40%;
     display: block;
-    transform: translateX(0%);
-    z-index: 1;
+    opacity: 1;
+    z-index: 100;
 }
 /* LEFT CONTAINER OVERFLOW */
 #project-img-container{
     overflow-y: scroll;
 }
-/* RIGHT MENU DISPLAY AND OVERFLOW */
-.work,
-.about,
-.contact{
+
+#project-container{
     display: none;
+    overflow-y: scroll;
+}
+#project-container.showme{
+    display: block;
+}
+/* RIGHT MENU DISPLAY AND OVERFLOW */
+
+/*TOGGLE DESCRIPTIONS IN WORK MENU*/
+
+/* HIDE */  
+#about-1,
+#contact-1,
+#services-container,
+#clients-container,
+#contact-contact,
+#contact-visitus{
+    display: none;
+    opacity: 0;
+    transition: 0.75;
+}
+
+#about-1.showme,
+#contact-1.showme,
+#contact-contact.showme,
+#contact-visitus.showme,
+#services-container.showme,
+#clients-container.showme{
+    display: block;
+    opacity: 1;
+    transition: 0.75;
+    height: fit-content;
+    overflow-y: scroll;
+}
+
+
+
+#project-menu,
+#about-1,
+#contact-1{
     height: 100vh;
     overflow-y: scroll;
-    transform: translateX(100%);
-    transition: ease 0.75;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
+}   
+
+#project-menu{
+    display: none;
+    opacity: 0;
 }
-/* ALLOW SCROLL ON HOVER */
-.work:hover{
-    overflow: scroll;
+
+#project-menu.showme{
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    z-index: 99;
 }
-.work.showme,
-.about.showme,
-.contact.showme{
-    display: block;
-    transform: translateX(0%);
-    transition: ease 0.75;
+
+.work-2{
+    display: none;
 }
-/* grid CONTAINER structure of WORK */
-.grid-container-workmenu{
-    display: grid;
-    grid-template-columns: 10% 90%;
-    grid-template-rows: auto;
-    padding: 3em 10em 2em 3em;
-    column-gap: 2em;
-    row-gap: 3em;
+
+.work-2 h2{
+    padding-right: 1.5em;
 }
-.grid-item-workmenu{
-    vertical-align: baseline;
+
+.project-title{
+    display: inline-flex;
 }
+
+.project-descr{
+    padding-top: 1em;
+    padding-left: 3.7em;
+}
+
+#back{
+    padding-bottom: 20px;
+}
+
+.work-ul-num,
+.work-ul-name{
+    color: var(--amWhite);
+    padding-right: 30px;
+}
+
+#project-menu li{
+    padding-bottom: 20px;
+}
+
+/* UNDERLINE ON HOVER OF PROJECT HEADINGS */
+.work-ul-name li{
+    padding-left: 0px;
+    transition: padding-left 0.5s;
+}
+.work-ul-name li:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
+    padding-left: 15px;
+    transition: padding-left 0.5s;
+}
+
 .work h1{
     padding-left: 0px;
     transition: padding-left 0.35s;
@@ -216,88 +326,15 @@ nav li{
 .work h2{
     line-height: 150%;
 }
-/* UNDERLINE ON HOVER OF PROJECT HEADINGS */
-.work h1:hover{
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 8%;
-    padding-left: 20px;
-    transition: padding-left 0.35s;
-}
-.work h1:hover{
-    padding-left: 20px;
-    transition: padding-left 0.35s;
-}
-/*TOGGLE DESCRIPTIONS IN WORK MENU*/
-.work p{
-    padding-left: 0px;
-    transition: padding-left 0.25s;
-    display: none;
-    opacity: 1;
-}
 
-.block{
-    padding-top: 15px;
-}
-/* grid CONTAINER structure of ABOUT */
-#about-intro,
-#about-team,
-#about-services,
-#about-clients{
-    width: 100%;
-    padding: 3em 10em 4em 4em;
-}
-
-#about-team,
-#about-services,
-#about-clients{
-    display: none;
-}
-
-#about-team.showme,
-#about-services.showme,
-#about-clients.showme{
-    display: block;
-}
-
-
-/* TEAM*/
-.grid-container-about-team{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    padding: 0em;
-    column-gap: 2em;
-    row-gap: 3em;
-}
 /* grid ITEMS composition of ABOUT */
-    .grid-container-about-team img{
-        grid-column: 1 / span 2;
-    }
-    #team-heading{
-        grid-column: 1 / span 2;
-    }
-    #about-client-text{
-        grid-column-start: 1;
-        grid-column-end: span 2;
-        grid-row: 11;
-    }
-    #client-heading{
-        padding-bottom: 1em;
-    }
     #about-client-img{
         grid-column-start: 1;
         grid-column-end: span 2;
         grid-row: 12;
     }
-    #about-services{
-        grid-column-start: 1;
-        grid-column-end: span 2;
-        grid-row: 6;
-    }
 
-    /* SERVICES */
+/* SERVICES */
 .grid-container-about-services{
     width: 100%;
     display: grid;
@@ -331,20 +368,10 @@ nav li{
         row-gap: 1em;
     }
 
-/* grid composition of ABOUT TEAM */
-    #alex,
-    #ahna{
-            flex: 1 0 20%;
-            padding: 1.75rem 1rem 0rem 1.75rem;
-            transition: flex-basis 500ms linear;
-            margin-bottom: 1rem;
-    }
-
 /*LIST OF SERVICES*/
 .about li{
     list-style:none;
     font-weight: 400;
-    font-size: 105%;
     line-height: 120%;
 }
 #liheader{
@@ -357,23 +384,8 @@ nav li{
     padding-top: 1em;
     padding-left: 3.25em;
 }
-
-/* grid ITEMS composition of CONTACT */
-#contact-intro,
-#contact-contactus,
-#contact-visitus{
-    width: 100%;
-    padding: 3em 10em 4em 4em;
-}
-
-#contact-contactus,
-#contact-visitus{
-    display: none;
-}
-
-#contact-contactus.showme,
-#contact-visitus.showme{
-    display: block;
+.hidden-list li{
+    line-height: 1.3;
 }
 
 .about li,
@@ -392,21 +404,7 @@ nav li{
 #copyright-am:hover{
 text-decoration: none;
 }
-/* grid CONTAINER structure of SOCIALS in CONTACT */
-.grid-container-socials{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto;
-    column-gap: 2em;
-    color: white;
-    justify-content: space-around;
-}
-#address,
-#enquiries{
-    max-width: 300px;
-    flex: 1 0 20%;
-    transition: flex-basis 500ms linear;
-}
+
 /* CONTACT US FORM */
 #contact-form-card{
     display: flex;
@@ -419,15 +417,15 @@ text-decoration: none;
     width: 100%;
     padding:10px;
     margin: 0.5em 0em;
-    color: white;
-    background-color: black;
+    color: var(--amWhite);
+    background-color: var(--amBlack);
     border: none;
     border-bottom: 2px solid var(--amWhite);
     justify-content: space-around;
     font-family: degular, sans-serif;
     font-weight:lighter;
     font-style: normal;
-    font-size: 110%;
+    font-size: 100%;
     text-transform: uppercase;
 }
 #submit:hover{
@@ -469,17 +467,17 @@ textarea:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
-cursor: inherit;
+/* cursor: inherit; */
 }
 
 /* PROJECT IMAGES CONTAINER */
 .left-cont{
-    background-color: white;
+    background-color: var(--amWhite);
 }
 #project-img-container > section{
     width: 60vw;
     min-height: 100vh;
-    background-color: white;
+    background-color: var(--amWhite);
     position:absolute;
     top: 0px;
     left: 0px;
@@ -498,9 +496,9 @@ cursor: inherit;
     line-height: 0  ;
     float: top;
 }
-.projectfetti{
+/* .projectfetti{
     background-color: #E0E0E1;
-}
+} */
 
 /* BACKGROUND SLIDESHOW */
 .slideshow-container{
@@ -530,18 +528,14 @@ cursor: inherit;
 #mappp-wrapper{
     position: fixed;
     bottom: 0px;
-    width: 100%;
+    width: 40%;
     height: 60vh;
-    margin-left: -4em;
 }
 
 #map {
     height: 100%;
     width: 100%;
   }
-#contact-enq-wrapper{
-    height: 100vh;
-}
 
 /* SWIPER */
 .swiper-container{
@@ -568,23 +562,13 @@ background-color: var(--amBlack) !important;
 }
 
 /* MAILCHIMP SUBSCRIBERS */
-#subscriber-close-btn{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    cursor: pointer;
-    padding: 15px;
-}
 #subscriber-container{
-    position: fixed;
-    z-index: 3000;
-    background-color: rgba(255, 255, 255, 0.63);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    display: none;
     justify-content: center;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
+}
+#subscriber-container.showme{
+    display: block;
 }
 #mc-embedded-subscribe-form{
     text-align: left !important;
@@ -592,12 +576,12 @@ background-color: var(--amBlack) !important;
     color: var(--amWhite) !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
+    /* align-items: center !important; */
     justify-content: flex-start !important;
-    width: 550px !important;
+    /* width: 550px !important; */
     height: auto !important;
-    padding: 50px 50px 50px !important;
-    position: relative !important;
+    /* padding: 50px 50px 50px !important; */
+    /* position: relative !important; */
 }
 #mce-EMAIL,
 #mc-embedded-subscribe{
@@ -613,7 +597,7 @@ background-color: var(--amBlack) !important;
     font-family: degular, sans-serif !important;
     font-weight:lighter !important;
     font-style: normal !important;
-    font-size: 110% !important;
+    font-size: 100% !important;
     text-transform: uppercase !important;
     text-align: center;
 }
@@ -648,7 +632,7 @@ background-color: var(--amBlack) !important;
 #sub-label{
     font-family: degular, sans-serif;
     font-weight: normal !important;
-    font-size: 120% !important;
+    /* font-size: 120% !important; */
     letter-spacing: 0.25px;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }
@@ -659,17 +643,34 @@ background-color: var(--amBlack) !important;
     line-height: 150%;
 }
 
+#back.reposition{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    padding: 40px;
+    z-index: 99;
+}
+
+#project-container.reposition{
+    padding-top: 100px;
+    overflow-y: scroll;
+}
+
 .back-inline{
     display: inline-block;
     line-height: 1.75;
 }
 
-.right-arrow{
-    padding-left: 1em;
+#back-wrapper:hover .back-inline{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
 }
 
-.back-arrow{
-    padding-right: 1em;
+.back-inline:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 8%;
 }
 
 .about-li-hover,
