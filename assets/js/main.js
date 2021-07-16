@@ -162,7 +162,6 @@ $(document).ready(function () {
     // handle basic menu function and show Work
     handleMenu();
     workActive();
-    resizeWork();
 
     // redefine values as true
     isRightContOpen = true;
@@ -314,8 +313,6 @@ $(document).ready(function () {
     isDescrOpen = true;
 
     isLeftContOpen = true;
-
-    resizeWork();
   }
 
   // ----------------------------------------------------
