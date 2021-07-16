@@ -135,6 +135,7 @@ a:hover{
     padding: 40px;
     opacity: 1;
     transition: 0.75s;
+    height: fit-content;
 }
 
 #menu-text.hide{
@@ -218,6 +219,7 @@ nav.showme{
 
 #project-container{
     display: none;
+    overflow-y: scroll;
 }
 #project-container.showme{
     display: block;
@@ -247,6 +249,8 @@ nav.showme{
     display: block;
     opacity: 1;
     transition: 0.75;
+    height: fit-content;
+    overflow-y: scroll;
 }
 
 
@@ -659,6 +663,7 @@ background-color: var(--amBlack) !important;
 
 #project-container.reposition{
     padding-top: 100px;
+    overflow-y: scroll;
 }
 
 .back-inline{

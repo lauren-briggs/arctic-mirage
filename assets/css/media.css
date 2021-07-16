@@ -1,140 +1,4 @@
-/* @media all and (max-width: 1500px ) {
-    #grid-container-services{
-        grid-column: span 2;
-        grid-template-rows: auto;
-    }
-    #about-client-text{
-        grid-row: 15;
-    }
-    #about-client-img{
-        grid-row: 16;
-    }
-    .grid-container-socials{
-        grid-template-columns: auto auto auto;
-        row-gap: 0.75em;
-    }
-    #amCopyright{
-        grid-column-start: 1;
-        grid-column-end: span 3;
-        grid-row: 2;
-        justify-self: flex-start;
-    }
-} */
-
-/* @media all and (max-width: 1350px ) {
-    p{ */
-        /* font-size: 16px; */
-        /* line-height: 19px; */
-    /* }
-    .grid-container-workmenu{
-        row-gap: 2.5em;
-    } */
-    /* ABOUT SECTION RESIZING */
-    /* .grid-container-about{
-        row-gap: 1.5em;
-    }
-    .grid-container-about-team{
-        grid-template-columns: 100%;
-        grid-column-start: 1;
-    }
-    #alex-text{
-        grid-row: 2;
-    }
-    #minka-text{
-        grid-row:6;
-    }
-    #about-client{
-        grid-row: 19;
-        padding-top: 2em;
-    }
-    #about-client-text{
-        grid-row: 20;
-    }
-    #about-client-img{
-        grid-row: 21;
-    }
-    #grid-container-services{
-        grid-template-rows: auto;
-    }
-
-    #grid-container-clients{
-        grid-template-columns: auto auto;
-    } */
-    /* CONTACT SECTION RESIZING */
-    /* .grid-container-contact{
-        padding-bottom: 4em;
-        row-gap: 1.25em;
-        height: auto;
-    }
-    #address,
-    #enquiries{
-        grid-column: 1 /span 2;
-    }
-    #contact-socials{
-        grid-row: 6;
-    }
-    #subscriber-container{
-        position: fixed;
-        z-index: 3000;
-        background-color: rgba(255, 255, 255, 0.63);
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #mc-embedded-subscribe-form{
-        text-align: left !important;
-        background-color: var(--amBlack) !important;
-        color: var(--amWhite) !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        width: 550px !important;
-        height: auto !important;
-        padding: 50px 50px 50px !important;
-        position: relative !important;
-    }
-    #mce-EMAIL,
-    #mc-embedded-subscribe{
-        width: 100% !important;
-        padding:10px !important;
-        margin: 1.5em 0em !important;
-        color: white !important;
-        background-color: black !important;
-        border: none !important;
-        border-radius: 0px !important;
-        border-bottom: 2px solid var(--amWhite) !important;
-        justify-content: center !important;
-        font-family: degular, sans-serif !important;
-        font-weight:lighter !important;
-        font-style: normal !important;
-        font-size: 110% !important;
-        text-transform: uppercase !important;
-        text-align: center;
-    }
-    
-    #mc-embedded-subscribe{
-        margin: 0em !important;
-    }
-    #sub-email:focus{
-        border: 2px solid var(--amWhite) !important;
-        outline: none !important;
-    }
-    #sub-label{
-        font-family: degular, sans-serif;
-        font-weight: normal !important;
-        font-size: 120% !important;
-    }
-} */
 @media all and (max-width: 1024px ) {
-    /* h1{
-        font-size: 160%;
-    }
-    h2{
-        font-size: 24px;
-    } */
     /* Making RIGHT cont full width */
     #rightcont.showme{
         width: 50%;
@@ -143,21 +7,6 @@
     #menu-text{
         width: 50%;
     }
-    /* .grid-container-workmenu,
-    #about-intro,
-    #about-team,
-    #about-services,
-    #about-clients,
-    #contact-intro,
-    #contact-contactus,
-    #contact-visitus{
-        padding-left: 11em;
-        padding-top: 2.5em;
-    } */
-/* 
-    #grid-container-clients{
-        grid-template-columns: auto auto auto auto;
-    }  */
 
     /* RESIZING LEFT CONT TO APPEAR FROM BOTTOM */
     .leftcont{
@@ -203,13 +52,22 @@
     #homelogo{
         width: 100px;
     }
-    #grid-container-clients{
-        grid-template-columns: auto auto;
-    }.grid-container-about-team{
-        grid-template-columns: 100%;
+    #rightcont.showme{
+        width: 100vw;
+        height: fit-content;
+        padding-top: 110px;
     }
-    #minka-text{
-        grid-row: 6;
+    h1{
+        font-size: 250%;
+    }
+    h2{
+        font-size: 120%;
+    }
+    #project-menu{
+        height: fit-content;
+    }
+    #mappp-wrapper{
+        width: 100%;
     }
 }
 
@@ -242,7 +100,7 @@
     #homelogo{
         left: 2.15em;
     }
-    #mc-embedded-subscribe{
+    /* #mc-embedded-subscribe{
         width: 100% !important;
         padding:10px !important;
         margin: 1.5em 0em !important;
@@ -258,10 +116,10 @@
         font-size: 110% !important;
         text-transform: uppercase !important;
         text-align: center;
-    }
+    } */
 }
 @media all and (max-width: 480px ) {
-    h1{
+    /* h1{
         font-size: 160%;
         line-height: 100%;
     }
@@ -274,22 +132,27 @@
     }
     h4{
         /* font-size: 15px; */
-    }
+    /* } */ 
     #homelogo{
         top: 35px !important;
         left: 35px !important;
     }
-    nav{
-        right: -160px !important;
-        top: 175px !important;
+    #menu-text{
+        top: 0px;
+        left: 0;
+        padding-top: 120px;
+        width: 100%;
     }
-    nav li{
-        padding: 10px 30px 10px 40px !important;
+    h1{
+        font-size: 170%;
     }
-    #navBtn{
-        right: 30px !important;
-        bottom: 30px !important;
+    h2{
+        font-size: 120%;
     }
+    #project-menu li{
+        padding-bottom: 15px;
+    }
+
     #mc-embedded-subscribe{
         width: 100% !important;
         padding:10px !important;
@@ -306,7 +169,7 @@
         font-size: 110% !important;
         text-transform: uppercase !important;
         text-align: center;
-    }
+    } */
     #contact-form-card > input,
     #contact-form-card textarea,
     :placeholder-shown{
