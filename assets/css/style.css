@@ -219,7 +219,7 @@ a:hover{
 }
 /* LEFT CONTAINER OVERFLOW */
 #project-img-container{
-    z-index: 99;
+    z-index: 9;
     overflow-y: scroll;
 }
 
