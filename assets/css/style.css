@@ -22,7 +22,6 @@ body{
     top: 40px;
     left: 40px;
     z-index: 100;
-    /* cursor: pointer; */
 }
 /*consistent styling throughout*/
 p{
@@ -89,10 +88,6 @@ nav{
     background-color: var(--amBlack);
     font-family: degular, sans-serif;
     position: fixed;
-    /* left: 40px;
-    bottom: 40px; */
-    /* text-transform: uppercase; */
-    /* transform: rotate(90deg); */
     text-decoration: none;
     color: var(--amWhite);
     z-index: 2;
@@ -116,10 +111,6 @@ nav{
     transition: 0.75s;
 }
 .menu-li{
-    /* display: inline-flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-around; */
-    /* align-items:flex-end; */
     padding: 20px 50px 0px 0px;
 }
 
@@ -179,9 +170,6 @@ nav.showme{
     transition: 0.5s;
 }
 
-/* .menu-li.white{
-    color: var(--amWhite);
-} */
 #navBtn{
     font-family: degular, sans-serif;
     font-weight: 300;
@@ -200,19 +188,16 @@ nav.showme{
 }
 #navBtn:hover{
     text-decoration: none;
-    /* cursor: pointer; */
 }
 #navBtn.showme{
     transform: rotate(0deg);
 }
 /* #navBtn.white{
-    color: var(--amWhite);
-} */
+
 /* RIGHT CONTAINER */
 #rightcont{
     width: 0;
     height: 100%;
-    /* background-color: black; */
     position:fixed;
     top: 0;
     right: 0;
@@ -231,42 +216,51 @@ nav.showme{
     overflow-y: scroll;
 }
 /* RIGHT MENU DISPLAY AND OVERFLOW */
+
+/*TOGGLE DESCRIPTIONS IN WORK MENU*/
+
+/* HIDE */  
+#about-1,
+#contact-1,
+#services-container,
+#clients-container,
+#contact-contact,
+#contact-visitus{
+    display: none;
+    opacity: 0;
+    transition: 0.75;
+}
+
+#about-1.showme,
+#contact-1.showme,
+#contact-contact.showme,
+#contact-visitus.showme,
+#services-container.showme,
+#clients-container.showme{
+    display: block;
+    opacity: 1;
+    transition: 0.75;
+}
+
+
+
 #project-menu,
 #about-1,
 #contact-1{
-    display: none;
     height: 100vh;
     overflow-y: scroll;
-    opacity: 0;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }   
+
+#project-menu{
+    display: none;
+    opacity: 0;
+}
 
 #project-menu.showme{
     display: flex;
     flex-direction: row;
     opacity: 1;
-}
-
-#about-1.showme,
-#contact-1.showme{
-    display: block;
-    /* transform: translateX(0%); */
-    opacity: 1;
-    /* transition: ease 0.75; */
-}
-
-/* ALLOW SCROLL ON HOVER */
-#project-menu:hover{
-    overflow: scroll;
-}
-
-.grid-container-workmenu{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    padding: 0em;
-    row-gap: 2em;
 }
 
 .work-2{
@@ -285,18 +279,6 @@ nav.showme{
     padding-top: 1em;
     padding-left: 3.7em;
 }
-/* grid CONTAINER structure of WORK */
-/* .grid-container-workmenu{
-    display: grid;
-    grid-template-columns: 10% 90%;
-    grid-template-rows: auto;
-    padding: 3em 10em 2em 3em;
-    column-gap: 2em;
-    row-gap: 3em;
-}
-.grid-item-workmenu{
-    vertical-align: baseline;
-} */
 
 #back{
     padding-bottom: 20px;
@@ -331,27 +313,6 @@ nav.showme{
 }
 .work h2{
     line-height: 150%;
-}
-
-/*TOGGLE DESCRIPTIONS IN WORK MENU*/
-
-/* HIDE */
-#about-1,
-#contact-1,
-#services-container,
-#clients-container,
-#contact-contact,
-#contact-visitus{
-    display: none;
-}
-
-#about-1.showme,
-#contact-1.showme,
-#contact-contact.showme,
-#contact-visitus.showme,
-#services-container.showme,
-#clients-container.showme{
-    display: block;
 }
 
 /* grid ITEMS composition of ABOUT */
@@ -557,16 +518,12 @@ textarea:hover{
     bottom: 0px;
     width: 100%;
     height: 60vh;
-    /* margin-left: -4em; */
 }
 
 #map {
     height: 100%;
     width: 100%;
   }
-/* #contact-enq-wrapper{
-    height: 100vh;
-} */
 
 /* SWIPER */
 .swiper-container{
@@ -700,14 +657,6 @@ background-color: var(--amBlack) !important;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
 }
-
-/* .right-arrow{
-    padding-left: 1em;
-}
-
-.back-arrow{
-    padding-right: 1em;
-} */
 
 .about-li-hover,
 .contact-li-hover{
