@@ -3,16 +3,14 @@
     #rightcont.showme{
         width: 50%;
     }
-
     #menu-text{
         width: 50%;
     }
-
     /* RESIZING LEFT CONT TO APPEAR FROM TOP */
     .leftcont{
-        height: 40vh;
+        height: 50vh;
         position: relative;
-        bottom: 0px;
+        top: 0px;
         left: 0px;
     }
     .swiper-container{
@@ -29,7 +27,7 @@
       }
     #project-img-container > section{
         width: 100vw;
-        min-height: 40vh;
+        min-height: 50vh;
         transform: translateX(0%);
         transform: translateY(-100%);
         transition: 0.75s;
@@ -48,6 +46,7 @@
         
     }
 }
+
 @media all and (max-width: 768px ) {
     #homelogo img{
         width: 50px;
@@ -104,6 +103,10 @@
     #rightcont.showme{
         padding-top: 90px;
         padding-bottom: 0px;
+    }
+    #back.reposition{
+        top: 45%;
+        padding-top: 60px;
     }
     h1{
         font-size: 170%;
