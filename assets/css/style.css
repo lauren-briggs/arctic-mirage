@@ -258,6 +258,7 @@ a:hover{
 #contact-visitus.showme{
     opacity: 1;
     transition: 0.75;
+    display: block;
 }
 
 
