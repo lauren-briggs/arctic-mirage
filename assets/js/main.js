@@ -80,6 +80,7 @@ $(document).ready(function () {
     visitUsEl.removeClass("showme");
     subscribeEl.removeClass("showme");
     menuTextEl.addClass('hide');
+    menuUl.removeClass('showme');
 
     // checking if left container is open and closing if true
     if (isLeftContOpen === true) {
