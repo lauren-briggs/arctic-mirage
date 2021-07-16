@@ -10,20 +10,20 @@
 
     /* RESIZING LEFT CONT TO APPEAR FROM TOP */
     .leftcont{
-        height: 50vh;
+        height: 40vh;
         position: relative;
         bottom: 0px;
         left: 0px;
     }
     .swiper-container{
         width: 100%;
-        height: 50%;
+        height: 40%;
       }
       .swiper-wrapper{
-          height: 50%;
+          height: 40%;
       }
       .swiper-slide{
-          height: 50%;
+          height: 40%;
           justify-content: flex-start;
           align-items: center;
       }
@@ -38,7 +38,7 @@
         width: 50%;
     }
     #project-container{
-        height: 60%;
+        height: 55%;
         width: 100%;
         position:fixed;
         bottom: 0;
