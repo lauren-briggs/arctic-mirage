@@ -137,32 +137,32 @@ $(document).ready(function () {
   // SHOW WORK FUNCTIONALITY AND CONDITIONS
   // ----------------------------------------------------
   function showWork() {
-    // workEl.animate({ scrollTop: 0 }, "fast");
-    if (isRightContOpen === false) {
-      handleMenu();
-      workActive();
+    // Closing all other els
+    aboutEl.removeClass("showme");
+    aboutNav.removeClass("underline");
+    isAboutElOpen = false;
+    contactEl.removeClass("showme");
+    contactNav.removeClass("underline");
+    isContactElOpen = false;
+    servicesEl.removeClass("showme");
+    isServicesElOpen = false;
+    clientsEl.removeClass("showme");
+    isClientsElOpen = false;
+    contactUsEl.removeClass("showme");
+    isContactUsElOpen = false;
+    visitUsEl.removeClass("showme");
+    isVisitUsElOpen = false;
 
-      isRightContOpen = true;
-      isProjectMenuElOpen = true;
-    } else if (isAboutElOpen === true || isContactElOpen === true) {
-      // closing About and Contact sections and removing their underline
-      aboutEl.removeClass("showme");
-      aboutNav.removeClass("underline");
-      isAboutElOpen = false;
-      contactEl.removeClass("showme");
-      contactNav.removeClass("underline");
-      isContactElOpen = false;
+    // handle basic menu function and show Work
+    handleMenu();
+    workActive();
+    // resizeWork();
 
-      // handle basic menu function and show Work
-      handleMenu();
-      workActive();
-      // resizeWork();
+    // redefine values as true
+    isRightContOpen = true;
+    isProjectMenuElOpen = true;
 
-      // redefine values as true
-      isRightContOpen = true;
-      isProjectMenuElOpen = true;
-
-    }
+    // }
     menuTextEl.addClass('hide');
   }
 
@@ -180,39 +180,37 @@ $(document).ready(function () {
   // SHOW ABOUT FUNCTIONALITY AND CONDITIONS
   // ----------------------------------------------------
   function showAbout() {
-    aboutEl.animate({ scrollTop: 0 }, "fast");
-    if (isRightContOpen === false) {
-      handleMenu();
-      aboutActive();
+    // Closing all other els
+    projectMenuEl.removeClass("showme");
+    workNav.removeClass("underline");
+    isProjectMenuElOpen = false;
+    contactEl.removeClass("showme");
+    contactNav.removeClass("underline");
+    isContactElOpen = false;
+    servicesEl.removeClass("showme");
+    isServicesElOpen = false;
+    clientsEl.removeClass("showme");
+    isClientsElOpen = false;
+    contactUsEl.removeClass("showme");
+    isContactUsElOpen = false;
+    visitUsEl.removeClass("showme");
+    isVisitUsElOpen = false;
 
-      isRightContOpen = true;
-      isAboutElOpen = true;
-    } else if (isProjectMenuElOpen === true || isContactElOpen === true) {
-      // closing About and Contact sections and removing their underline
-      projectMenuEl.removeClass("showme");
-      workNav.removeClass("underline");
-      isProjectMenuElOpen = false;
-      contactEl.removeClass("showme");
-      contactNav.removeClass("underline");
-      isContactElOpen = false;
-
-      // Checking if project photos are open and closing if true
-      if (isLeftContOpen === true) {
-        leftCont.children().each(function () {
-          $(this).css("display", "none")
-        });
-      }
-      isLeftContOpen = false;
-
-      // handle basic menu function and show Work
-      handleMenu();
-      aboutActive();
-
-      // redefine values as true
-      isRightContOpen = true;
-      isAboutElOpen = true;
-
+    // Checking if project photos are open and closing if true
+    if (isLeftContOpen === true) {
+      leftCont.children().each(function () {
+        $(this).css("display", "none")
+      });
     }
+    isLeftContOpen = false;
+    // handle basic menu function and show Work
+    handleMenu();
+    aboutActive();
+
+    // redefine values as true
+    isRightContOpen = true;
+    isAboutElOpen = true;
+    // }
     menuTextEl.addClass('hide');
   }
 
@@ -230,39 +228,39 @@ $(document).ready(function () {
   // SHOW CONTACT FUNCTIONALITY AND CONDITIONS
   // ----------------------------------------------------
   function showContact() {
-    contactEl.animate({ scrollTop: 0 }, "fast");
-    if (isRightContOpen === false) {
-      handleMenu();
-      contactActive();
+    // Closing all other els
+    projectMenuEl.removeClass("showme");
+    workNav.removeClass("underline");
+    isProjectMenuElOpen = false;
+    aboutEl.removeClass("showme");
+    aboutNav.removeClass("underline");
+    isAboutElOpen = false;
+    servicesEl.removeClass("showme");
+    isServicesElOpen = false;
+    clientsEl.removeClass("showme");
+    isClientsElOpen = false;
+    contactUsEl.removeClass("showme");
+    isContactUsElOpen = false;
+    visitUsEl.removeClass("showme");
+    isVisitUsElOpen = false;
 
-      isRightContOpen = true;
-      isContactElOpen = true;
-    } else if (isProjectMenuElOpen === true || isAboutElOpen === true) {
-      // closing About and Contact sections and removing their underline
-      projectMenuEl.removeClass("showme");
-      workNav.removeClass("underline");
-      isProjectMenuElOpen = false;
-      aboutEl.removeClass("showme");
-      aboutNav.removeClass("underline");
-      isAboutElOpen = false;
-
-      // Checking if project photos are open and closing if true
-      if (isLeftContOpen === true) {
-        leftCont.children().each(function () {
-          $(this).css("display", "none")
-        });
-      }
-      isLeftContOpen = false;
-
-      // handle basic menu function and show Work
-      handleMenu();
-      contactActive();
-
-      // redefine values as true
-      isRightContOpen = true;
-      isContactElOpen = true;
-
+    // Checking if project photos are open and closing if true
+    if (isLeftContOpen === true) {
+      leftCont.children().each(function () {
+        $(this).css("display", "none")
+      });
     }
+    isLeftContOpen = false;
+
+    // handle basic menu function and show Work
+    handleMenu();
+    contactActive();
+
+    // redefine values as true
+    isRightContOpen = true;
+    isContactElOpen = true;
+
+    // }
     menuTextEl.addClass('hide');
     window.scroll({
       top: 0,

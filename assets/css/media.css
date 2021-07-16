@@ -1,4 +1,4 @@
-@media all and (max-width: 1500px ) {
+/* @media all and (max-width: 1500px ) {
     #grid-container-services{
         grid-column: span 2;
         grid-template-rows: auto;
@@ -19,18 +19,18 @@
         grid-row: 2;
         justify-self: flex-start;
     }
-}
+} */
 
-@media all and (max-width: 1350px ) {
-    p{
+/* @media all and (max-width: 1350px ) {
+    p{ */
         /* font-size: 16px; */
         /* line-height: 19px; */
-    }
+    /* }
     .grid-container-workmenu{
         row-gap: 2.5em;
-    }
+    } */
     /* ABOUT SECTION RESIZING */
-    .grid-container-about{
+    /* .grid-container-about{
         row-gap: 1.5em;
     }
     .grid-container-about-team{
@@ -59,9 +59,9 @@
 
     #grid-container-clients{
         grid-template-columns: auto auto;
-    }
+    } */
     /* CONTACT SECTION RESIZING */
-    .grid-container-contact{
+    /* .grid-container-contact{
         padding-bottom: 4em;
         row-gap: 1.25em;
         height: auto;
@@ -127,19 +127,23 @@
         font-weight: normal !important;
         font-size: 120% !important;
     }
-}
+} */
 @media all and (max-width: 1024px ) {
-    h1{
-        /* font-size: 160%; */
+    /* h1{
+        font-size: 160%;
     }
     h2{
-        /* font-size: 24px; */
-    }
+        font-size: 24px;
+    } */
     /* Making RIGHT cont full width */
     #rightcont.showme{
-        width: 100%;
+        width: 50%;
     }
-    .grid-container-workmenu,
+
+    #menu-text{
+        width: 50%;
+    }
+    /* .grid-container-workmenu,
     #about-intro,
     #about-team,
     #about-services,
@@ -149,11 +153,11 @@
     #contact-visitus{
         padding-left: 11em;
         padding-top: 2.5em;
-    }
-
+    } */
+/* 
     #grid-container-clients{
         grid-template-columns: auto auto auto auto;
-    } 
+    }  */
 
     /* RESIZING LEFT CONT TO APPEAR FROM BOTTOM */
     .leftcont{
@@ -188,7 +192,7 @@
         grid-row: 4;
     }
     #mappp-wrapper{
-        margin-left: -11em;
+        width: 50%;
     }
 }
 @media all and (max-width: 768px ) {
