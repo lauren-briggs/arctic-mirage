@@ -249,14 +249,15 @@ a:hover{
 #about-1.showme,
 #contact-1.showme,
 #contact-contact.showme,
-#contact-visitus.showme,
 #services-container.showme,
 #clients-container.showme{
     display: block;
+}
+
+
+#contact-visitus.showme{
     opacity: 1;
     transition: 0.75;
-    height: fit-content;
-    overflow-y: scroll;
 }
 
 
