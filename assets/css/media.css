@@ -49,13 +49,14 @@
     }
 }
 @media all and (max-width: 768px ) {
-    #homelogo{
-        width: 100px;
+    #homelogo img{
+        width: 50px;
+        height: 23px;
     }
     #rightcont.showme{
         width: 100vw;
         height: fit-content;
-        padding-top: 110px;
+        padding-top: 70px;
     }
     h1{
         font-size: 250%;
@@ -72,71 +73,23 @@
 }
 
 @media all and (max-width: 600px ) {
-    .grid-container-workmenu,
-    #about-intro,
-    #about-team,
-    #about-services,
-    #about-clients,
-    #contact-intro,
-    #contact-contactus,
-    #contact-visitus{
-        padding: 8em 6em 4em 2.15em;
-    }
     #mappp-wrapper{
         margin-left: -2.15em;
         height: 55vh;
     }
-    .grid-container-about{
-        padding: 3em 8em 4em 3em;
-    }
-
     #mc-embedded-subscribe-form{
         width: 100% !important;
         margin: auto;
     }
-    .grid-container-workmenu{
-        row-gap: 2em;
+    #menu-text{
+        padding-top: 100px;
     }
-    #homelogo{
-        left: 2.15em;
+    #rightcont{
+        padding-top: 100px;
     }
-    /* #mc-embedded-subscribe{
-        width: 100% !important;
-        padding:10px !important;
-        margin: 1.5em 0em !important;
-        color: white !important;
-        background-color: black !important;
-        border: none !important;
-        border-radius: 0px !important;
-        border-bottom: 2px solid var(--amWhite) !important;
-        justify-content: center !important;
-        font-family: degular, sans-serif !important;
-        font-weight:lighter !important;
-        font-style: normal !important;
-        font-size: 110% !important;
-        text-transform: uppercase !important;
-        text-align: center;
-    } */
 }
 @media all and (max-width: 480px ) {
-    /* h1{
-        font-size: 160%;
-        line-height: 100%;
-    }
-    h2{
-        font-size: 150%;
-        line-height: 100%;
-    }
-    .work h2{
-        line-height: 100%;
-    }
-    h4{
-        /* font-size: 15px; */
-    /* } */ 
-    #homelogo{
-        top: 35px !important;
-        left: 35px !important;
-    }
+
     #menu-text{
         top: 0px;
         left: 0;
@@ -152,8 +105,7 @@
     #project-menu li{
         padding-bottom: 15px;
     }
-
-    #mc-embedded-subscribe{
+    /* #mc-embedded-subscribe{
         width: 100% !important;
         padding:10px !important;
         margin: 1.5em 0em !important;

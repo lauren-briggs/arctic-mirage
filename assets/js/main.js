@@ -323,10 +323,16 @@ $(document).ready(function () {
   // ----------------------------------------------------
 
   $(window).resize(function () {
-    if ($(window).width() < 1024) {
+
+    $("#back").removeClass('reposition');
+    projectCont.removeClass('reposition');
+    console.log(isLeftContOpen);
+    if (isLeftContOpen === false) {
+      projectCont.removeClass('reposition');
+    } else if (isLeftContOpen === true && $(window).width() < 1024) {
       $("#back").addClass('reposition');
       projectCont.addClass('reposition');
-    } else {
+    } else if (isLeftContOpen === true && $(window).width() > 1024) {
       $("#back").removeClass('reposition');
       projectCont.removeClass('reposition');
     }
