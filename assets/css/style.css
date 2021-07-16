@@ -664,7 +664,7 @@ background-color: var(--amBlack) !important;
 #project-container.reposition{
     padding-top: 100px;
     overflow-y: scroll;
-    z-index: 200;
+    z-index: 20;
 }
 
 .back-inline{
