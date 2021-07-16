@@ -3,8 +3,9 @@ $(document).ready(function () {
   // ----------------------------------------------------
   // ELEMENTS
   // ----------------------------------------------------
-  const menuEl = $("nav");
+  const menuEl = $("#menu-container");
   const menuUl = $("#menu-ul");
+  // const nav = $("nav");
   const menuTextEl = $("#menu-text");
   const rightCont = $("#rightcont");
   const leftCont = $(".leftcont");
@@ -57,6 +58,7 @@ $(document).ready(function () {
   // ----------------------------------------------------
   function showMenu() {
     menuEl.addClass("showme");
+    menuUl.addClass("showme");
     navBtn.addClass("showme");
     menuTextEl.removeClass("hide");
     isMenuOpen = true;
@@ -67,8 +69,8 @@ $(document).ready(function () {
   // ----------------------------------------------------
   function closeAll() {
     rightCont.removeClass("showme");
-    menuEl.removeClass("showme white");
-    navBtn.removeClass("showme white");
+    menuEl.removeClass("showme");
+    navBtn.removeClass("showme");
     projectMenuEl.removeClass("showme");
     aboutEl.removeClass("showme");
     contactEl.removeClass("showme");
@@ -286,7 +288,7 @@ $(document).ready(function () {
       });
     }
 
-    menuUl.addClass('hide');
+    menuUl.removeClass('showme');
     projectCont.addClass('showme');
 
     // Getting the id value of the target el
@@ -553,7 +555,7 @@ $(document).ready(function () {
         $(this).css("display", "none")
       });
       isLeftContOpen = false;
-      menuUl.removeClass('hide');
+      menuUl.addClass('showme');
       projectCont.children().each(function () {
         $(this).css("display", "none")
       });

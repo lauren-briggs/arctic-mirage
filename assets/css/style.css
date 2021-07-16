@@ -82,7 +82,7 @@ h5{
 /* MENU FUNCTIONALITY */
 
 /* styling of ALL nav elements */
-nav{
+#menu-container{
     width: 100vw;
     height: 100vh;
     background-color: var(--amBlack);
@@ -92,7 +92,10 @@ nav{
     color: var(--amWhite);
     z-index: 2;
     font-style: normal;
-    list-style: none;
+    list-style: none
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.75s;
 }
 /* POSITIONING AND STYLNIG OF NAV ELEMENTS */
 #menu-ul{
@@ -100,14 +103,15 @@ nav{
     position: fixed;
     bottom: 40px;
     left: 40px;
-    display: block;
-    opacity: 1;
-    transition: 0.75s;
-}
-
-#menu-ul.hide{
     display: none;
     opacity: 0;
+    transition: 0.75s;
+    z-index: 2000;
+}
+
+#menu-ul.showme{
+    display: block;
+    opacity: 1;
     transition: 0.75s;
 }
 .menu-li{
@@ -151,21 +155,21 @@ a:hover{
 #workNav.underline,
 #aboutNav.underline,
 #contactNav.underline{
+    color: var(--amWhite);
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
 }
-nav{
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.75s;
-}
-.menu-li:hover{
+
+#workNav:hover,
+#aboutNav:hover,
+#contactNav:hover{
+    color: var(--amWhite);
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
 }
-nav.showme{
+#menu-container.showme{
     visibility: visible;
     opacity: 1;
     transition: 0.5s;
@@ -198,16 +202,17 @@ nav.showme{
 /* RIGHT CONTAINER */
 #rightcont{
     /* width: 0; */
-    height: 100%;
+    height: fit-content;
     position:fixed;
     top: 0;
     right: 0;
-    overflow-y: hidden;
+    overflow-y: scroll;
     opacity: 0;
     padding: 40px;
 }
 #rightcont.showme{
     width: 40%;
+    height: fit-content;
     display: block;
     opacity: 1;
     z-index: 100;
@@ -258,7 +263,8 @@ nav.showme{
 #project-menu,
 #about-1,
 #contact-1{
-    height: 100vh;
+    height: fit-content;
+    padding-bottom: 0px;
     overflow-y: scroll;
     cursor: url('../img/am-collateral/am21-04_logo_cursor_a_rev.png') 15 15, auto;
 }   

@@ -75,7 +75,7 @@
 @media all and (max-width: 600px ) {
     #mappp-wrapper{
         margin-left: -2.15em;
-        height: 55vh;
+        /* height: 55vh; */
     }
     #mc-embedded-subscribe-form{
         width: 100% !important;
