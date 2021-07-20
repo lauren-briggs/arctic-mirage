@@ -574,6 +574,13 @@ $(document).ready(function () {
     }
   })
 
+  // Close on esc key
+  window.onkeyup = function (event) {
+    if (event.keyCode == 27) {
+      closeAll();
+    }
+  }
+
   // ----------------------------------------------------
   // CALLING FUNCTIONS
   // ----------------------------------------------------
