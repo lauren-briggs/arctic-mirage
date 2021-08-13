@@ -82,10 +82,17 @@ $(document).ready(function () {
     menuUl.removeClass('showme');
 
     // checking if left container is open and closing if true
-    if (isLeftContOpen === true) {
+    if (isLeftContOpen === true && isDescrOpen === true) {
       leftCont.children().each(function () {
         $(this).css("display", "none")
       });
+      isLeftContOpen = false;
+      projectCont.children().each(function () {
+        $(this).css("display", "none")
+      });
+      $("#back").removeClass('reposition');
+      projectCont.removeClass('reposition');
+      projectCont.removeClass('showme');
     }
 
     // redefining booleans
