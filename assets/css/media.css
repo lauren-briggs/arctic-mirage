@@ -92,7 +92,7 @@
         row-gap: 1em;
     }
     .leftcont{
-        height: 40vh;
+        height: 50vh;
     }
     #menu-text{
         top: 0px;
@@ -126,12 +126,12 @@
     #mc-embedded-subscribe{
         width: 100% !important;
         padding:10px !important;
-        margin: 1.5em 0em !important;
+        margin: 0.5em 0em !important;
         color: white !important;
         background-color: black !important;
         border: none !important;
         border-radius: 0px !important;
-        border-bottom: 2px solid var(--amWhite) !important;
+        border-bottom: 1px solid var(--amWhite) !important;
         justify-content: center !important;
         font-family: degular, sans-serif !important;
         font-weight:lighter !important;
