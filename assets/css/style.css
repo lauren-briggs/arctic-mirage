@@ -711,6 +711,10 @@ background-color: var(--amBlack) !important;
     text-decoration-thickness: 8%;
 }
 
-#honeypot{
+/* #honeypot{
     display: none;
+} */
+
+.dispnon{
+    display: none
 }
