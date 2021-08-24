@@ -446,6 +446,10 @@ $(document).ready(function () {
     isContactElOpen = false;
     visitUsEl.addClass("showme");
     isVisitUsElOpen = true;
+    if ($(window).width() < 600) {
+      $("#mappp-wrapper").css("display: none");
+      $("#mappp-wrapper-mobile").css("display: block");
+    }
   })
 
   subscribeElBtn.click(function () {

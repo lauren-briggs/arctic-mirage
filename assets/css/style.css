@@ -551,6 +551,22 @@ textarea:hover{
     background-repeat: no-repeat;
   }
 
+  #mappp-wrapper-mobile{
+    position: fixed;
+    bottom: 0px;
+    width: 40%;
+    height: 60vh;
+}
+
+  #map-mobile {
+    height: 100%;
+    width: 100%;
+    background-image: url("/assets/img/am-collateral/AM_Location-Map.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
 /* SWIPER */
 .swiper-container{
 background-color: var(--amWhite);
