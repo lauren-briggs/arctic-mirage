@@ -99,12 +99,8 @@
     }
     #rightcont{
         padding-top: 100px;
-        height: max-content;
+        height:inherit;
     }
-    #contact-visitus{
-        padding-top: 200px;
-    }
-}
 @media all and (max-width: 480px ) {
     .grid-container-about-services{
         row-gap: 1em;
