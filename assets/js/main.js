@@ -449,6 +449,7 @@ $(document).ready(function () {
     if ($(window).width() < 600) {
       $("#mappp-wrapper").css("display: none");
       $("#mappp-wrapper-mobile").css("display: block");
+      rightCont.css("height: 100vh");
     }
   })
 
