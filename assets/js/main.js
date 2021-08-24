@@ -407,38 +407,38 @@ $(document).ready(function () {
   // ----------------------------------------------------
   // GOOGLE MAP
   // ----------------------------------------------------
-  let map;
-  function initMap() {
-    const amOffice = { lat: -37.932821, lng: 145.036590 }
-    map = new google.maps.Map(document.getElementById("map"), {
-      center: amOffice,
-      zoom: 12,
-      mapId: 'ca5e31db849d916a',
-      disableDefaultUI: true,
-      zoomControl: false,
-      mapTypeControl: false,
-      scaleControl: true,
-      streetViewControl: false,
-      rotateControl: false,
-      fullscreenControl: false,
-    });
-    const svgMarker = {
-      path: "M36.3,101.8L18.4,146H0L60,2.6h18.6l60,143.4H120l-17.9-44.2l-5.7-14.6l-6.5-15.8 c-6.7-16.7-14.6-36.6-20.1-51.9h-1.2c-5.7,15.5-13.4,35.1-20.1,51.9l-6.5,15.8L36.3,101.8z",
-      fillColor: "white",
-      fillOpacity: 1,
-      strokeWeight: 0,
-      rotation: 0,
-      scale: 0.25,
-      anchor: new google.maps.Point(55, 60),
-    };
-    new google.maps.Marker({
-      position: map.getCenter(),
-      icon: svgMarker,
-      map: map,
-    });
-  }
+  // let map;
+  // function initMap() {
+  //   const amOffice = { lat: -37.932821, lng: 145.036590 }
+  //   map = new google.maps.Map(document.getElementById("map"), {
+  //     center: amOffice,
+  //     zoom: 12,
+  //     mapId: 'ca5e31db849d916a',
+  //     disableDefaultUI: true,
+  //     zoomControl: false,
+  //     mapTypeControl: false,
+  //     scaleControl: true,
+  //     streetViewControl: false,
+  //     rotateControl: false,
+  //     fullscreenControl: false,
+  //   });
+  //   const svgMarker = {
+  //     path: "M36.3,101.8L18.4,146H0L60,2.6h18.6l60,143.4H120l-17.9-44.2l-5.7-14.6l-6.5-15.8 c-6.7-16.7-14.6-36.6-20.1-51.9h-1.2c-5.7,15.5-13.4,35.1-20.1,51.9l-6.5,15.8L36.3,101.8z",
+  //     fillColor: "white",
+  //     fillOpacity: 1,
+  //     strokeWeight: 0,
+  //     rotation: 0,
+  //     scale: 0.25,
+  //     anchor: new google.maps.Point(55, 60),
+  //   };
+  //   new google.maps.Marker({
+  //     position: map.getCenter(),
+  //     icon: svgMarker,
+  //     map: map,
+  //   });
+  // }
 
-  contactNav.click(initMap);
+  // contactNav.click(initMap);
   // $('#visitus-btn').click(initMap)
   // initMap();
 
