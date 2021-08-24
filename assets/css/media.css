@@ -87,8 +87,8 @@
         height: 60%;
     }
     #map {
-        height: 60%;
-        width: 50%;
+        height: 100%;
+        width: 100%;
       }
     #mc-embedded-subscribe-form{
         width: 100% !important;
@@ -99,6 +99,7 @@
     }
     #rightcont{
         padding-top: 100px;
+        height: max-content;
     }
 }
 @media all and (max-width: 480px ) {
