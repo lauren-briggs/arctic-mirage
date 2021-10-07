@@ -416,7 +416,7 @@ text-decoration: none;
 }
 
 /* CONTACT US FORM */
-#contact-form-card{
+/* #contact-form-card{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -445,8 +445,8 @@ text-decoration: none;
 }
 ::placeholder{
     color: var(--amWhite);
-}
-#name:hover,
+} */
+/* #name:hover,
 #email:hover,
 #subject:hover,
 #message:hover{
@@ -477,8 +477,8 @@ textarea:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 8%;
-/* cursor: inherit; */
-}
+cursor: inherit;
+} */
 
 /* PROJECT IMAGES CONTAINER */
 .left-cont{
@@ -733,10 +733,12 @@ background-color: var(--amBlack) !important;
     text-decoration-thickness: 8%;
 }
 
-/* #honeypot{
-    display: none;
-} */
 
 .dispnon{
     display: none
+}
+
+
+#contact-form{
+    margin-left: -5px;
 }
