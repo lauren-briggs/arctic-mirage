@@ -741,4 +741,5 @@ background-color: var(--amBlack) !important;
 
 #contact-form{
     margin-left: -5px;
+    text-transform: uppercase;
 }
